@@ -21,7 +21,7 @@
             <RowDefinition Height="50"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Rectangle HorizontalAlignment="Left" Height="535" Stroke="Black" VerticalAlignment="Center" Width="500" Fill="#FF1B1B1B" RadiusX="8" RadiusY="8"  Opacity="0.68" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
+        <Rectangle HorizontalAlignment="Left" Height="510" Stroke="Black" VerticalAlignment="Center" Width="500" Fill="#FF1B1B1B" RadiusX="8" RadiusY="8"  Opacity="0.68" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5" Margin="424,27.6,0,1.6" Grid.Row="1">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -60,9 +60,9 @@
         <Button x:Name="btn_Misterio" Content="Misterio" Grid.Column="1" HorizontalAlignment="Left" Margin="211.8,512.6,0,0" Grid.Row="1" VerticalAlignment="Top" Background="White" FontFamily="Bahnschrift SemiBold Condensed" FontSize="16" Click="btn_Misterio_Click"/>
         <Button x:Name="btn_Mangas" Content="Mangás" Grid.Column="1" HorizontalAlignment="Left" Margin="295.8,512.6,0,0" Grid.Row="1" VerticalAlignment="Top" Background="White" FontFamily="Bahnschrift SemiBold Condensed" FontSize="16" Click="btn_Mangas_Click"/>
         <Button x:Name="btn_Terror" Content="Terror" Grid.Column="1" HorizontalAlignment="Left" Margin="133.8,512.6,0,0" Grid.Row="1" VerticalAlignment="Top" Background="White" FontFamily="Bahnschrift SemiBold Condensed" FontSize="16" Click="btn_Terror_Click"/>
-        <Button x:Name="btn_Romance" Content="Romance" Grid.Column="1" HorizontalAlignment="Left" Margin="53.8,512.6,0,0" Grid.Row="1" VerticalAlignment="Top" Background="White" FontFamily="Bahnschrift SemiBold Condensed" FontSize="16" Click="btn_Romance_Click"/>
+        <Button x:Name="btn_Romance" Content="Romance" Grid.Column="1" HorizontalAlignment="Left" Margin="53.8,516.6,0,0" Grid.Row="1" VerticalAlignment="Top" Background="White" FontFamily="Bahnschrift SemiBold Condensed" FontSize="16" Click="btn_Romance_Click"/>
 
-        <Image Name="populares" Grid.Column="1" HorizontalAlignment="Left" Height="382" Margin="124,117,0,0" Grid.Row="1" VerticalAlignment="Top" Width="350" Source="../imagens/1.jpg"  />
+        <Image Name="populares" Grid.Column="1" HorizontalAlignment="Left" Height="382" Margin="123.8,111.6,0,45.6" Grid.Row="1" VerticalAlignment="Center" Width="350" Source="../imagens/1.jpg"  />
         <Button x:Name="btn_cad_ini" Content="Cadastro" Click="btn_cad_ini_Click" Grid.Column="1" HorizontalAlignment="Right" Grid.Row="1" VerticalAlignment="Top" Width="70" FontWeight="Bold" />
         <Button x:Name="btn_login_ini" Content="Login" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Width="70" FontWeight="Bold" Margin="0,50,72.2,0" Grid.RowSpan="2" Click="btn_login_ini_Click"/>
     </Grid>
