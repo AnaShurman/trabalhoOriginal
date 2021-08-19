@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:trabalho.apresentacao"
         mc:Ignorable="d"
-        Title="Cadastro" Height="680" Width="1370" WindowState="Maximized" OpacityMask="Black" ScrollViewer.CanContentScroll="True" WindowStyle="ThreeDBorderWindow" SnapsToDevicePixels="True" Icon="logopequena2.png" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" AllowDrop="True" IsTabStop="True" TabIndex="2147483645">
+        Title="Cadastro" Height="680" Width="1370" WindowState="Maximized" OpacityMask="Black" Icon="logopequena2.png">
     <Window.Background>
         <ImageBrush ImageSource="../imagens/stars.jpg"/>
     </Window.Background>
