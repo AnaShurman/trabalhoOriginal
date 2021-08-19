@@ -1,0 +1,48 @@
+﻿<Window x:Class="trabalho.apresentacao.formLivro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:trabalho.apresentacao"
+        mc:Ignorable="d"
+        Title="formLivro"  Height="400" Width="700" WindowStartupLocation='CenterScreen'>
+    <Grid Margin="10,6,0,5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="500"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Image x:Name="logo" VerticalAlignment="Top" Height="81" Source="../imagens/logo.png" MouseLeftButtonDown="logo_MouseLeftButtonDown" Margin="-29,-11,480,0" Grid.RowSpan="2" Grid.ColumnSpan="2" >
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="../imagens/logo.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <RadioButton Content="16/07/2021,Terça, 14:50" Grid.Column="1" HorizontalAlignment="Left" Margin="110,74.6,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+        <RadioButton Content="01/09/2021- 18:00" Grid.Column="1" HorizontalAlignment="Left" Margin="110,114.6,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <RadioButton Content="20/08/2021-10:00" Grid.Column="1" HorizontalAlignment="Left" Margin="110,94.6,0,0" Grid.Row="1" VerticalAlignment="Top" IsThreeState="True"/>
+        <RadioButton Content="Shopping Dom Pedro" Grid.Column="1" HorizontalAlignment="Left" Margin="268,116.6,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <RadioButton Content="Biblioteca Municipal" Grid.Column="1" HorizontalAlignment="Left" Margin="268,96.6,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <RadioButton Content="Shopping de Hortolândia" Grid.Column="1" HorizontalAlignment="Left" Margin="268,73.6,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Button x:Name="btn_enviar" Content="Enviar solicitação" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="303,212.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="97" Click="btn_enviar_Click"/>
+        <Button x:Name="btn_cancelar" Content="Cancelar" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="411,212.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="79" Click="btn_cancelar_Click"/>
+        <Label Content="Datas disponiveis" Grid.Column="1" HorizontalAlignment="Left" Margin="99,40.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="146" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Lugares disponiveis" Grid.Column="1" HorizontalAlignment="Left" Margin="268,39.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="162" FontWeight="Bold" FontSize="16" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.657"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+
+    </Grid>
+</Window>
