@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:trabalho.apresentacao"
         mc:Ignorable="d"
-        Title="formLivro"  Height="400" Width="700" WindowStartupLocation='CenterScreen'>
+        Title="formLivro" 
+ Height="400" Width="700" WindowStartupLocation='CenterScreen'>
     <Grid Margin="10,6,0,5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"></ColumnDefinition>
@@ -25,11 +26,13 @@
             </Image.OpacityMask>
         </Image>
         <RadioButton Content="16/07/2021,Terça, 14:50" Grid.Column="1" HorizontalAlignment="Left" Margin="110,74.6,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
-        <RadioButton Content="01/09/2021- 18:00" Grid.Column="1" HorizontalAlignment="Left" Margin="110,114.6,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <RadioButton Content="20/08/2021-10:00" Grid.Column="1" HorizontalAlignment="Left" Margin="110,94.6,0,0" Grid.Row="1" VerticalAlignment="Top" IsThreeState="True"/>
+        <RadioButton Content="01/09/2021- 18:00" Grid.Column="1" HorizontalAlignment="Left" Margin="110,114.6,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+
         <RadioButton Content="Shopping Dom Pedro" Grid.Column="1" HorizontalAlignment="Left" Margin="268,116.6,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <RadioButton Content="Biblioteca Municipal" Grid.Column="1" HorizontalAlignment="Left" Margin="268,96.6,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <RadioButton Content="Shopping de Hortolândia" Grid.Column="1" HorizontalAlignment="Left" Margin="268,73.6,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        
         <Button x:Name="btn_enviar" Content="Enviar solicitação" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="303,212.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="97" Click="btn_enviar_Click"/>
         <Button x:Name="btn_cancelar" Content="Cancelar" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="411,212.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="79" Click="btn_cancelar_Click"/>
         <Label Content="Datas disponiveis" Grid.Column="1" HorizontalAlignment="Left" Margin="99,40.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="146" FontWeight="Bold" FontSize="16"/>

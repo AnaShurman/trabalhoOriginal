@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using trabalho.modelo;
 
 namespace trabalho.apresentacao
 {
@@ -29,6 +30,79 @@ namespace trabalho.apresentacao
             Inicio inicio = new Inicio();
             inicio.Show();
             this.Close();
+        }
+
+        private void btn_Login_Log_Click(object sender, RoutedEventArgs e)
+        {
+            Controle controle = new Controle();
+            controle.acessar(txt_User_Log.Text, txt_User_Log.Text, txt_Pass_Log.Password);
+
+            if (controle.mensagem.Equals(""))
+            {
+                if (controle.tem)
+                {
+                    MessageBox.Show("Logado com sucesso!", "Entrando!", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Inicio inicio = new Inicio();
+                    inicio.Show();
+                    Close();
+
+                }
+                else
+                {
+                    MessageBox.Show("Login não encontrado! Verifique username e senha", "ERRO!", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show(controle.mensagem);
+            }
+        }
+
+        private void btn_Cadastrar_Log_Click(object sender, RoutedEventArgs e)
+        {
+            Cadastro cadastro = new Cadastro();
+            cadastro.Show();
+            Close();
+        }
+
+        private void btn_Voltar_Log_Click(object sender, RoutedEventArgs e)
+        {
+            Inicio inicio = new Inicio();
+            inicio.Show();
+            Close();
+        }
+
+        private void Romance_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Mangas_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Misterio_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Terror_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void logo_click(object sender, MouseButtonEventArgs e)
+        {
+            Inicio inicio = new Inicio();
+            inicio.Show();
+            Close();
+
+        }
+
+        private void btn_perfil_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

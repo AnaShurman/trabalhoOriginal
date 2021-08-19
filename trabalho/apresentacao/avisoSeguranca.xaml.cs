@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace trabalho.apresentacao
 {
     /// <summary>
-    /// Lógica interna para avisoSeguranca.xaml
+    /// Lógica interna para AvisoSeguranca.xaml
     /// </summary>
-    public partial class avisoSeguranca : Window
+    public partial class AvisoSeguranca : Window
     {
-        public avisoSeguranca()
+        public AvisoSeguranca()
         {
             InitializeComponent();
         }
