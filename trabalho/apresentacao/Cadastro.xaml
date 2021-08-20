@@ -5,46 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:trabalho.apresentacao"
         mc:Ignorable="d"
-        Title="Cadastro" Height="680" Width="1370" WindowState="Maximized" OpacityMask="Black">
+        Title="Cadastro" Height="680" Width="1370" WindowState="Maximized" OpacityMask="Black" Icon="../imagens/logopequena2.png">
     <Window.Background>
         <ImageBrush ImageSource="../imagens/stars.jpg"/>
     </Window.Background>
 
-    <Window.Resources>
-        <Style x:Key="Estilo_Placeholder" TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type TextBox}">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="9*"/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
-                            <TextBox Text="{Binding Path=Text,
-                            RelativeSource={RelativeSource TemplatedParent}, 
-                            Mode=TwoWay,
-                            UpdateSourceTrigger=PropertyChanged}"
-                            x:Name="Texto" 
-                            Background="Transparent" 
-                            Panel.ZIndex="2" Grid.ColumnSpan="2" />
-                            <TextBox Text="{TemplateBinding Tag}" Background="{TemplateBinding Background}" Panel.ZIndex="1" Grid.ColumnSpan="2">
-                                <TextBox.Style>
-                                    <Style TargetType="{x:Type TextBox}">
-                                        <Setter Property="Foreground" Value="Transparent"/>
-                                        <Style.Triggers>
-                                            <DataTrigger Binding="{Binding Path=Text, Source={x:Reference Texto}}" Value="">
-                                                <Setter Property="Foreground"  Value="LightGray"/>
-                                            </DataTrigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </TextBox.Style>
-                            </TextBox>
-                        </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Window.Resources>
 
     <Grid Margin="10,6,0,5">
         <Grid.ColumnDefinitions>
@@ -60,22 +25,13 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <Rectangle Grid.Column="1" HorizontalAlignment="Left" Height="528" Stroke="Black" VerticalAlignment="Top" Width="983" Fill="#FF1B1B1B" RadiusX="8" RadiusY="8" Grid.Row="1" Opacity="0.68" Grid.RowSpan="3" Margin="33.2,1,0,0"/>
+        <Rectangle Grid.Column="1" HorizontalAlignment="Left" Height="485" Stroke="Black" VerticalAlignment="Top" Width="990" Fill="#FF1B1B1B" RadiusX="8" RadiusY="8" Grid.Row="1" Opacity="0.68" Grid.RowSpan="2" Margin="33,1,0,0"/>
 
-        <Image x:Name="logo" Grid.Row="0" Source="../imagens/logo.png" Stretch="UniformToFill"  Height="104"  HorizontalAlignment="Left" Width="225"   VerticalAlignment="Top" Margin="-18,-22,0,0" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" MouseLeftButtonDown="logo_MouseLeftButtonDown">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleY="-0.547"/>
-                    <RotateTransform/>
-                    <TranslateTransform Y="-1.006"/>
-                </TransformGroup>
-            </Image.RenderTransform>
+        <Image x:Name="logo" Grid.Row="0" Source="../imagens/logo.png" MouseLeftButtonDown="logo_click"  Stretch="UniformToFill"  IsEnabled="False"  Height="104"  HorizontalAlignment="Left" Width="225"   VerticalAlignment="Top" Margin="-18,-22,0,0" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
             <Image.OpacityMask>
                 <ImageBrush ImageSource="../imagens/logo.png" TileMode="None" Stretch="None"/>
             </Image.OpacityMask>
         </Image>
-
 
         <Menu x:Name="menu" HorizontalAlignment="Left" Grid.Row="1" Background="#FF1B1B1B" Width="204" Opacity="0.85" Grid.RowSpan="2">
             <MenuItem Header="Categorias"  Background="#FF323232" Foreground="White"  Width="220" Margin="0,87,0,0" FontFamily="Haettenschweiler" FontSize="22" >
@@ -91,31 +47,30 @@
                 <ImageBrush ImageSource="../imagens/perfil_icon.png"/>
             </Button.Background>
         </Button>
-        <Label x:Name="lblNome_Cad" Content="Nome completo:" Grid.Column="1" HorizontalAlignment="Left" Margin="320,20,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="120" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="lblUser_Cad" Content="Nome de usuário:" Grid.Column="1" HorizontalAlignment="Left" Margin="320,70,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="120" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="lbl_Email_Cad" Content="Email:" Grid.Column="1" HorizontalAlignment="Left" Margin="320,120,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="120" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="lblGender_Cad" Content="Genêro:" Grid.Column="1" HorizontalAlignment="Left" Margin="320,170,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="120" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="lblCidade_Cad" Content="Cidade:" Grid.Column="1" HorizontalAlignment="Left" Margin="320,-25,0,0" Grid.Row="2" VerticalAlignment="Top" Height="30" Width="120" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="lblEstado_Cad" Content="Estado:" Grid.Column="1" HorizontalAlignment="Left" Margin="320,25,0,0" Grid.Row="2" VerticalAlignment="Top" Height="30" Width="120" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="lblCel_Cad" Content="WhatsApp:" Grid.Column="1" HorizontalAlignment="Left" Margin="320,75,0,0" Grid.Row="2" VerticalAlignment="Top" Height="30" Width="120" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="lblPass_Cad" Content="Senha:" Grid.Column="1" HorizontalAlignment="Left" Margin="320,125,0,0" Grid.Row="2" VerticalAlignment="Top" Height="30" Width="120" Foreground="White" FontWeight="Bold"/>
-        <TextBox x:Name="txt_Nome_Cad" Style="{StaticResource Estilo_Placeholder}" Tag="Digite seu nome..."  Grid.Column="1" HorizontalAlignment="Left" Margin="480,20,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="150" Background="Black" FontWeight="Bold"/>
-        <TextBox x:Name="txt_User_Cad" Style="{StaticResource Estilo_Placeholder}" Tag="Digite um username..." Grid.Column="1" HorizontalAlignment="Left" Margin="480,70,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="150" Background="Black" FontWeight="Bold"/>
-        <TextBox x:Name="txt_Email_Cad" Style="{StaticResource Estilo_Placeholder}" Tag="email@email..." Grid.Column="1" HorizontalAlignment="Left" Margin="480,120,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="150" Background="Black" FontWeight="Bold"/>
-        <TextBox x:Name="txt_Cidade_Cad" Style="{StaticResource Estilo_Placeholder}" Tag="Digite sua cidade..." Grid.Column="1" HorizontalAlignment="Left" Margin="480,-25,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="150" Background="Black" FontWeight="Bold"/>
-        <TextBox x:Name="txt_DDD_Cad" Style="{StaticResource Estilo_Placeholder}" Tag="DDD" Grid.Column="1" HorizontalAlignment="Left" Margin="480,75,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="45" Background="Black" FontWeight="Bold"/>
-        <TextBox x:Name="txt_Cel_Cad" Style="{StaticResource Estilo_Placeholder}" Tag="9 12345678" Grid.Column="1" HorizontalAlignment="Left" Margin="530,75,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="100" Background="Black" FontWeight="Bold"/>
-        <TextBox x:Name="txt_Pass_Cad" MinHeight="8" Style="{StaticResource Estilo_Placeholder}" Tag="Senha" Grid.Column="1" HorizontalAlignment="Left" Margin="480,125,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="150" Background="Black" FontWeight="Bold"/>
-        <Image Source="https://i.pinimg.com/originals/4e/a2/ea/4ea2ea56f1798863bebccfaa2c6c38b5.png" Grid.Column="1" HorizontalAlignment="Left" Height="50" Margin="390,75,0,0" Grid.Row="2" VerticalAlignment="Top" Width="50"/>
-        <Button x:Name="btn_Cadastrar_Cad" Content="Cadastrar" Grid.Column="1" HorizontalAlignment="Left" Margin="390,190,0,0" Grid.Row="2" VerticalAlignment="Top" Width="80"/>
-        <Button x:Name="btn_Voltar_Cad" Content="Voltar" Grid.Column="1" HorizontalAlignment="Left" Margin="480,190,0,0" Grid.Row="2" VerticalAlignment="Top" Width="80"/>
-        <ComboBox x:Name="cb_Gender_Cad" Grid.Column="1" HorizontalAlignment="Left" Margin="480,170,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="150">
-            <ComboBox.Background>
-                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
-                    <GradientStop Color="#FFBD9A9A" Offset="1"/>
-                </LinearGradientBrush>
-            </ComboBox.Background>
+
+        <Label x:Name="lblNome_Cad" Content="Nome completo:" Grid.Column="1" HorizontalAlignment="Left" Margin="320,20,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="lblUser_Cad" Content="Nome de usuário:" Grid.Column="1" HorizontalAlignment="Left" Margin="320,60,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="lbl_Email_Cad" Content="Email:" Grid.Column="1" HorizontalAlignment="Left" Margin="320,100,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="lblGender_Cad" Content="Gênero:" Grid.Column="1" HorizontalAlignment="Left" Margin="320,140,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="lblCidade_Cad" Content="Cidade:" Grid.Column="1" HorizontalAlignment="Left" Margin="320,180,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="lblEstado_Cad" Content="Estado:" Grid.Column="1" HorizontalAlignment="Left" Margin="320,220,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="lblCel_Cad" Content="WhatsApp:" Grid.Column="1" HorizontalAlignment="Left" Margin="320,15,0,0" Grid.Row="2" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="lblPass_Cad" Content="Senha:" Grid.Column="1" HorizontalAlignment="Left" Margin="320,55,0,0" Grid.Row="2" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="lbl_Confirm_Pass_Cad" Content="Confirmar senha:" Grid.Column="1" HorizontalAlignment="Left" Margin="320,95,0,0" Grid.Row="2" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
+
+        <TextBox x:Name="txt_Nome_Cad" Grid.Column="1" Style="{StaticResource Estilo_Placeholder}" Tag="Digite seu nome..." HorizontalAlignment="Left" Margin="480,20,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="150" AcceptsTab="True"/>
+        <TextBox x:Name="txt_User_Cad" Grid.Column="1" Style="{StaticResource Estilo_Placeholder}" Tag="Digite um username..." HorizontalAlignment="Left" Margin="480,60,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="150" AcceptsTab="True"/>
+        <TextBox x:Name="txt_Email_Cad" Grid.Column="1" Style="{StaticResource Estilo_Placeholder}" Tag="Digite seu email..." HorizontalAlignment="Left" Margin="480,100,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="150" AutoWordSelection="True"/>
+        <TextBox x:Name="txt_Cidade_Cad" Grid.Column="1" Style="{StaticResource Estilo_Placeholder}" Tag="Digite sua cidade..." HorizontalAlignment="Left" Margin="480,180,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="150" AcceptsTab="True"/>
+        <TextBox x:Name="txt_DDD_Cad" Grid.Column="1" Style="{StaticResource Estilo_Placeholder}" Tag="DDD..." HorizontalAlignment="Left" Margin="480,15,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="45" AcceptsTab="True"/>
+        <TextBox x:Name="txt_Cel_Cad" Grid.Column="1" Style="{StaticResource Estilo_Placeholder}" Tag="Digite seu celular..." HorizontalAlignment="Left" Margin="530,15,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="100" AcceptsTab="True"/>
+        <PasswordBox x:Name="txt_Pass_Cad" Style="{StaticResource Estilo_Placeholder_P}" Tag="Digite uma senha..." MinHeight="8" Grid.Column="1" HorizontalAlignment="Left" Margin="480,55,0,0" Grid.Row="2" VerticalAlignment="Top" Height="25" Width="150"/>
+        <PasswordBox x:Name="txt_Pass_Cad_Confirm" Style="{StaticResource Estilo_Placeholder_P}" Tag="Repita a senha..." MinHeight="8" Grid.Column="1" HorizontalAlignment="Left" Margin="480,95,0,0" Grid.Row="2" VerticalAlignment="Top" Height="25" Width="150"/>
+
+        <Image Source="https://i.pinimg.com/originals/4e/a2/ea/4ea2ea56f1798863bebccfaa2c6c38b5.png" Grid.Column="1" HorizontalAlignment="Left" Height="50" Margin="390,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="50" />
+        <Button x:Name="btn_Cadastrar_Cad" Content="Cadastrar" Grid.Column="1" HorizontalAlignment="Left" Margin="360,147,0,0" Grid.Row="2" VerticalAlignment="Top" Width="80" Click="btn_Cadastrar_Cad_Click"/>
+        <Button x:Name="btn_Limpar_Cad" Content="Limpar" Grid.Column="1" HorizontalAlignment="Left" Margin="445,147,0,0" Grid.Row="2" VerticalAlignment="Top" Width="80" Click="btn_Limpar_Cad_Click"/>
+        <ComboBox x:Name="cb_Gender_Cad" Grid.Column="1" HorizontalAlignment="Left" Margin="480,140,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="150" SelectionChanged="cb_Gender_Cad_SelectionChanged">
             <ComboBoxItem Content="Mulher Cisgênero"/>
             <ComboBoxItem Content="Homem Cisgênero"/>
             <ComboBoxItem Content="Homem Transexual"/>
@@ -125,40 +80,38 @@
             <ComboBoxItem Content="Não sei responder"/>
             <ComboBoxItem Content="Outros"/>
         </ComboBox>
-        <ComboBox x:Name="cb_Estado_Cad" Grid.Column="1" HorizontalAlignment="Left" Margin="480,25,0,0" Grid.Row="2" VerticalAlignment="Top" Height="30" Width="150">
-            <ComboBoxItem Content="  AC "/>
-            <ComboBoxItem Content="  AL "/>
-            <ComboBoxItem Content="  AM "/>
-            <ComboBoxItem Content="  AP "/>
-            <ComboBoxItem Content="  BA "/>
-            <ComboBoxItem Content="  CE "/>
-            <ComboBoxItem Content="  DF "/>
-            <ComboBoxItem Content="  ES "/>
-            <ComboBoxItem Content="  GO "/>
-            <ComboBoxItem Content="  MA "/>
-            <ComboBoxItem Content="  MG "/>
-            <ComboBoxItem Content="  MS "/>
-            <ComboBoxItem Content="  MT "/>
-            <ComboBoxItem Content="  PA "/>
-            <ComboBoxItem Content="  PB "/>
-            <ComboBoxItem Content="  PE "/>
-            <ComboBoxItem Content="  PI "/>
-            <ComboBoxItem Content="  PR "/>
-            <ComboBoxItem Content="  RJ "/>
-            <ComboBoxItem Content="  RN "/>
-            <ComboBoxItem Content="  RO "/>
-            <ComboBoxItem Content="  RR "/>
-            <ComboBoxItem Content="  RS "/>
-            <ComboBoxItem Content="  SC "/>
-            <ComboBoxItem Content="  SE "/>
-            <ComboBoxItem Content="  SP "/>
-            <ComboBoxItem Content="  TO "/>
+        <ComboBox x:Name="cb_Estado_Cad" Grid.Column="1" HorizontalAlignment="Left" Margin="480,220,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="150" Grid.RowSpan="2" SelectionChanged="cb_Estado_Cad_SelectionChanged" >
+            <ComboBoxItem Content="AC"/>
+            <ComboBoxItem Content="AL"/>
+            <ComboBoxItem Content="AM"/>
+            <ComboBoxItem Content="AP"/>
+            <ComboBoxItem Content="BA"/>
+            <ComboBoxItem Content="CE"/>
+            <ComboBoxItem Content="DF"/>
+            <ComboBoxItem Content="ES"/>
+            <ComboBoxItem Content="GO"/>
+            <ComboBoxItem Content="MA"/>
+            <ComboBoxItem Content="MG"/>
+            <ComboBoxItem Content="MS"/>
+            <ComboBoxItem Content="MT"/>
+            <ComboBoxItem Content="PA"/>
+            <ComboBoxItem Content="PB"/>
+            <ComboBoxItem Content="PE"/>
+            <ComboBoxItem Content="PI"/>
+            <ComboBoxItem Content="PR"/>
+            <ComboBoxItem Content="RJ"/>
+            <ComboBoxItem Content="RN"/>
+            <ComboBoxItem Content="RO"/>
+            <ComboBoxItem Content="RR"/>
+            <ComboBoxItem Content="RS"/>
+            <ComboBoxItem Content="SC"/>
+            <ComboBoxItem Content="SE"/>
+            <ComboBoxItem Content="SP"/>
+            <ComboBoxItem Content="TO"/>
         </ComboBox>
-        <Button x:Name="btn_View_Pass" Grid.Column="1" HorizontalAlignment="Left" Margin="603,125,0,0" Grid.Row="2" VerticalAlignment="Top" Width="27" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
-            <Image Source="http://i.stack.imgur.com/H9Sb2.png" Opacity="0.4" />
-        </Button>
-
-
+        <Button x:Name="btn_Voltar_Cad" Content="Voltar" Grid.Column="1" HorizontalAlignment="Left" Margin="530,147,0,0" Grid.Row="2" VerticalAlignment="Top" Width="80" Click="btn_Voltar_Cad_Click"/>
+        <TextBlock x:Name="txt_gen" Grid.Column="1" HorizontalAlignment="Left" Margin="485,140,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Selecione seu gênero..." VerticalAlignment="Top" Height="25" Width="130" Foreground="#C0C0C0"/>
+        <TextBlock x:Name="txt_UF" Grid.Column="1" HorizontalAlignment="Left" Margin="485,220,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Selecione UF..." VerticalAlignment="Top" Height="25" Width="130" Foreground="#C0C0C0" Grid.RowSpan="2"/>
 
     </Grid>
 </Window>

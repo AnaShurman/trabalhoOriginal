@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using trabalho.modelo;
 
 namespace trabalho.apresentacao
 {
@@ -79,6 +80,72 @@ namespace trabalho.apresentacao
             Inicio inicio = new Inicio();
             inicio.Show();
             this.Close();
+        }
+
+        private void btn_Cadastrar_Cad_Click(object sender, RoutedEventArgs e)
+        {
+            Controle controle = new Controle();
+            controle.acessarC(txt_Email_Cad.Text);
+
+            if (controle.mensagem.Equals(""))
+            {
+                if (controle.tem)
+                {
+                    MessageBox.Show("Usuario existe no banco! Tente fazer login", "ERRO!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    limpar();
+                }
+                else
+                {
+                    String mensagem = controle.cadastrar(txt_User_Cad.Text, txt_Pass_Cad.Password, txt_Nome_Cad.Text, cb_Gender_Cad.Text, txt_Cidade_Cad.Text, cb_Estado_Cad.Text, txt_DDD_Cad.Text, txt_Cel_Cad.Text, txt_Email_Cad.Text, txt_Pass_Cad_Confirm.Password);
+                    if (controle.tem)
+                    {
+                        MessageBox.Show(mensagem, "Cadastro", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show(controle.mensagem);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show(controle.mensagem);
+            }
+        }
+
+        private void limpar()
+        {
+            txt_Nome_Cad.Clear();
+            txt_User_Cad.Clear();
+            txt_Pass_Cad.Clear();
+            txt_Email_Cad.Clear();
+            txt_DDD_Cad.Clear();
+            txt_Cidade_Cad.Clear();
+            txt_Cel_Cad.Clear();
+            txt_Nome_Cad.Focus();
+            txt_Pass_Cad_Confirm.Clear();
+        }
+
+        private void btn_Limpar_Cad_Click(object sender, RoutedEventArgs e)
+        {
+            limpar();
+        }
+
+        private void btn_Voltar_Cad_Click(object sender, RoutedEventArgs e)
+        {
+            Inicio inicio = new Inicio();
+            inicio.Show();
+            Close();
+        }
+
+        private void cb_Estado_Cad_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            txt_UF.Visibility = Visibility.Hidden;
+        }
+
+        private void cb_Gender_Cad_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            txt_gen.Visibility = Visibility.Hidden;
         }
     }
 }

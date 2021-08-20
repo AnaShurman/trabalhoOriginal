@@ -31,7 +31,7 @@ namespace trabalho.apresentacao
 
         private void btn_enviar_Click(object sender, RoutedEventArgs e)
         {
-            avisoSeguranca seguranca = new avisoSeguranca();
+            AvisoSeguranca seguranca = new AvisoSeguranca();
             seguranca.Show();
             this.Close();
         }
