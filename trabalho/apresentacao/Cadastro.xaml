@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:trabalho.apresentacao"
         mc:Ignorable="d"
-        Title="Cadastro" Height="680" Width="1370" WindowState="Maximized" OpacityMask="Black" Icon="logopequena2.png">
+        Title="Cadastro" Height="680" Width="1370" WindowState="Maximized" OpacityMask="Black" Icon="../imagens/logopequena2.png">
     <Window.Background>
         <ImageBrush ImageSource="../imagens/stars.jpg"/>
     </Window.Background>

@@ -161,9 +161,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="apresentacao\logopequena2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="imagens\1.jpg" />
   </ItemGroup>
   <ItemGroup>
