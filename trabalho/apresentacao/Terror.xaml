@@ -24,7 +24,7 @@
 
         <Rectangle Grid.Column="1" HorizontalAlignment="Center" Height="574" Stroke="Black" VerticalAlignment="Top" Width="1044" Fill="#FF1B1B1B" RadiusX="8" RadiusY="8" Grid.Row="1" Opacity="0.68" Grid.RowSpan="2"/>
 
-        <Image x:Name="logo" Grid.Row="0" Source="../imagens/logo.png" Stretch="UniformToFill"  IsEnabled="False"  Height="104"  HorizontalAlignment="Left" Width="225"   VerticalAlignment="Top" Margin="-18,-22,0,0" RenderTransformOrigin="0.5,0.5" MouseLeftButtonDown="logo_MouseLeftButtonDown">
+        <Image x:Name="logo" Grid.Row="0" Source="../imagens/logo.png" Stretch="UniformToFill"  Height="104"  HorizontalAlignment="Left" Width="225"   VerticalAlignment="Top" Margin="-18,-22,0,0" RenderTransformOrigin="0.5,0.5" MouseLeftButtonDown="logo_MouseLeftButtonDown">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
