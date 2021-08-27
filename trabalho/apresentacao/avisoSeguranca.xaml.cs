@@ -35,5 +35,10 @@ namespace trabalho.apresentacao
             inicio.Show();
             this.Close();
         }
+
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

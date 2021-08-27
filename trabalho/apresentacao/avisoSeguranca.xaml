@@ -20,35 +20,19 @@
             <RowDefinition Height="50"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Image x:Name="logo" VerticalAlignment="Top" Height="81" Source="../imagens/logo.png" MouseLeftButtonDown="logo_MouseLeftButtonDown" Margin="-29,-11,480,0" Grid.RowSpan="2" Grid.ColumnSpan="2" >
+        <Image Grid.ColumnSpan="4" Margin="-41,-119,-31,-123.8" Grid.RowSpan="3" Source="/trabalho;component/Image2.png" Stretch="Fill"/>
+        <Image x:Name="logo" VerticalAlignment="Top" Height="81" Source="../imagens/logo.png" MouseLeftButtonDown="logo_MouseLeftButtonDown" Margin="4,-10,447,0" Grid.RowSpan="2" Grid.ColumnSpan="2" >
             <Image.OpacityMask>
                 <ImageBrush ImageSource="../imagens/logo.png"/>
             </Image.OpacityMask>
         </Image>
-        <CheckBox Content="Eu estou ciente sobre todas as instruções de segurança e tomo total responsabilidade &#xD;&#xA;por possiveis acidentes e imprevistos relacionados a entrega do livro." HorizontalAlignment="Left" Margin="4,191.6,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="490" Grid.Column="1"/>
+
+        <CheckBox Content="Eu estou ciente sobre todas as instruções &#xA;de segurança e tomo total responsabilidade &#xD;&#xA;por possiveis acidentes e imprevistos&#xD;&#xA; relacionados a entrega do livro." HorizontalAlignment="Left" Margin="289,135.6,0,0" Grid.Row="1" VerticalAlignment="Top" Height="89" Width="286" Grid.Column="1" Checked="CheckBox_Checked" Grid.ColumnSpan="2" FontFamily="Sitka Heading" FontSize="14"/>
         <Button x:Name="btn_finalizar" Content="Finalizar" Grid.Column="1" HorizontalAlignment="Left" Margin="395,229.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <Image Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="374,62.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="130" Source="logogrande2 (1).png" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="-1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
         <Label Content="Dicas de segurança:" Grid.Column="1" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="248" FontWeight="Bold" FontSize="16" FontFamily="Sitka Heading"/>
-        <Label Content="-Compartilhe sua localização com algum conhecido;&#xD;&#xA;-Sempre diga para alguém de sua confiança onde você esta indo;&#xD;&#xA;- Marque sempre em lugares seguros e com uma boa&#xD;&#xA; circulação de pessoas;" Grid.Column="1" HorizontalAlignment="Left" Margin="10,24.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="368" Height="97"/>
-        <Image Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="373,80.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="96" Source="/trabalho;component/imagens/logogrande2 (1).png" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="-1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
+        <Label Content="" HorizontalAlignment="Left" Margin="31,41.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="324" Height="144" FontFamily="Sitka Heading" Grid.ColumnSpan="2" FontSize="14"/>
+        <Image Grid.ColumnSpan="2" Margin="31,5.6,252,0.2" Grid.RowSpan="2" Source="/trabalho;component/logogrande2 (1).png" Stretch="Fill" Grid.Row="1"/>
+
 
     </Grid>
 </Window>

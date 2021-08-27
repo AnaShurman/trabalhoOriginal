@@ -193,5 +193,29 @@
   <ItemGroup>
     <Resource Include="imagens\logogrande2 %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="apresentacao\logogrande1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="logogrande2 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sem título %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image5.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
