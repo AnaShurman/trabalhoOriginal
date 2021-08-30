@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using trabalho.apresentacao;
+using System.IO;
+using Microsoft.Win32;
 
 
 namespace trabalho.dal
@@ -67,7 +69,6 @@ namespace trabalho.dal
         }
 
 
-
         public String cadastrar(String username, String senha, String nome, String genero, String cidade, String estado, String ddd, String celular, String email, String confSenha)
         {
 
@@ -110,5 +111,7 @@ namespace trabalho.dal
 
             return mensagem;
         }
+
+
     }
 }

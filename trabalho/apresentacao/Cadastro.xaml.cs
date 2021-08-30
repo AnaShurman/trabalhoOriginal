@@ -27,53 +27,47 @@ namespace trabalho.apresentacao
 
         private void logo_click(object sender, MouseButtonEventArgs e)
         {
-
+            Inicio inicio = new Inicio();
+            inicio.Show();
+            Close();
         }
 
         private void Romance_Click(object sender, RoutedEventArgs e)
         {
-
+            Romance romance = new Romance();
+            romance.Show();
+            Close();
         }
 
         private void Mangas_Click(object sender, RoutedEventArgs e)
         {
+            Mangas mangas = new Mangas();
+            mangas.Show();
+            Close();
 
         }
 
         private void Misterio_Click(object sender, RoutedEventArgs e)
         {
-
+            Misterio misterio = new Misterio();
+            misterio.Show();
+            Close();
         }
 
         private void Terror_Click(object sender, RoutedEventArgs e)
         {
-
+            Terror terror = new Terror();
+            terror.Show();
+            Close();
         }
 
         private void btn_perfil_Click(object sender, RoutedEventArgs e)
         {
-
+            /* Perfil perfil = new Perfil();
+             perfil.Show();
+             Close();*/
         }
 
-        private void hortolandia_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void americana_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void sumare_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void campinas_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void logo_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {

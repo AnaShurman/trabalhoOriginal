@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using trabalho.dal;
+using Microsoft.Win32;
+using System.IO;
 
 namespace trabalho.modelo
 {
@@ -43,5 +45,7 @@ namespace trabalho.modelo
             }
             return mensagem;
         }
+
+
     }
 }

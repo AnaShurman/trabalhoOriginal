@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:trabalho.apresentacao"
         mc:Ignorable="d"
-        Title="Cadastro" Height="680" Width="1370" WindowState="Maximized" OpacityMask="Black" Icon="../imagens/logopequena2.png">
+        Title="Cadastro" Height="680" Width="1370" WindowState="Maximized" OpacityMask="Black">
     <Window.Background>
         <ImageBrush ImageSource="../imagens/stars.jpg"/>
     </Window.Background>
@@ -13,16 +13,16 @@
 
     <Grid Margin="10,6,0,5">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="211*"></ColumnDefinition>
-            <ColumnDefinition Width="1058"></ColumnDefinition>
-            <ColumnDefinition Width="93*"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="120*"/>
-            <RowDefinition Height="120*"/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
         <Rectangle Grid.Column="1" HorizontalAlignment="Left" Height="485" Stroke="Black" VerticalAlignment="Top" Width="990" Fill="#FF1B1B1B" RadiusX="8" RadiusY="8" Grid.Row="1" Opacity="0.68" Grid.RowSpan="2" Margin="33,1,0,0"/>
@@ -64,13 +64,14 @@
         <TextBox x:Name="txt_Cidade_Cad" Grid.Column="1" Style="{StaticResource Estilo_Placeholder}" Tag="Digite sua cidade..." HorizontalAlignment="Left" Margin="480,180,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="150" AcceptsTab="True"/>
         <TextBox x:Name="txt_DDD_Cad" Grid.Column="1" Style="{StaticResource Estilo_Placeholder}" Tag="DDD..." HorizontalAlignment="Left" Margin="480,15,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="45" AcceptsTab="True"/>
         <TextBox x:Name="txt_Cel_Cad" Grid.Column="1" Style="{StaticResource Estilo_Placeholder}" Tag="Digite seu celular..." HorizontalAlignment="Left" Margin="530,15,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="100" AcceptsTab="True"/>
-        <PasswordBox x:Name="txt_Pass_Cad" Style="{StaticResource Estilo_Placeholder_P}" Tag="Digite uma senha..." MinHeight="8" Grid.Column="1" HorizontalAlignment="Left" Margin="480,55,0,0" Grid.Row="2" VerticalAlignment="Top" Height="25" Width="150"/>
-        <PasswordBox x:Name="txt_Pass_Cad_Confirm" Style="{StaticResource Estilo_Placeholder_P}" Tag="Repita a senha..." MinHeight="8" Grid.Column="1" HorizontalAlignment="Left" Margin="480,95,0,0" Grid.Row="2" VerticalAlignment="Top" Height="25" Width="150"/>
+        <PasswordBox x:Name="txt_Pass_Cad" MinHeight="8" Grid.Column="1" HorizontalAlignment="Left" Margin="480,55,0,0" Grid.Row="2" VerticalAlignment="Top" Height="25" Width="150"/>
+        <PasswordBox x:Name="txt_Pass_Cad_Confirm" MinHeight="8" Grid.Column="1" HorizontalAlignment="Left" Margin="480,95,0,0" Grid.Row="2" VerticalAlignment="Top" Height="25" Width="150"/>
 
         <Image Source="https://i.pinimg.com/originals/4e/a2/ea/4ea2ea56f1798863bebccfaa2c6c38b5.png" Grid.Column="1" HorizontalAlignment="Left" Height="50" Margin="390,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="50" />
         <Button x:Name="btn_Cadastrar_Cad" Content="Cadastrar" Grid.Column="1" HorizontalAlignment="Left" Margin="360,147,0,0" Grid.Row="2" VerticalAlignment="Top" Width="80" Click="btn_Cadastrar_Cad_Click"/>
         <Button x:Name="btn_Limpar_Cad" Content="Limpar" Grid.Column="1" HorizontalAlignment="Left" Margin="445,147,0,0" Grid.Row="2" VerticalAlignment="Top" Width="80" Click="btn_Limpar_Cad_Click"/>
-        <ComboBox x:Name="cb_Gender_Cad" Grid.Column="1" HorizontalAlignment="Left" Margin="480,140,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="150" SelectionChanged="cb_Gender_Cad_SelectionChanged">
+        <ComboBox x:Name="cb_Gender_Cad" Grid.Column="1" Tag="test" HorizontalAlignment="Left" Margin="480,140,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="150" SelectionChanged="cb_Gender_Cad_SelectionChanged" Background="{x:Null}" BorderBrush="{x:Null}">
+
             <ComboBoxItem Content="Mulher Cisgênero"/>
             <ComboBoxItem Content="Homem Cisgênero"/>
             <ComboBoxItem Content="Homem Transexual"/>
@@ -110,8 +111,8 @@
             <ComboBoxItem Content="TO"/>
         </ComboBox>
         <Button x:Name="btn_Voltar_Cad" Content="Voltar" Grid.Column="1" HorizontalAlignment="Left" Margin="530,147,0,0" Grid.Row="2" VerticalAlignment="Top" Width="80" Click="btn_Voltar_Cad_Click"/>
-        <TextBlock x:Name="txt_gen" Grid.Column="1" HorizontalAlignment="Left" Margin="485,140,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Selecione seu gênero..." VerticalAlignment="Top" Height="25" Width="130" Foreground="#C0C0C0"/>
-        <TextBlock x:Name="txt_UF" Grid.Column="1" HorizontalAlignment="Left" Margin="485,220,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Selecione UF..." VerticalAlignment="Top" Height="25" Width="130" Foreground="#C0C0C0" Grid.RowSpan="2"/>
-
+        <TextBlock x:Name="txt_gen" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Selecione seu gênero..." VerticalAlignment="Top" Height="16" Width="122" Foreground="#C0C0C0" Grid.Column="1" Margin="485,145,0,0" Grid.Row="1"/>
+        <TextBlock x:Name="txt_UF" Grid.Column="1" HorizontalAlignment="Left" Margin="485,220,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Selecione UF..." VerticalAlignment="Top" Height="25" Width="100" Foreground="#C0C0C0" Grid.RowSpan="2"/>
+        <TextBlock x:Name="txt_ps"  MinHeight="8" Grid.Column="1" HorizontalAlignment="Left" Margin="480,55,0,0" Grid.Row="2" VerticalAlignment="Top" Height="16" Width="108" TextWrapping="Wrap" Foreground="#C0C0C0" Text="Digite uma senha..."/>
     </Grid>
 </Window>
