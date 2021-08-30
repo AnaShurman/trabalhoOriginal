@@ -117,16 +117,11 @@ namespace trabalho.apresentacao
             Close();
         }
 
-        private void btn_cad_ini_Click(object sender, RoutedEventArgs e)
-        {
-            Cadastro cadastro = new Cadastro();
-            cadastro.Show();
-            Close();
-        }
-
         private void btn_perfil_Click(object sender, RoutedEventArgs e)
         {
-            //Dan
+            Perfil perfil = new Perfil();
+            perfil.Show();
+            Close();
         }
 
         private void btn_login_ini_Click(object sender, RoutedEventArgs e)
@@ -135,6 +130,20 @@ namespace trabalho.apresentacao
             login.Show();
             Close();
 
+        }
+
+        private void btn_cad_ini_Click_1(object sender, RoutedEventArgs e)
+        {
+            Cadastro cadastro = new Cadastro();
+            cadastro.Show();
+            Close();
+        }
+
+        private void add_Click(object sender, RoutedEventArgs e)
+        {
+            Adicionar_livros add = new Adicionar_livros();
+            add.Show();
+            Close();
         }
     }
 }

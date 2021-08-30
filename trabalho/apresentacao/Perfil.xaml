@@ -1,0 +1,61 @@
+﻿<Window x:Class="trabalho.apresentacao.Perfil"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:trabalho.apresentacao"
+        mc:Ignorable="d"
+        Title="Perfil" Height="680" Width="1370" WindowState="Maximized" OpacityMask="Black">
+    <Window.Background>
+        <ImageBrush ImageSource="../imagens/stars.jpg"/>
+    </Window.Background>
+    <Grid Margin="10,6,0,5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="211*"></ColumnDefinition>
+            <ColumnDefinition Width="1058"></ColumnDefinition>
+            <ColumnDefinition Width="93*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="120*"/>
+            <RowDefinition Height="120*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Rectangle Grid.Column="1" HorizontalAlignment="Left" Height="485" Stroke="Black" VerticalAlignment="Top" Width="666" Fill="#FF1B1B1B" RadiusX="8" RadiusY="8" Grid.Row="1" Opacity="0.68" Grid.RowSpan="2" Margin="267,1,0,0"/>
+
+        <Image x:Name="logo" Grid.Row="0" Source="../imagens/logo.png" MouseLeftButtonDown="logo_click"  Stretch="UniformToFill"  IsEnabled="False"  Height="104"  HorizontalAlignment="Left" Width="225"   VerticalAlignment="Top" Margin="-18,-22,0,0" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.547"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-1.006"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="../imagens/logo.png" TileMode="None" Stretch="None"/>
+            </Image.OpacityMask>
+        </Image>
+
+        <Menu x:Name="menu" HorizontalAlignment="Left" Grid.Row="1" Background="#FF1B1B1B" Width="204" Opacity="0.85" Grid.RowSpan="2">
+            <MenuItem Header="Categorias"  Background="#FF323232" Foreground="White"  Width="220" Margin="0,87,0,0" FontFamily="Haettenschweiler" FontSize="22" >
+                <MenuItem x:Name="Romance" Header="Romance" Click="Romance_Click"  Foreground="#FFFFF6F6" Background="#FF171819"/>
+                <MenuItem x:Name="Mangas" Header="Mangás" Background="#FF323232" Click="Mangas_Click"  Foreground="White"/>
+                <MenuItem x:Name="Misterio" Header="Misterio" Background="#FF323232" Click="Misterio_Click"  Foreground="White"/>
+                <MenuItem x:Name="Terror" Header="Terror" Background="#FF323232"  Click="Terror_Click" Foreground="White"/>
+            </MenuItem>
+        </Menu>
+
+        <Label x:Name="lblLivrosLidos" Content="Livros lidos:" Grid.Column="1" HorizontalAlignment="Left" Margin="324,80,0,0" Grid.Row="1" VerticalAlignment="Top" Height="38" Width="146" Foreground="White" FontWeight="Bold" FontSize="22"/>
+
+        <Button x:Name="btn_Meus_Livros" Content="Meus livros" Grid.Column="1" HorizontalAlignment="Left" Margin="698,38,0,0" Grid.Row="2" VerticalAlignment="Top" Width="181" RenderTransformOrigin="0.494,2.85" Height="50" FontSize="20"/>
+        <Button x:Name="btn_Cadastrar_Livro" Content="Cadastrar livro" Grid.Column="1" HorizontalAlignment="Left" Margin="698,97,0,0" Grid.Row="2" VerticalAlignment="Top" Width="181" Height="50" FontSize="20" Click="btn_Cadastrar_Livro_Click"/>
+        <Image x:Name="img_Usuario" Grid.Column="1" HorizontalAlignment="Left" Height="206" Margin="682,38,0,0" Grid.Row="1" VerticalAlignment="Top" Width="206"/>
+        <Label Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="lblEndereco" Content="&lt;Endereço&gt;" Grid.Column="1" HorizontalAlignment="Left" Margin="324,61,0,0" Grid.Row="2" VerticalAlignment="Top" Width="242" Height="85" FontSize="20" Foreground="White"/>
+        <TextBlock x:Name="lblNumLivros" Grid.Column="1" HorizontalAlignment="Left" Margin="386,197,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
