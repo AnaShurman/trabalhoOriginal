@@ -41,15 +41,7 @@ namespace trabalho.apresentacao {
     public partial class Cadastro : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 30 "..\..\..\apresentacao\Cadastro.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Image logo;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 36 "..\..\..\apresentacao\Cadastro.xaml"
+        #line 51 "..\..\..\apresentacao\Cadastro.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Menu menu;
         
@@ -57,47 +49,7 @@ namespace trabalho.apresentacao {
         #line hidden
         
         
-        #line 38 "..\..\..\apresentacao\Cadastro.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.MenuItem Romance;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 39 "..\..\..\apresentacao\Cadastro.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.MenuItem Mangas;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 40 "..\..\..\apresentacao\Cadastro.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.MenuItem Misterio;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 41 "..\..\..\apresentacao\Cadastro.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.MenuItem Terror;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 45 "..\..\..\apresentacao\Cadastro.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button btn_perfil;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 51 "..\..\..\apresentacao\Cadastro.xaml"
+        #line 60 "..\..\..\apresentacao\Cadastro.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label lblNome_Cad;
         
@@ -105,7 +57,7 @@ namespace trabalho.apresentacao {
         #line hidden
         
         
-        #line 52 "..\..\..\apresentacao\Cadastro.xaml"
+        #line 61 "..\..\..\apresentacao\Cadastro.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label lblUser_Cad;
         
@@ -113,7 +65,7 @@ namespace trabalho.apresentacao {
         #line hidden
         
         
-        #line 53 "..\..\..\apresentacao\Cadastro.xaml"
+        #line 62 "..\..\..\apresentacao\Cadastro.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label lbl_Email_Cad;
         
@@ -121,7 +73,7 @@ namespace trabalho.apresentacao {
         #line hidden
         
         
-        #line 54 "..\..\..\apresentacao\Cadastro.xaml"
+        #line 63 "..\..\..\apresentacao\Cadastro.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label lblGender_Cad;
         
@@ -129,7 +81,7 @@ namespace trabalho.apresentacao {
         #line hidden
         
         
-        #line 55 "..\..\..\apresentacao\Cadastro.xaml"
+        #line 64 "..\..\..\apresentacao\Cadastro.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label lblCidade_Cad;
         
@@ -137,7 +89,7 @@ namespace trabalho.apresentacao {
         #line hidden
         
         
-        #line 56 "..\..\..\apresentacao\Cadastro.xaml"
+        #line 65 "..\..\..\apresentacao\Cadastro.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label lblEstado_Cad;
         
@@ -145,7 +97,7 @@ namespace trabalho.apresentacao {
         #line hidden
         
         
-        #line 57 "..\..\..\apresentacao\Cadastro.xaml"
+        #line 66 "..\..\..\apresentacao\Cadastro.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label lblCel_Cad;
         
@@ -153,7 +105,7 @@ namespace trabalho.apresentacao {
         #line hidden
         
         
-        #line 58 "..\..\..\apresentacao\Cadastro.xaml"
+        #line 67 "..\..\..\apresentacao\Cadastro.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label lblPass_Cad;
         
@@ -161,7 +113,7 @@ namespace trabalho.apresentacao {
         #line hidden
         
         
-        #line 59 "..\..\..\apresentacao\Cadastro.xaml"
+        #line 68 "..\..\..\apresentacao\Cadastro.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label lbl_Confirm_Pass_Cad;
         
@@ -169,7 +121,7 @@ namespace trabalho.apresentacao {
         #line hidden
         
         
-        #line 61 "..\..\..\apresentacao\Cadastro.xaml"
+        #line 71 "..\..\..\apresentacao\Cadastro.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txt_Nome_Cad;
         
@@ -177,7 +129,7 @@ namespace trabalho.apresentacao {
         #line hidden
         
         
-        #line 62 "..\..\..\apresentacao\Cadastro.xaml"
+        #line 74 "..\..\..\apresentacao\Cadastro.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txt_User_Cad;
         
@@ -185,7 +137,7 @@ namespace trabalho.apresentacao {
         #line hidden
         
         
-        #line 63 "..\..\..\apresentacao\Cadastro.xaml"
+        #line 78 "..\..\..\apresentacao\Cadastro.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txt_Email_Cad;
         
@@ -193,7 +145,7 @@ namespace trabalho.apresentacao {
         #line hidden
         
         
-        #line 64 "..\..\..\apresentacao\Cadastro.xaml"
+        #line 82 "..\..\..\apresentacao\Cadastro.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txt_Cidade_Cad;
         
@@ -201,7 +153,7 @@ namespace trabalho.apresentacao {
         #line hidden
         
         
-        #line 65 "..\..\..\apresentacao\Cadastro.xaml"
+        #line 86 "..\..\..\apresentacao\Cadastro.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txt_DDD_Cad;
         
@@ -209,7 +161,7 @@ namespace trabalho.apresentacao {
         #line hidden
         
         
-        #line 66 "..\..\..\apresentacao\Cadastro.xaml"
+        #line 90 "..\..\..\apresentacao\Cadastro.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txt_Cel_Cad;
         
@@ -217,7 +169,7 @@ namespace trabalho.apresentacao {
         #line hidden
         
         
-        #line 67 "..\..\..\apresentacao\Cadastro.xaml"
+        #line 93 "..\..\..\apresentacao\Cadastro.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.PasswordBox txt_Pass_Cad;
         
@@ -225,7 +177,7 @@ namespace trabalho.apresentacao {
         #line hidden
         
         
-        #line 68 "..\..\..\apresentacao\Cadastro.xaml"
+        #line 96 "..\..\..\apresentacao\Cadastro.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.PasswordBox txt_Pass_Cad_Confirm;
         
@@ -233,23 +185,7 @@ namespace trabalho.apresentacao {
         #line hidden
         
         
-        #line 71 "..\..\..\apresentacao\Cadastro.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button btn_Cadastrar_Cad;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 72 "..\..\..\apresentacao\Cadastro.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button btn_Limpar_Cad;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 73 "..\..\..\apresentacao\Cadastro.xaml"
+        #line 102 "..\..\..\apresentacao\Cadastro.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox cb_Gender_Cad;
         
@@ -257,7 +193,7 @@ namespace trabalho.apresentacao {
         #line hidden
         
         
-        #line 83 "..\..\..\apresentacao\Cadastro.xaml"
+        #line 111 "..\..\..\apresentacao\Cadastro.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox cb_Estado_Cad;
         
@@ -265,25 +201,25 @@ namespace trabalho.apresentacao {
         #line hidden
         
         
-        #line 112 "..\..\..\apresentacao\Cadastro.xaml"
+        #line 131 "..\..\..\apresentacao\Cadastro.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button btn_Cadastrar_Cad;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 132 "..\..\..\apresentacao\Cadastro.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button btn_Limpar_Cad;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 133 "..\..\..\apresentacao\Cadastro.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btn_Voltar_Cad;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 113 "..\..\..\apresentacao\Cadastro.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBlock txt_gen;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 114 "..\..\..\apresentacao\Cadastro.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBlock txt_UF;
         
         #line default
         #line hidden
@@ -319,163 +255,93 @@ namespace trabalho.apresentacao {
             switch (connectionId)
             {
             case 1:
-            this.logo = ((System.Windows.Controls.Image)(target));
-            
-            #line 30 "..\..\..\apresentacao\Cadastro.xaml"
-            this.logo.MouseLeftButtonDown += new System.Windows.Input.MouseButtonEventHandler(this.logo_click);
-            
-            #line default
-            #line hidden
-            return;
-            case 2:
             this.menu = ((System.Windows.Controls.Menu)(target));
             return;
+            case 2:
+            
+            #line 53 "..\..\..\apresentacao\Cadastro.xaml"
+            ((System.Windows.Controls.ComboBoxItem)(target)).MouseLeftButtonDown += new System.Windows.Input.MouseButtonEventHandler(this.ComboBoxItem_MouseLeftButtonDown);
+            
+            #line default
+            #line hidden
+            return;
             case 3:
-            this.Romance = ((System.Windows.Controls.MenuItem)(target));
-            
-            #line 38 "..\..\..\apresentacao\Cadastro.xaml"
-            this.Romance.Click += new System.Windows.RoutedEventHandler(this.Romance_Click);
-            
-            #line default
-            #line hidden
-            return;
-            case 4:
-            this.Mangas = ((System.Windows.Controls.MenuItem)(target));
-            
-            #line 39 "..\..\..\apresentacao\Cadastro.xaml"
-            this.Mangas.Click += new System.Windows.RoutedEventHandler(this.Mangas_Click);
-            
-            #line default
-            #line hidden
-            return;
-            case 5:
-            this.Misterio = ((System.Windows.Controls.MenuItem)(target));
-            
-            #line 40 "..\..\..\apresentacao\Cadastro.xaml"
-            this.Misterio.Click += new System.Windows.RoutedEventHandler(this.Misterio_Click);
-            
-            #line default
-            #line hidden
-            return;
-            case 6:
-            this.Terror = ((System.Windows.Controls.MenuItem)(target));
-            
-            #line 41 "..\..\..\apresentacao\Cadastro.xaml"
-            this.Terror.Click += new System.Windows.RoutedEventHandler(this.Terror_Click);
-            
-            #line default
-            #line hidden
-            return;
-            case 7:
-            this.btn_perfil = ((System.Windows.Controls.Button)(target));
-            
-            #line 45 "..\..\..\apresentacao\Cadastro.xaml"
-            this.btn_perfil.Click += new System.Windows.RoutedEventHandler(this.btn_perfil_Click);
-            
-            #line default
-            #line hidden
-            return;
-            case 8:
             this.lblNome_Cad = ((System.Windows.Controls.Label)(target));
             return;
-            case 9:
+            case 4:
             this.lblUser_Cad = ((System.Windows.Controls.Label)(target));
             return;
-            case 10:
+            case 5:
             this.lbl_Email_Cad = ((System.Windows.Controls.Label)(target));
             return;
-            case 11:
+            case 6:
             this.lblGender_Cad = ((System.Windows.Controls.Label)(target));
             return;
-            case 12:
+            case 7:
             this.lblCidade_Cad = ((System.Windows.Controls.Label)(target));
             return;
-            case 13:
+            case 8:
             this.lblEstado_Cad = ((System.Windows.Controls.Label)(target));
             return;
-            case 14:
+            case 9:
             this.lblCel_Cad = ((System.Windows.Controls.Label)(target));
             return;
-            case 15:
+            case 10:
             this.lblPass_Cad = ((System.Windows.Controls.Label)(target));
             return;
-            case 16:
+            case 11:
             this.lbl_Confirm_Pass_Cad = ((System.Windows.Controls.Label)(target));
             return;
-            case 17:
+            case 12:
             this.txt_Nome_Cad = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 18:
+            case 13:
             this.txt_User_Cad = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 19:
+            case 14:
             this.txt_Email_Cad = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 20:
+            case 15:
             this.txt_Cidade_Cad = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 21:
+            case 16:
             this.txt_DDD_Cad = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 22:
+            case 17:
             this.txt_Cel_Cad = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 23:
+            case 18:
             this.txt_Pass_Cad = ((System.Windows.Controls.PasswordBox)(target));
             return;
-            case 24:
+            case 19:
             this.txt_Pass_Cad_Confirm = ((System.Windows.Controls.PasswordBox)(target));
             return;
-            case 25:
-            this.btn_Cadastrar_Cad = ((System.Windows.Controls.Button)(target));
-            
-            #line 71 "..\..\..\apresentacao\Cadastro.xaml"
-            this.btn_Cadastrar_Cad.Click += new System.Windows.RoutedEventHandler(this.btn_Cadastrar_Cad_Click);
-            
-            #line default
-            #line hidden
-            return;
-            case 26:
-            this.btn_Limpar_Cad = ((System.Windows.Controls.Button)(target));
-            
-            #line 72 "..\..\..\apresentacao\Cadastro.xaml"
-            this.btn_Limpar_Cad.Click += new System.Windows.RoutedEventHandler(this.btn_Limpar_Cad_Click);
-            
-            #line default
-            #line hidden
-            return;
-            case 27:
+            case 20:
             this.cb_Gender_Cad = ((System.Windows.Controls.ComboBox)(target));
             
-            #line 73 "..\..\..\apresentacao\Cadastro.xaml"
+            #line 102 "..\..\..\apresentacao\Cadastro.xaml"
             this.cb_Gender_Cad.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.cb_Gender_Cad_SelectionChanged);
             
             #line default
             #line hidden
             return;
-            case 28:
+            case 21:
             this.cb_Estado_Cad = ((System.Windows.Controls.ComboBox)(target));
             
-            #line 83 "..\..\..\apresentacao\Cadastro.xaml"
+            #line 111 "..\..\..\apresentacao\Cadastro.xaml"
             this.cb_Estado_Cad.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.cb_Estado_Cad_SelectionChanged);
             
             #line default
             #line hidden
             return;
-            case 29:
+            case 22:
+            this.btn_Cadastrar_Cad = ((System.Windows.Controls.Button)(target));
+            return;
+            case 23:
+            this.btn_Limpar_Cad = ((System.Windows.Controls.Button)(target));
+            return;
+            case 24:
             this.btn_Voltar_Cad = ((System.Windows.Controls.Button)(target));
-            
-            #line 112 "..\..\..\apresentacao\Cadastro.xaml"
-            this.btn_Voltar_Cad.Click += new System.Windows.RoutedEventHandler(this.btn_Voltar_Cad_Click);
-            
-            #line default
-            #line hidden
-            return;
-            case 30:
-            this.txt_gen = ((System.Windows.Controls.TextBlock)(target));
-            return;
-            case 31:
-            this.txt_UF = ((System.Windows.Controls.TextBlock)(target));
             return;
             }
             this._contentLoaded = true;
