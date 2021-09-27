@@ -4,6 +4,10 @@
     "\\trabalho",
     "\\trabalho\\apresentacao"
   ],
+<<<<<<< Updated upstream
   "SelectedNode": "\\trabalho.sln",
+=======
+  "SelectedNode": "\\trabalho\\apresentacao\\Inicio.xaml.cs",
+>>>>>>> Stashed changes
   "PreviewInSolutionExplorer": false
 }
