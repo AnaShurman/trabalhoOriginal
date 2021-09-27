@@ -50,12 +50,11 @@
 
         <Label x:Name="lblLivrosLidos" Content="Livros lidos:" Grid.Column="1" HorizontalAlignment="Left" Margin="324,80,0,0" Grid.Row="1" VerticalAlignment="Top" Height="38" Width="146" Foreground="White" FontWeight="Bold" FontSize="22"/>
 
-        <Button x:Name="btn_Meus_Livros" Content="Meus livros" Grid.Column="1" HorizontalAlignment="Left" Margin="698,38,0,0" Grid.Row="2" VerticalAlignment="Top" Width="181" RenderTransformOrigin="0.494,2.85" Height="50" FontSize="20"/>
+        <Button x:Name="btn_Meus_Livros" Content="Meus livros" Grid.Column="1" HorizontalAlignment="Left" Margin="698,38,0,0" Grid.Row="2" VerticalAlignment="Top" Width="181" RenderTransformOrigin="0.494,2.85" Height="50" FontSize="20" Click="btn_Meus_Livros_Click"/>
         <Button x:Name="btn_Cadastrar_Livro" Content="Cadastrar livro" Grid.Column="1" HorizontalAlignment="Left" Margin="698,97,0,0" Grid.Row="2" VerticalAlignment="Top" Width="181" Height="50" FontSize="20" Click="btn_Cadastrar_Livro_Click"/>
         <Image x:Name="img_Usuario" Grid.Column="1" HorizontalAlignment="Left" Height="206" Margin="682,38,0,0" Grid.Row="1" VerticalAlignment="Top" Width="206"/>
-        <Label Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Label x:Name="lblEndereco" Content="&lt;Endereço&gt;" Grid.Column="1" HorizontalAlignment="Left" Margin="324,61,0,0" Grid.Row="2" VerticalAlignment="Top" Width="242" Height="85" FontSize="20" Foreground="White"/>
-        <TextBlock x:Name="lblNumLivros" Grid.Column="1" HorizontalAlignment="Left" Margin="386,197,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="lblNumLivros" Grid.Column="1" HorizontalAlignment="Left" Margin="386,197,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FFDC3535" Height="19" Width="172"/>
+        <Button x:Name="btn_add_livro_lido" Content="Adicionar livro lido" Grid.Column="1" HorizontalAlignment="Left" Margin="497.2,93,0,0" Grid.Row="1" VerticalAlignment="Top" Width="128" Click="btn_add_livro_lido_Click"/>
 
     </Grid>
 </Window>

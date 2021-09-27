@@ -19,15 +19,23 @@ namespace trabalho.apresentacao
     /// </summary>
     public partial class Biografia : Window
     {
+
+        int idRecebido = 0;
+
+        public Biografia(int idEnviado)
+        {
+            idRecebido = idEnviado;
+            InitializeComponent();
+        }
         public Biografia()
         {
             InitializeComponent();
         }
         private void btn_perfil_Click(object sender, RoutedEventArgs e)
         {
-            /* perfil perfil = new perfil();          -ENCAMINHAR PARA O PERFIL DO USUARIO 
-               perfil.Show();                        
-               this.Close();*/
+            Perfil perfil = new Perfil();
+            perfil.Show();
+            this.Close();
         }
 
         private void Romance_Click(object sender, RoutedEventArgs e)

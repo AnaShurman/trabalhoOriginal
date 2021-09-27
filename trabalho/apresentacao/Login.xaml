@@ -56,7 +56,7 @@
         <Label x:Name="lblUser_Log" Content="Nome de usuário ou email:" Grid.Column="1" HorizontalAlignment="Left" Margin="442,108,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="265" Foreground="White" FontWeight="Bold"/>
         <Label x:Name="lblPass_Log" Content="Senha:" Grid.Column="1" HorizontalAlignment="Left" Margin="442,166,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="120" Foreground="White" FontWeight="Bold"/>
         <TextBox x:Name="txt_User_Log" Grid.Column="1" Style="{StaticResource Estilo_Placeholder}" Tag="Digite email ou username..." HorizontalAlignment="Left" Margin="442,138,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="150" RenderTransformOrigin="0.5,0.5"/>
-        <PasswordBox x:Name="txt_Pass_Log" Style="{StaticResource Estilo_Placeholder_P}" Tag="Digite uma senha..." MinHeight="8" Grid.Column="1" HorizontalAlignment="Left" Margin="442,196,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="150"/>
+        <PasswordBox x:Name="txt_Pass_Log" MinHeight="8" Grid.Column="1" HorizontalAlignment="Left" Margin="442,196,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="150"/>
 
         <Button x:Name="btn_Cadastrar_Log" Content="Cadastrar" Grid.Column="1" HorizontalAlignment="Left" Margin="471,35,0,0" Grid.Row="2" VerticalAlignment="Top" Width="80" Click="btn_Cadastrar_Log_Click"/>
         <Button x:Name="btn_Voltar_Log" Content="Voltar" Grid.Column="1" HorizontalAlignment="Left" Margin="515,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="80" Click="btn_Voltar_Log_Click"/>

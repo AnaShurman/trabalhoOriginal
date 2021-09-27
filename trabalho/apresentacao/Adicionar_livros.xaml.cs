@@ -29,8 +29,13 @@ namespace trabalho.apresentacao
         MySqlCommand cmd = new MySqlCommand();
         Conexao con = new Conexao();
         string imageName;
+        int idRecebido = 0;
 
-
+        public Adicionar_livros(int idEnviado)
+        {
+            idRecebido = idEnviado;
+            InitializeComponent();
+        }
 
         public Adicionar_livros()
         {
@@ -47,11 +52,13 @@ namespace trabalho.apresentacao
             fs.Close();
 
             //Comandos para inserir livros
-            cmd.CommandText = "INSERT INTO livros (nome_livro, cat_livro, edicao_livro, foto) VALUES(@nome_livro, @cat_livro, @ano_livro, @foto)";
+            cmd.CommandText = "INSERT INTO livros (nome_livro, cat_livro, edicao_livro, foto, id_user) VALUES(@nome_livro, @cat_livro, @ano_livro, @foto, @id_user)";
             cmd.Parameters.AddWithValue("@nome_livro", txt_nome_livro.Text);
             cmd.Parameters.AddWithValue("@cat_livro", txt_cat_livro.Text);
             cmd.Parameters.AddWithValue("@ano_livro", txt_data_livro.Text);
             cmd.Parameters.AddWithValue("@foto", data);
+            cmd.Parameters.AddWithValue("@id_user", idRecebido);
+
 
             try
             {

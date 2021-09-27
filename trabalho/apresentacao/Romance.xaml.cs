@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using trabalho.dal;
+using trabalho.modelo;
 
 namespace trabalho.apresentacao
 {
@@ -19,15 +22,59 @@ namespace trabalho.apresentacao
     /// </summary>
     public partial class Romance : Window
     {
+        public bool tem = false;
+        public String mensagem = "";//Se estiver vazio esta certo
+        MySqlCommand cmd = new MySqlCommand();
+        Conexao con = new Conexao();
+        MySqlDataReader dr;
+        int idRecebido = 0;
+
+        public Romance(int idEnviado)
+        {
+            idRecebido = idEnviado;
+            InitializeComponent();
+        }
         public Romance()
         {
             InitializeComponent();
         }
+
+        private void selectFiltro()
+        {
+            //Comandos para inserir livros
+            cmd.CommandText = "";
+            cmd.Parameters.AddWithValue("@city", MySqlDbType.Int32).Value = txtPesquisa.Text;
+            try
+            {
+                cmd.Connection = con.conectar();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                teste1.Content = dr.GetValue(0);
+                teste.Text = dr.GetString(2);
+                con.desconectar();
+                mensagem = "Chegou aqui!";
+                tem = true;
+            }
+            catch (MySqlException)
+            {
+                this.mensagem = "Erro com o Database!";
+            }
+
+            if (tem)
+            {
+                MessageBox.Show(mensagem, "Chegou aqui 2", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show(mensagem);
+            }
+        }
+
         private void btn_perfil_Click(object sender, RoutedEventArgs e)
         {
-            /* perfil perfil = new perfil();          -ENCAMINHAR PARA O PERFIL DO USUARIO 
-               perfil.Show();                        
-               this.Close();*/
+            Perfil perfil = new Perfil();
+            perfil.Show();
+            Close(); 
         }
 
         private void Romance_Click(object sender, RoutedEventArgs e)
@@ -59,27 +106,6 @@ namespace trabalho.apresentacao
             this.Close();
         }
 
-
-        private void hortolandia_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void americana_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void sumare_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void campinas_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -87,15 +113,20 @@ namespace trabalho.apresentacao
 
         private void logo_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-        Inicio inicio = new Inicio();
-        inicio.Show();
-        this.Close();
+            Inicio inicio = new Inicio();
+            inicio.Show();
+            this.Close();
         }
 
         private void btn_antesDeVc_Click(object sender, RoutedEventArgs e)
         {
             formLivro form = new formLivro();
             form.Show();
+        }
+
+        private void btn_pesquisa_Click(object sender, RoutedEventArgs e)
+        {
+            selectFiltro();
         }
     }
 }

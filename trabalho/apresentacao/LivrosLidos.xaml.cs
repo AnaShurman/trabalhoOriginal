@@ -16,43 +16,45 @@ using trabalho.modelo;
 namespace trabalho.apresentacao
 {
     /// <summary>
-    /// Lógica interna para Login.xaml
+    /// Lógica interna para LivrosLidos.xaml
     /// </summary>
-    public partial class Login : Window
+    public partial class LivrosLidos : Window
     {
-        public Login()
+        int pages_tot = 0;
+        int idRecebido = 0;
+
+        public LivrosLidos(int page, int idEnviado)
+        {
+            pages_tot = page;
+            idRecebido = idEnviado;
+            InitializeComponent();
+        }
+
+        public LivrosLidos()
         {
             InitializeComponent();
         }
 
-        private void logo_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            Inicio inicio = new Inicio();
-            inicio.Show();
-            this.Close();
-        }
 
-        private void btn_Login_Log_Click(object sender, RoutedEventArgs e)
+
+        private void btn_add_livro_lido_Click(object sender, RoutedEventArgs e)
         {
             Controle controle = new Controle();
-            controle.acessar(txt_User_Log.Text, txt_User_Log.Text, txt_Pass_Log.Password);
 
             if (controle.mensagem.Equals(""))
             {
+                pages_tot += Convert.ToInt32(txt_numero_paginas.Text);
+
+                String mensagem = controle.cadastrarLivroL(txt_nome_livro_lido.Text, txt_numero_paginas.Text, pages_tot, Convert.ToString(idRecebido));
                 if (controle.tem)
                 {
-                    MessageBox.Show("Logado com sucesso!", "Entrando!", MessageBoxButton.OK, MessageBoxImage.Information);
-
-                    Inicio inicio = new Inicio(controle.acessarID(txt_User_Log.Text, txt_User_Log.Text));
-                    inicio.Show();
-                    Close();
-
-
+                    MessageBox.Show(mensagem, "Cadastro de livros lidos", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Login não encontrado! Verifique username e senha", "ERRO!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show(controle.mensagem);
                 }
+
             }
             else
             {
@@ -60,14 +62,7 @@ namespace trabalho.apresentacao
             }
         }
 
-        private void btn_Cadastrar_Log_Click(object sender, RoutedEventArgs e)
-        {
-            Cadastro cadastro = new Cadastro();
-            cadastro.Show();
-            Close();
-        }
-
-        private void btn_Voltar_Log_Click(object sender, RoutedEventArgs e)
+        private void logo_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             Inicio inicio = new Inicio();
             inicio.Show();
@@ -94,17 +89,11 @@ namespace trabalho.apresentacao
 
         }
 
-        private void logo_click(object sender, MouseButtonEventArgs e)
-        {
-            Inicio inicio = new Inicio();
-            inicio.Show();
-            Close();
-
-        }
-
         private void btn_perfil_Click(object sender, RoutedEventArgs e)
         {
-
+            Perfil perfil = new Perfil();
+            perfil.Show();
+            Close();
         }
     }
 }

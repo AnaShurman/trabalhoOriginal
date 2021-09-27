@@ -61,11 +61,15 @@
         <Label x:Name="lbl_data_livro" Content="Ano de lançamento:" Grid.Column="1" HorizontalAlignment="Left" Margin="223,190,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
 
         <TextBox x:Name="txt_nome_livro" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="368,130,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txt_cat_livro" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="368,160,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="txt_cat_livro" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="368,160,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem>Mangás</ComboBoxItem>
+            <ComboBoxItem>Misterio</ComboBoxItem>
+            <ComboBoxItem>Romance</ComboBoxItem>
+            <ComboBoxItem>Terror</ComboBoxItem>
+        </ComboBox>
         <TextBox x:Name="txt_data_livro" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="368,190,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-
         <Button x:Name="btn_salvar_livro" Content="Salvar livro" Grid.Column="1" HorizontalAlignment="Left" Margin="503,440,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btn_salvar_livro_Click"/>
-        <Image x:Name="imagebox" Grid.Column="1" HorizontalAlignment="Left" Height="280" Margin="621,130,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200"/>
+        <Image x:Name="imagebox" Grid.Column="1" HorizontalAlignment="Left" Height="371" Margin="620.8,88.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="329"/>
         <Button x:Name="btn_add_img" Content="Adicionar imagem" Grid.Column="1" HorizontalAlignment="Left" Margin="368,234,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.947,0.55" Height="20" Click="btn_add_img_Click"/>
 
 

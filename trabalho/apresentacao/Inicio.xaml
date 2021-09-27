@@ -56,6 +56,7 @@
 
         <Image Name="populares" Grid.Column="1" HorizontalAlignment="Left" Height="382" Margin="124,117,0,0" Grid.Row="1" VerticalAlignment="Top" Width="350" Source="../imagens/1.jpg"  />
         <Button x:Name="btn_cad_ini" Content="Cadastro" Grid.Column="1" HorizontalAlignment="Left" Margin="409,36,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Background="{x:Null}" BorderBrush="#FF231E1E" Foreground="White" FontWeight="Bold" Click="btn_cad_ini_Click_1"/>
+        <Button x:Name="btn_login_ini" Content="login" Grid.Column="1" HorizontalAlignment="Left" Margin="341.8,35.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btn_login_ini_Click"/>
 
     </Grid>
 </Window>
