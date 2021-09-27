@@ -19,15 +19,23 @@ namespace trabalho.apresentacao
     /// </summary>
     public partial class Misterio : Window
     {
+
+        int idRecebido = 0;
+
+        public Misterio(int idEnviado)
+        {
+            idRecebido = idEnviado;
+            InitializeComponent();
+        }
         public Misterio()
         {
             InitializeComponent();
         }
         private void btn_perfil_Click(object sender, RoutedEventArgs e)
         {
-            /* perfil perfil = new perfil();          -ENCAMINHAR PARA O PERFIL DO USUARIO 
+               Perfil perfil = new Perfil();
                perfil.Show();                        
-               this.Close();*/
+               this.Close();
         }
 
         private void Romance_Click(object sender, RoutedEventArgs e)

@@ -20,11 +20,17 @@ namespace trabalho.apresentacao
     public partial class Inicio : Window
     {
         int i = 1;
-        public Inicio()
+        int idRecebido = 0;
+        public Inicio(int idEnviado)
         {
+            idRecebido = idEnviado;
+            //MessageBox.Show(idRecebido.ToString());
             InitializeComponent();
         }
-
+        public Inicio()
+        {   
+            InitializeComponent();
+        }
         private void logo_Click(object sender, MouseButtonEventArgs e)
         {
             Inicio Inicio = new Inicio();
@@ -68,6 +74,8 @@ namespace trabalho.apresentacao
                 i = 6;
             }
             populares.Source = new BitmapImage(new Uri(@"../imagens/" + i + ".jpg", UriKind.Relative));
+           
+
 
         }
 
@@ -84,42 +92,42 @@ namespace trabalho.apresentacao
 
         private void btn_Biografia_Click(object sender, RoutedEventArgs e)
         {
-            Biografia Biografia = new Biografia();
+            Biografia Biografia = new Biografia(idRecebido);
             Biografia.Show();
             Close();
         }
 
         private void btn_Misterio_Click(object sender, RoutedEventArgs e)
         {
-            Misterio Misterio = new Misterio();
+            Misterio Misterio = new Misterio(idRecebido);
             Misterio.Show();
             Close();
         }
 
         private void btn_Mangas_Click(object sender, RoutedEventArgs e)
         {
-            Mangas Mangas = new Mangas();
+            Mangas Mangas = new Mangas(idRecebido);
             Mangas.Show();
             Close();
         }
 
         private void btn_Terror_Click(object sender, RoutedEventArgs e)
         {
-            Terror Terror = new Terror();
+            Terror Terror = new Terror(idRecebido);
             Terror.Show();
             Close();
         }
 
         private void btn_Romance_Click(object sender, RoutedEventArgs e)
         {
-            Romance Romance = new Romance();
+            Romance Romance = new Romance(idRecebido);
             Romance.Show();
             Close();
         }
 
         private void btn_perfil_Click(object sender, RoutedEventArgs e)
         {
-            Perfil perfil = new Perfil();
+            Perfil perfil = new Perfil(idRecebido);
             perfil.Show();
             Close();
         }
@@ -141,9 +149,10 @@ namespace trabalho.apresentacao
 
         private void add_Click(object sender, RoutedEventArgs e)
         {
-            Adicionar_livros add = new Adicionar_livros();
+            Adicionar_livros add = new Adicionar_livros(idRecebido);
             add.Show();
             Close();
         }
+  
     }
 }

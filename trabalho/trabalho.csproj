@@ -124,6 +124,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="apresentacao\LivrosLidos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="apresentacao\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -155,6 +159,9 @@
     </Compile>
     <Compile Include="apresentacao\Inicio.xaml.cs">
       <DependentUpon>Inicio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="apresentacao\LivrosLidos.xaml.cs">
+      <DependentUpon>LivrosLidos.xaml</DependentUpon>
     </Compile>
     <Compile Include="apresentacao\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>

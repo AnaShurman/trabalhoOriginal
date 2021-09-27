@@ -63,9 +63,9 @@ namespace trabalho.apresentacao
 
         private void btn_perfil_Click(object sender, RoutedEventArgs e)
         {
-            /* Perfil perfil = new Perfil();
+             Perfil perfil = new Perfil();
              perfil.Show();
-             Close();*/
+             Close();
         }
 
 
@@ -90,7 +90,7 @@ namespace trabalho.apresentacao
                 }
                 else
                 {
-                    String mensagem = controle.cadastrar(txt_User_Cad.Text, txt_Pass_Cad.Password, txt_Nome_Cad.Text, cb_Gender_Cad.Text, txt_Cidade_Cad.Text, cb_Estado_Cad.Text, txt_DDD_Cad.Text, txt_Cel_Cad.Text, txt_Email_Cad.Text, txt_Pass_Cad_Confirm.Password);
+                    String mensagem = controle.cadastrar(txt_User_Cad.Text, txt_Pass_Cad.Text, txt_Nome_Cad.Text, cb_Gender_Cad.Text, txt_Cidade_Cad.Text, cb_Estado_Cad.Text, txt_DDD_Cad.Text, txt_Cel_Cad.Text, txt_Email_Cad.Text, txt_Pass_Cad_Confirm.Text);
                     if (controle.tem)
                     {
                         MessageBox.Show(mensagem, "Cadastro", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -141,5 +141,17 @@ namespace trabalho.apresentacao
         {
             txt_gen.Visibility = Visibility.Hidden;
         }
+
+        private void check_pass_Checked(object sender, RoutedEventArgs e)
+        {
+            if ((bool)!check_pass.IsChecked)
+            {
+                txt_Pass_Cad.Text = "*****";
+            }
+            
+
+           
+        }
+
     }
 }
