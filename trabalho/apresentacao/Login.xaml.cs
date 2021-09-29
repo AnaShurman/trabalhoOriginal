@@ -104,7 +104,9 @@ namespace trabalho.apresentacao
 
         private void btn_perfil_Click(object sender, RoutedEventArgs e)
         {
-
+            Perfil perfil = new Perfil();
+            perfil.Show();
+            Close();
         }
     }
 }
