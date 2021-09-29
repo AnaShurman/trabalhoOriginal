@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:trabalho.apresentacao"
         mc:Ignorable="d"
-      Title="Cadastro" Height="680" Width="1370" WindowState="Maximized" OpacityMask="Black" Icon="logogrande1.png" Background="#FF1D0E4D">
+      Title="Cadastro" Height="680" Width="1370" WindowState="Maximized" OpacityMask="Black" Icon="/trabalho;component/imagens/logogrande1.png" Background="#FF1D0E4D">
 
 
     <Grid Margin="10,6,0,5">
@@ -23,7 +23,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/trabalho;component/imagens/background1.jpg"/>
         </Grid.Background>
-        <Image x:Name="logo" HorizontalAlignment="Center" VerticalAlignment="Center" MaxHeight="120" Source="logogrande1.png" Grid.Row="0"  Grid.Column="0" Height="97" Width="126" MouseLeftButtonDown="logo_Click">
+        <Image x:Name="logo" HorizontalAlignment="Center" VerticalAlignment="Center" MaxHeight="120" Source="/trabalho;component/imagens/logogrande1.png" Grid.Row="0"  Grid.Column="0" Height="97" Width="126" MouseLeftButtonDown="logo_Click">
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>
@@ -42,7 +42,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Rectangle Grid.Column="1" Grid.Row="1" Fill="#FF1B1B1B" HorizontalAlignment="Center" Height="492"  RadiusY="8" RadiusX="8" Stroke="Black" VerticalAlignment="Top" Width="758" Opacity="0.835" Margin="94.2,0.2,37.4,0" Grid.RowSpan="2" />
+        <Rectangle Grid.Column="1" Grid.Row="1" Fill="#FF1B1B1B" HorizontalAlignment="Center" Height="492"  RadiusY="8" RadiusX="8" Stroke="Black" VerticalAlignment="Top" Width="758" Opacity="0.37" Margin="94.2,0.2,37.4,0" Grid.RowSpan="2" />
 
         <Label x:Name="lblNome_Cad" Content="Nome completo:" Grid.Column="1" HorizontalAlignment="Left" Margin="307.2,17.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
         <Label x:Name="lblUser_Cad" Content="Nome de usuário:" Grid.Column="1" HorizontalAlignment="Left" Margin="307.2,57.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
@@ -111,20 +111,20 @@
                 <ComboBoxItem Content="TO"/>
             </ComboBox>
         </Border>
-        <Image Grid.Column="2" HorizontalAlignment="Left" Height="152" Margin="160.6,-43,-53.4,0" VerticalAlignment="Top" Width="180" Source="Sem título (3).png" Stretch="UniformToFill" Grid.RowSpan="2">
+        <Image Grid.Column="2" HorizontalAlignment="Left" Height="152" Margin="160.6,-43,-53.4,0" VerticalAlignment="Top" Width="180" Source="/trabalho;component/imagens/Sem título (3).png" Stretch="UniformToFill" Grid.RowSpan="2">
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>
             <Image.OpacityMask>
-                <ImageBrush ImageSource="Sem título (3).png" Stretch="UniformToFill"/>
+                <ImageBrush ImageSource="/trabalho;component/imagens/Sem título (3).png" Stretch="UniformToFill"/>
             </Image.OpacityMask>
         </Image>
-        <Image Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Height="141"  VerticalAlignment="Top" Width="286" Source="cadastro.png" Stretch="UniformToFill" Margin="332.2,-32,271.4,0" Grid.RowSpan="2" >
+        <Image Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Height="141"  VerticalAlignment="Top" Width="286" Source="/trabalho;component/imagens/cadastro.png" Stretch="UniformToFill" Margin="332.2,-32,271.4,0" Grid.RowSpan="2" >
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>
             <Image.OpacityMask>
-                <ImageBrush ImageSource="cadastro.png" Stretch="UniformToFill">
+                <ImageBrush ImageSource="/trabalho;component/imagens/cadastro.png" Stretch="UniformToFill">
                     <ImageBrush.RelativeTransform>
                         <TransformGroup>
                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -145,7 +145,7 @@
                 <MenuItem Header="Mangas"/>
             </MenuItem>
         </Menu>
-        <Image HorizontalAlignment="Left" Height="55" Margin="0,104.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="79" Source="categoria.png" RenderTransformOrigin="-0.532,0.52"/>
+        <Image HorizontalAlignment="Left" Height="55" Margin="0,104.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="79" Source="/trabalho;component/imagens/categoria.png" RenderTransformOrigin="-0.532,0.52"/>
 
 
 

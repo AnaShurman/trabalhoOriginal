@@ -51,13 +51,13 @@
             </MenuItem>
         </Menu>
 
-        <Button x:Name="btn_cad_ini" Content="Cadastro" Click="btn_cad_ini_Click" VerticalAlignment="Center" Width="101"  Grid.Column="2" FontFamily="Simplicity" FontSize="18" Background="White" Foreground="Black" Margin="94.8,61,-1.4,60.6"  />
-        <Button x:Name="btn_login_ini" Content="Login" HorizontalAlignment="Center" VerticalAlignment="Center" Width="70" Click="btn_login_ini_Click"  Grid.Column="2" FontFamily="Simplicity" FontSize="18" Foreground="Black" Background="White" Margin="22.8,61,101.6,60.6"/>
+        <Button x:Name="btn_cad_ini" Content="Cadastro" Click="btn_cad_ini_Click" VerticalAlignment="Center" Width="101"  Grid.Column="2" FontFamily="Book Antiqua" FontSize="18" Background="White" Foreground="Black" Margin="94.8,61,-1.4,60.6" FontWeight="Bold"  />
+        <Button x:Name="btn_login_ini" Content="Login" HorizontalAlignment="Center" VerticalAlignment="Center" Width="102" Click="btn_login_ini_Click"  Grid.Column="1" FontFamily="Book Antiqua" FontSize="16" Foreground="Black" Background="White" Margin="957,60,102.6,61.6" FontWeight="Bold" Grid.ColumnSpan="2"/>
 
 
-        <Image HorizontalAlignment="Left" Height="247" Grid.Row="1"  Grid.Column="1" VerticalAlignment="Center" Width="322" Source="/trabalho;component/imagens/bdd1d5e226cd486257900a950fc001e8.png" Stretch="UniformToFill"  Margin="4,63.4,0,175.2"/>
-        <Image Grid.Column="1" HorizontalAlignment="Center" Height="247" Grid.Row="1" VerticalAlignment="Center" Width="275" Source="/trabalho;component/imagens/bdd1d5e226cd486257900a950fc001e8.png" Stretch="UniformToFill" Margin="318,63.4,374.2,175.2"/>
-        <Image Grid.Column="1" HorizontalAlignment="Right" Height="247" Grid.Row="1" VerticalAlignment="Center" Width="260" Source="/trabalho;component/imagens/bdd1d5e226cd486257900a950fc001e8.png" Stretch="UniformToFill" Margin="0,65.4,99.2,173.2"/>
+        <Image HorizontalAlignment="Left" Height="247" Grid.Row="1"  Grid.Column="1" VerticalAlignment="Center" Width="322" Source="/trabalho;component/imagens/margem.png" Stretch="UniformToFill"  Margin="4,63.4,0,175.2"/>
+        <Image Grid.Column="1" HorizontalAlignment="Center" Height="247" Grid.Row="1" VerticalAlignment="Center" Width="275" Source="/trabalho;component/imagens/margem.png" Stretch="UniformToFill" Margin="318,63.4,374.2,175.2"/>
+        <Image Grid.Column="1" HorizontalAlignment="Right" Height="247" Grid.Row="1" VerticalAlignment="Center" Width="260" Source="/trabalho;component/imagens/margem.png" Stretch="UniformToFill" Margin="0,65.4,99.2,173.2"/>
 
         <Image Grid.Row="1" Source="/trabalho;component/imagens/1.jpg" Stretch="UniformToFill" Grid.Column="1" Height="184" VerticalAlignment="Center" Margin="83,85.4,719.2,216.2" />
         <Image Grid.Column="1" Grid.Row="1"  Height="184" Width="167"  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="397,85.4,403.2,216.2" Source="/trabalho;component/imagens/2.jpg" Stretch="UniformToFill"/>
