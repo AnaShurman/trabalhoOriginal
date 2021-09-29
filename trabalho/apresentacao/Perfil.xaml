@@ -7,55 +7,45 @@
         mc:Ignorable="d"
         Title="Perfil" Height="680" Width="1370" WindowState="Maximized" OpacityMask="Black">
     <Window.Background>
-        <ImageBrush ImageSource="../imagens/stars.jpg"/>
+        <ImageBrush ImageSource="/trabalho;component/imagens/background1.jpg"/>
     </Window.Background>
+
     <Grid Margin="10,6,0,5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="97*"/>
+            <RowDefinition Height="489*"/>
+            <RowDefinition Height="54*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="211*"></ColumnDefinition>
-            <ColumnDefinition Width="1058"></ColumnDefinition>
-            <ColumnDefinition Width="93*"></ColumnDefinition>
+            <ColumnDefinition Width="186*"/>
+            <ColumnDefinition Width="Auto" MinWidth="880"/>
+            <ColumnDefinition Width="287*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="120*"/>
-            <RowDefinition Height="120*"/>
-            <RowDefinition Height="50"/>
-        </Grid.RowDefinitions>
 
-        <Rectangle Grid.Column="1" HorizontalAlignment="Left" Height="485" Stroke="Black" VerticalAlignment="Top" Width="666" Fill="#FF1B1B1B" RadiusX="8" RadiusY="8" Grid.Row="1" Opacity="0.68" Grid.RowSpan="2" Margin="267,1,0,0"/>
 
-        <Image x:Name="logo" Grid.Row="0" Source="../imagens/logo.png" MouseLeftButtonDown="logo_click"  Stretch="UniformToFill"  IsEnabled="False"  Height="104"  HorizontalAlignment="Left" Width="225"   VerticalAlignment="Top" Margin="-18,-22,0,0" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleY="-0.547"/>
-                    <RotateTransform/>
-                    <TranslateTransform Y="-1.006"/>
-                </TransformGroup>
-            </Image.RenderTransform>
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="../imagens/logo.png" TileMode="None" Stretch="None"/>
-            </Image.OpacityMask>
-        </Image>
+        <Rectangle HorizontalAlignment="Center" Height="485" Stroke="Black" VerticalAlignment="Top" Width="666" Fill="#FF1A1A1A" RadiusX="8" RadiusY="8" Opacity="0.37"  Grid.Column="1" Grid.Row="1" Margin="110.8,0.2,111.2,0"/>
 
-        <Menu x:Name="menu" HorizontalAlignment="Left" Grid.Row="1" Background="#FF1B1B1B" Width="204" Opacity="0.85" Grid.RowSpan="2">
-            <MenuItem Header="Categorias"  Background="#FF323232" Foreground="White"  Width="220" Margin="0,87,0,0" FontFamily="Haettenschweiler" FontSize="22" >
-                <MenuItem x:Name="Romance" Header="Romance" Click="Romance_Click"  Foreground="#FFFFF6F6" Background="#FF171819"/>
-                <MenuItem x:Name="Mangas" Header="Mangás" Background="#FF323232" Click="Mangas_Click"  Foreground="White"/>
-                <MenuItem x:Name="Misterio" Header="Misterio" Background="#FF323232" Click="Misterio_Click"  Foreground="White"/>
-                <MenuItem x:Name="Terror" Header="Terror" Background="#FF323232"  Click="Terror_Click" Foreground="White"/>
+        <Label x:Name="lblLivrosLidos" Content="Livros lidos:" Grid.Column="1" HorizontalAlignment="Left" Margin="224.8,73.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="38" Width="146" Foreground="White" FontWeight="Bold" FontSize="22"/>
+
+        <Button x:Name="btn_Meus_Livros" Content="Meus livros" Grid.Column="1" HorizontalAlignment="Left" Margin="580.8,58.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="181" RenderTransformOrigin="0.494,2.85" Height="50" FontSize="20" Click="btn_Meus_Livros_Click"/>
+        <Button x:Name="btn_Cadastrar_Livro" Content="Cadastrar livro" Grid.Column="1" HorizontalAlignment="Left" Margin="580.8,118.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="181" Height="50" FontSize="20" Click="btn_Cadastrar_Livro_Click"/>
+        <Button x:Name="btn_add_livro_lido" Content="Adicionar livro lido" Grid.Column="1" HorizontalAlignment="Left" Margin="323.8,175.4,0,-153.8" Grid.Row="2" VerticalAlignment="Top" Width="146" Click="btn_add_livro_lido_Click"/>
+        <ListBox Loaded="lbLivros_Loaded" x:Name="lbLivros" Grid.Column="1" HorizontalAlignment="Left" Height="243" Margin="224.8,141.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="146" Background="White" Foreground="#FFFDFDFD"/>
+        <TextBox x:Name="txtPageTotal" Loaded="txtPageTotal_Loaded"  Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="407.8,141.2,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="116" Foreground="White"/>
+        <Label Content="Páginas" Grid.Column="1" HorizontalAlignment="Left" Margin="407.8,72.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="116" Foreground="White" FontWeight="Bold" FontSize="22" Height="37"/>
+        <Menu x:Name="menu" HorizontalAlignment="Left" Background="{x:Null}" Width="132" Opacity="0.85" Margin="55,90.2,0,112.6" Grid.Row="1" Padding="0" Grid.ColumnSpan="2" >
+            <MenuItem Background="{x:Null}" Foreground="White" FontWeight="Bold" FontSize="27" FontFamily="Simplicity" Header="Meu Perfil" Width="147" Height="37" Padding="16,0,-80,0"/>
+            <MenuItem Header="Categorias"  Background="{x:Null}" Foreground="White"  Width="153" FontFamily="Simplicity" FontSize="27" FontWeight="Bold" Height="31" Padding="16,0,-86,0" Margin="0,32,0,0" BorderThickness="0" >
+
+                <MenuItem x:Name="Romance" Header="Romance" Background="#FF323232" Foreground="#FFFFF6F6" Click="Romance_Click"/>
+                <MenuItem x:Name="Mangas" Header="Mangás" Background="#FF323232" Foreground="White" Click="Mangas_Click"/>
+                <MenuItem x:Name="Misterio" Header="Misterio" Background="#FF323232" Foreground="White" Click="Misterio_Click"/>
+                <MenuItem x:Name="Terror" Header="Terror" Background="#FF323232" Foreground="White" Click="Terror_Click"/>
             </MenuItem>
         </Menu>
-
-        <Label x:Name="lblLivrosLidos" Content="Livros lidos:" Grid.Column="1" HorizontalAlignment="Left" Margin="324,55,0,0" Grid.Row="1" VerticalAlignment="Top" Height="38" Width="146" Foreground="White" FontWeight="Bold" FontSize="22"/>
-
-        <Button x:Name="btn_Meus_Livros" Content="Meus livros" Grid.Column="1" HorizontalAlignment="Left" Margin="752,24,0,0" Grid.Row="1" VerticalAlignment="Top" Width="181" RenderTransformOrigin="0.494,2.85" Height="50" FontSize="20" Click="btn_Meus_Livros_Click"/>
-        <Button x:Name="btn_Cadastrar_Livro" Content="Cadastrar livro" Grid.Column="1" HorizontalAlignment="Left" Margin="752,84,0,0" Grid.Row="1" VerticalAlignment="Top" Width="181" Height="50" FontSize="20" Click="btn_Cadastrar_Livro_Click"/>
-        <Button x:Name="btn_add_livro_lido" Content="Adicionar livro lido" Grid.Column="1" HorizontalAlignment="Left" Margin="324,175,0,0" Grid.Row="2" VerticalAlignment="Top" Width="146" Click="btn_add_livro_lido_Click"/>
-        <ListBox Loaded="lbLivros_Loaded" x:Name="lbLivros" Grid.Column="1" HorizontalAlignment="Left" Height="243" Margin="324,123,0,0" Grid.Row="1" VerticalAlignment="Top" Width="146" Grid.RowSpan="2" Background="{x:Null}" Foreground="#FFFDFDFD"/>
-        <TextBox x:Name="txtPageTotal" Loaded="txtPageTotal_Loaded"  Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="507,123,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="116"/>
-        <Label Content="Páginas" Grid.Column="1" HorizontalAlignment="Left" Margin="507,54,0,0" Grid.Row="1" VerticalAlignment="Top" Width="116" Foreground="White" FontWeight="Bold" FontSize="22"/>
+        <Image Source="/trabalho;component/imagens/perfil.png" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Height="75" Width="72" Margin="0,72.2,0,0"  />
+        <Image HorizontalAlignment="Left" Height="55" Margin="8,152.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="79" Source="/trabalho;component/imagens/categoria.png" RenderTransformOrigin="-0.532,0.52"/>
 
     </Grid>
 </Window>
