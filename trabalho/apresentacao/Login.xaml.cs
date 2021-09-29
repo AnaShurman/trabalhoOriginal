@@ -71,28 +71,37 @@ namespace trabalho.apresentacao
             inicio.Show();
             Close();
         }
-
         private void Romance_Click(object sender, RoutedEventArgs e)
         {
-
+            Romance Romance = new Romance();
+            Romance.Show();
+            Close();
         }
 
         private void Mangas_Click(object sender, RoutedEventArgs e)
         {
-
+            Mangas Mangas = new Mangas();
+            Mangas.Show();
+            Close();
         }
 
         private void Misterio_Click(object sender, RoutedEventArgs e)
         {
-
+            Misterio Misterio = new Misterio();
+            Misterio.Show();
+            Close();
         }
 
         private void Terror_Click(object sender, RoutedEventArgs e)
         {
-
+            Terror Terror = new Terror();
+            Terror.Show();
+            Close();
         }
 
-        private void logo_click(object sender, MouseButtonEventArgs e)
+
+
+        private void logo_Click(object sender, MouseButtonEventArgs e)
         {
             Inicio inicio = new Inicio();
             inicio.Show();
@@ -104,5 +113,6 @@ namespace trabalho.apresentacao
         {
 
         }
+
     }
 }

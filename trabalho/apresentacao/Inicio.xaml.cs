@@ -1,16 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
+﻿using System.Windows;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace trabalho.apresentacao
 {
@@ -19,7 +8,7 @@ namespace trabalho.apresentacao
     /// </summary>
     public partial class Inicio : Window
     {
-        int i = 1;
+      
         public Inicio()
         {
             InitializeComponent();
@@ -60,27 +49,8 @@ namespace trabalho.apresentacao
             Close();
         }
 
-        private void btn_back_Click(object sender, RoutedEventArgs e)
-        {
-            i--;
-            if (i < 1)
-            {
-                i = 6;
-            }
-            populares.Source = new BitmapImage(new Uri(@"../imagens/" + i + ".jpg", UriKind.Relative));
 
-        }
 
-        private void btn_next_Click(object sender, RoutedEventArgs e)
-        {
-            i++;
-            if (i > 6)
-            {
-                i = 1;
-            }
-            populares.Source = new BitmapImage(new Uri(@"../imagens/" + i + ".jpg", UriKind.Relative));
-
-        }
 
         private void btn_Biografia_Click(object sender, RoutedEventArgs e)
         {
@@ -126,7 +96,9 @@ namespace trabalho.apresentacao
 
         private void btn_perfil_Click(object sender, RoutedEventArgs e)
         {
-            //Dan
+            Login login = new Login();
+            login.Show();
+            Close();
         }
 
         private void btn_login_ini_Click(object sender, RoutedEventArgs e)
@@ -134,6 +106,11 @@ namespace trabalho.apresentacao
             Login login = new Login();
             login.Show();
             Close();
+
+        }
+
+        private void btn_clickBackground(object sender, RoutedEventArgs e)
+        {
 
         }
     }

@@ -5,10 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:trabalho.apresentacao"
         mc:Ignorable="d"
-        Title="Cadastro" Height="680" Width="1370" WindowState="Maximized" OpacityMask="Black" Icon="../imagens/logopequena2.png">
-    <Window.Background>
-        <ImageBrush ImageSource="../imagens/stars.jpg"/>
-    </Window.Background>
+      Title="Cadastro" Height="680" Width="1370" WindowState="Maximized" OpacityMask="Black" Icon="logogrande1.png" Background="#FF1D0E4D">
 
 
     <Grid Margin="10,6,0,5">
@@ -23,12 +20,10 @@
             <ColumnDefinition Width="287*"/>
         </Grid.ColumnDefinitions>
 
-
         <Grid.Background>
             <ImageBrush ImageSource="/trabalho;component/imagens/background1.jpg"/>
         </Grid.Background>
-
-        <Image HorizontalAlignment="Center" VerticalAlignment="Center" MaxHeight="120" Source="/trabalho;component/imagens/logogrande1.png" Grid.Row="0"  Grid.Column="0" Height="97" Width="126" Margin="26,0,24.8,488.6" Grid.RowSpan="2" >
+        <Image x:Name="logo" HorizontalAlignment="Center" VerticalAlignment="Center" MaxHeight="120" Source="logogrande1.png" Grid.Row="0"  Grid.Column="0" Height="97" Width="126" MouseLeftButtonDown="logo_Click">
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>
@@ -47,69 +42,55 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
+        <Rectangle Grid.Column="1" Grid.Row="1" Fill="#FF1B1B1B" HorizontalAlignment="Center" Height="492"  RadiusY="8" RadiusX="8" Stroke="Black" VerticalAlignment="Top" Width="758" Opacity="0.835" Margin="94.2,0.2,37.4,0" Grid.RowSpan="2" />
 
-        <Image Source="/trabalho;component/imagens/borda.png"  HorizontalAlignment="Center" VerticalAlignment="Center"  RenderTransformOrigin="0.59,0.473" Height="749" Margin="-12,-57,105.6,-52.8" Grid.RowSpan="3" Width="1260" Stretch="Fill" Grid.ColumnSpan="3">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/trabalho;component/imagens/borda.png"/>
-            </Image.OpacityMask>
-        </Image>
+        <Label x:Name="lblNome_Cad" Content="Nome completo:" Grid.Column="1" HorizontalAlignment="Left" Margin="307.2,17.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="lblUser_Cad" Content="Nome de usuário:" Grid.Column="1" HorizontalAlignment="Left" Margin="307.2,57.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="lbl_Email_Cad" Content="Email:" Grid.Column="1" HorizontalAlignment="Left" Margin="307.2,97.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="lblGender_Cad" Content="Gênero:" Grid.Column="1" HorizontalAlignment="Left" Margin="307.2,137.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="lblCidade_Cad" Content="Cidade:" Grid.Column="1" HorizontalAlignment="Left" Margin="307.2,177.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="lblEstado_Cad" Content="Estado:" Grid.Column="1" HorizontalAlignment="Left" Margin="307.2,217.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="lblCel_Cad" Content="WhatsApp:" Grid.Column="1" HorizontalAlignment="Left" Margin="312.2,254.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="lblPass_Cad" Content="Senha:" Grid.Column="1" HorizontalAlignment="Left" Margin="312.2,294.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="lbl_Confirm_Pass_Cad" Content="Confirmar senha:" Grid.Column="1" HorizontalAlignment="Left" Margin="312.2,334.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
 
-
-        <Menu x:Name="menu" HorizontalAlignment="Left" Background="{x:Null}" Width="120" Opacity="0.85" Margin="57,157.2,0,95.6" Grid.Row="1" Grid.ColumnSpan="2" >
-            <MenuItem  Header="Categorias" Foreground="#DDFFFFFF"  FontFamily="Simplicity" FontSize="25" Background="{x:Null}" FontWeight="Bold" Width="142" Height="51" Margin="-12,0,0,0" Padding="16,0,-99,0" >
-                <ComboBoxItem Content="Romance" FontFamily="Simplicity"  Background="{x:Null}" MouseRightButtonDown="Romance_Click"/>
-                <ComboBoxItem Content="Mangás"  FontFamily="Simplicity" Background="{x:Null}" MouseRightButtonDown="Mangas_Click"/>
-                <ComboBoxItem Content="Terror"  FontFamily="Simplicity" Background="{x:Null}" MouseRightButtonDown="Terror_Click"/>
-                <ComboBoxItem Content="Mistério"  FontFamily="Simplicity" Background="{x:Null}" MouseRightButtonDown="Misterio_Click"/>
-            </MenuItem>
-        </Menu>
-
-
-        <Label x:Name="lblNome_Cad" Content="Nome completo:" Grid.Column="1" HorizontalAlignment="Left" Margin="276.2,8.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="lblUser_Cad" Content="Nome de usuário:" Grid.Column="1" HorizontalAlignment="Left" Margin="276.2,48.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="lbl_Email_Cad" Content="Email:" Grid.Column="1" HorizontalAlignment="Left" Margin="276.2,88.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="lblGender_Cad" Content="Gênero:" Grid.Column="1" HorizontalAlignment="Left" Margin="276.2,128.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="lblCidade_Cad" Content="Cidade:" Grid.Column="1" HorizontalAlignment="Left" Margin="276.2,168.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="lblEstado_Cad" Content="Estado:" Grid.Column="1" HorizontalAlignment="Left" Margin="276.2,208.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="lblCel_Cad" Content="WhatsApp:" Grid.Column="1" HorizontalAlignment="Left" Margin="281.2,245.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="lblPass_Cad" Content="Senha:" Grid.Column="1" HorizontalAlignment="Left" Margin="281.2,285.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="lbl_Confirm_Pass_Cad" Content="Confirmar senha:" Grid.Column="1" HorizontalAlignment="Left" Margin="281.2,325.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
-
-        <Border BorderThickness="1"  CornerRadius="20" Padding="2"  MinHeight="8"  HorizontalAlignment="Left" Margin="515.2,9.2,0,0" Grid.Row="1" Grid.Column="1" Background="#FFF9F9F9" VerticalAlignment="Top" Height="25" Width="150">
-            <TextBox x:Name="txt_Nome_Cad"   Tag="Digite seu nome..." TextWrapping="Wrap"  AcceptsTab="True" Margin="-0.2,-0.2,0,-2.6" />
+        <Border BorderThickness="1"  CornerRadius="20" Padding="2"  MinHeight="8"  HorizontalAlignment="Left" Margin="467.2,17.2,0,0" Grid.Row="1" Grid.Column="1" Background="#FFF9F9F9" VerticalAlignment="Top" Height="25" Width="150">
+            <TextBox x:Name="txt_Nome_Cad"   Tag="Digite seu nome..." TextWrapping="Wrap"  AcceptsTab="True" Margin="-0.2,-3.2,0,0.4" />
+        </Border>
+        <Border BorderThickness="1"  CornerRadius="20" Padding="2" HorizontalAlignment="Left" Margin="467.2,57.2,0,0" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" Height="25" Width="150" Background="#FFF9F9F9">
+            <TextBox x:Name="txt_User_Cad"  Tag="Digite um username..." TextWrapping="Wrap"  AcceptsTab="True" Margin="-0.2,-2.2,0,-0.6"/>
         </Border>
 
-        <Border BorderThickness="1"  CornerRadius="20" Padding="2" HorizontalAlignment="Left" Margin="515.2,49.2,0,0" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" Height="25" Width="150" Background="#FFF9F9F9">
-            <TextBox x:Name="txt_User_Cad"  Tag="Digite um username..." TextWrapping="Wrap"  AcceptsTab="True" Margin="-0.2,-0.2,0,-2.6"/>
+        <Border BorderThickness="1"  CornerRadius="20" Padding="2" HorizontalAlignment="Left" Margin="467.2,97.2,0,0" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" Height="25" Width="150" Background="#FFF9F9F9">
+            <TextBox x:Name="txt_Email_Cad"  Tag="Digite seu email..." TextWrapping="Wrap" AutoWordSelection="True" Margin="-0.2,-2.2,0,-0.6" />
         </Border>
 
-
-        <Border BorderThickness="1"  CornerRadius="20" Padding="2" HorizontalAlignment="Left" Margin="515.2,89.2,0,0" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" Height="25" Width="150" Background="#FFF9F9F9">
-            <TextBox x:Name="txt_Email_Cad"  Tag="Digite seu email..." TextWrapping="Wrap" AutoWordSelection="True" Margin="-0.2,-0.2,0,-2.6" />
+        <Border BorderThickness="1"  CornerRadius="20" Padding="2" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="467.2,177.2,0,0" Height="25" Width="150" Background="#FFF9F9F9">
+            <TextBox x:Name="txt_Cidade_Cad"   Tag="Digite sua cidade..." TextWrapping="Wrap"   AcceptsTab="True" Margin="-0.2,-3.2,0,0.4"/>
         </Border>
 
-        <Border BorderThickness="1"  CornerRadius="20" Padding="2" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="515.2,169.2,0,0" Height="25" Width="150" Background="#FFF9F9F9">
-            <TextBox x:Name="txt_Cidade_Cad"   Tag="Digite sua cidade..." TextWrapping="Wrap"   AcceptsTab="True" Margin="-0.2,-0.2,0,-2.6"/>
+        <Border BorderThickness="1"  CornerRadius="10" Padding="2" Grid.Column="1"  HorizontalAlignment="Left" Margin="467.2,253.2,0,0" Grid.Row="1"  VerticalAlignment="Top" Height="26" Width="45" Background="#FFF6F6F6">
+            <TextBox x:Name="txt_DDD_Cad"   Tag="DDD..." TextWrapping="Wrap" AcceptsTab="True" Margin="-0.2,-2.2,0.4,-0.8" />
         </Border>
 
-        <Border BorderThickness="1"  CornerRadius="10" Padding="2" Grid.Column="1"  HorizontalAlignment="Left" Margin="515.2,245.2,0,0" Grid.Row="1"  VerticalAlignment="Top" Height="26" Width="45" Background="#FFF6F6F6">
-            <TextBox x:Name="txt_DDD_Cad"   Tag="DDD..." TextWrapping="Wrap" AcceptsTab="True" Margin="-0.2,-0.2,0.4,-2.8" />
+        <Border  BorderThickness="1"  CornerRadius="10" Padding="2"  Grid.Column="1"  HorizontalAlignment="Left" Margin="522.2,253.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="95" Background="White">
+            <TextBox x:Name="txt_Cel_Cad"  Tag="Digite seu celular..." TextWrapping="Wrap"  AcceptsTab="True" Margin="-0.2,-2.2,-0.2,-0.8"/>
+        </Border>
+        <Border BorderThickness="1"  CornerRadius="20" Padding="2"  MinHeight="8" Grid.Column="1" HorizontalAlignment="Left" Margin="467.2,294.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="150" Background="#FFF7F7F7">
+            <PasswordBox x:Name="txt_Pass_Cad"  Tag="Digite uma senha..." Margin="1.8,-4.2,-2,-1.6"/>
+        </Border>
+        <Border BorderThickness="1"  CornerRadius="20" Padding="2" Grid.Column="1" HorizontalAlignment="Left" Margin="467.2,334.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="150"  Background="#FFF7F7F7">
+            <PasswordBox x:Name="txt_Pass_Cad_Confirm"  Tag="Repita a senha..." Height="25" Width="150" Margin="-0.2,-5.2,-5,-0.6"  />
         </Border>
 
-        <Border  BorderThickness="1"  CornerRadius="10" Padding="2"  Grid.Column="1"  HorizontalAlignment="Left" Margin="570.2,245.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="95" Background="White">
-            <TextBox x:Name="txt_Cel_Cad"  Tag="Digite seu celular..." TextWrapping="Wrap"  AcceptsTab="True" Margin="-0.2,-0.2,-0.2,-2.8"/>
-        </Border>
-        <Border BorderThickness="1"  CornerRadius="20" Padding="2"  MinHeight="8" Grid.Column="1" HorizontalAlignment="Left" Margin="515.2,286.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="150" Background="#FFF7F7F7">
-            <PasswordBox x:Name="txt_Pass_Cad"  Tag="Digite uma senha..." Margin="1.8,-3.2,-2,-2.6"/>
-        </Border>
-        <Border BorderThickness="1"  CornerRadius="20" Padding="2" Grid.Column="1" HorizontalAlignment="Left" Margin="515.2,326.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="150"  Background="#FFF7F7F7">
-            <PasswordBox x:Name="txt_Pass_Cad_Confirm"  Tag="Repita a senha..." Height="25" Width="150" Margin="-0.2,-4.2,-5,-1.6"  />
-        </Border>
+        <Image Source="https://i.pinimg.com/originals/4e/a2/ea/4ea2ea56f1798863bebccfaa2c6c38b5.png" Grid.Column="1" HorizontalAlignment="Left" Height="50" Margin="382.2,249.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="50" />
+        <Button x:Name="btn_Cadastrar_Cad" Content="Cadastrar" Grid.Column="1" HorizontalAlignment="Left" Margin="422.2,398.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="95"  Height="42" Background="White" Foreground="#DD000000" Click="btn_Cadastrar_Cad_Click"/>
+        <Button x:Name="btn_Limpar_Cad" Content="Limpar" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="80"  Height="42" Margin="538.2,398.2,0,0" Background="White" Foreground="#DD000000" BorderBrush="Black" Click="btn_Limpar_Cad_Click" />
 
-        <Image Source="https://i.pinimg.com/originals/4e/a2/ea/4ea2ea56f1798863bebccfaa2c6c38b5.png" Grid.Column="1" HorizontalAlignment="Left" Height="50" Margin="351.2,240.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="50" />
+        <Button x:Name="btn_Voltar_Cad" Content="Voltar" Grid.Column="1" HorizontalAlignment="Left" Margin="318.2,398.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="80"  Height="42" RenderTransformOrigin="3.201,0.92" Background="White" Foreground="#DD000000" Click="btn_Voltar_Cad_Click" />
 
-        <Border BorderThickness="1"  CornerRadius="20" Padding="2" Grid.Column="1" HorizontalAlignment="Left" Margin="515.2,129.2,0,0" Grid.Row="1"  Background="#FFF7F7F7" VerticalAlignment="Top" Height="25" Width="150" >
-            <ComboBox x:Name="cb_Gender_Cad" HorizontalAlignment="Left" Margin="9.8,-3.2,0,-2.6" VerticalAlignment="Top" Height="25" Width="127" >
+        <Border BorderThickness="1"  CornerRadius="20" Padding="2" Grid.Column="1" HorizontalAlignment="Left" Margin="467.2,137.2,0,0" Grid.Row="1"  Background="#FFF7F7F7" VerticalAlignment="Top" Height="25" Width="150" >
+            <ComboBox x:Name="cb_Gender_Cad" HorizontalAlignment="Left" Margin="9.8,-3.2,0,-2.6" VerticalAlignment="Top" Height="25" Width="127"  >
                 <ComboBoxItem Content="Mulher "/>
                 <ComboBoxItem Content="Homem "/>
                 <ComboBoxItem Content="Não sei responder"/>
@@ -117,8 +98,8 @@
             </ComboBox>
         </Border>
 
-        <Border BorderThickness="1"  CornerRadius="20" Padding="2" Grid.Column="1" HorizontalAlignment="Left" Margin="515.2,209.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="150"  Background="#FFF7F7F7"  >
-            <ComboBox x:Name="cb_Estado_Cad" HorizontalAlignment="Left" Margin="6.8,-3.2,0,-2.6" VerticalAlignment="Top" Height="25" Width="130"  MouseRightButtonDown="txt_UF" >
+        <Border BorderThickness="1"  CornerRadius="20" Padding="2" Grid.Column="1" HorizontalAlignment="Left" Margin="467.2,217.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="150"  Background="#FFF7F7F7"  >
+            <ComboBox x:Name="cb_Estado_Cad" HorizontalAlignment="Left" Margin="6.8,-3.2,0,-2.6" VerticalAlignment="Top" Height="25" Width="130">
                 <ComboBoxItem Content="RJ"/>
                 <ComboBoxItem Content="RN"/>
                 <ComboBoxItem Content="RO" />
@@ -130,10 +111,44 @@
                 <ComboBoxItem Content="TO"/>
             </ComboBox>
         </Border>
+        <Image Grid.Column="2" HorizontalAlignment="Left" Height="152" Margin="160.6,-43,-53.4,0" VerticalAlignment="Top" Width="180" Source="Sem título (3).png" Stretch="UniformToFill" Grid.RowSpan="2">
+            <Image.Effect>
+                <DropShadowEffect/>
+            </Image.Effect>
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Sem título (3).png" Stretch="UniformToFill"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Height="141"  VerticalAlignment="Top" Width="286" Source="cadastro.png" Stretch="UniformToFill" Margin="332.2,-32,271.4,0" Grid.RowSpan="2" >
+            <Image.Effect>
+                <DropShadowEffect/>
+            </Image.Effect>
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="cadastro.png" Stretch="UniformToFill">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Image.OpacityMask>
+        </Image>
 
-        <Button x:Name="btn_Cadastrar_Cad" Content="Cadastrar" Grid.Column="1" HorizontalAlignment="Left" Margin="424.2,394.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="98" Click="btn_Cadastrar_Cad_Click" Height="28"/>
-        <Button x:Name="btn_Limpar_Cad" Content="Limpar" Grid.Column="1" HorizontalAlignment="Left" Margin="548.2,394.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="80" Click="btn_Limpar_Cad_Click" Height="28"/>
-        <Button x:Name="btn_Voltar_Cad" Content="Voltar" Grid.Column="1" HorizontalAlignment="Left" Margin="653.2,394.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="80" Click="btn_Voltar_Cad_Click" Height="28"/>
+        <Menu HorizontalAlignment="Left" Background="{x:Null}" Width="146" Opacity="0.85" Margin="53,104.2,0,148.6" Grid.Row="1" Grid.ColumnSpan="2">
+            <MenuItem Foreground="#DDFFFFFF" Header="Categorias" Width="155" Padding="8,0,-77,0" FontFamily="Simplicity" FontSize="28" FontWeight="Bold">
+                <MenuItem Header="Romance" Click="Romance_Click"/>
+                <MenuItem Header="Terror" Click="Terror_Click"/>
+                <MenuItem Header="Misterio" Click="Misterio_Click"/>
+                <MenuItem Header="Mangas"/>
+            </MenuItem>
+        </Menu>
+        <Image HorizontalAlignment="Left" Height="55" Margin="0,104.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="79" Source="categoria.png" RenderTransformOrigin="-0.532,0.52"/>
+
+
+
 
     </Grid>
 </Window>

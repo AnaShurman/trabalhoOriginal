@@ -184,3 +184,8 @@ C:\Users\AnaBeatrizClaroShurm\Documents\GitHub\trabalhoOriginal\trabalho\obj\Deb
 C:\Users\AnaBeatrizClaroShurm\Documents\GitHub\trabalhoOriginal\trabalho\obj\Debug\trabalho.csproj.CopyComplete
 C:\Users\AnaBeatrizClaroShurm\Documents\GitHub\trabalhoOriginal\trabalho\obj\Debug\trabalho.exe
 C:\Users\AnaBeatrizClaroShurm\Documents\GitHub\trabalhoOriginal\trabalho\obj\Debug\trabalho.pdb
+C:\Users\AnaBeatrizClaroShurm\Documents\GitHub\trabalhoOriginal\trabalho\bin\Debug\MaterialDesignColors.dll
+C:\Users\AnaBeatrizClaroShurm\Documents\GitHub\trabalhoOriginal\trabalho\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\AnaBeatrizClaroShurm\Documents\GitHub\trabalhoOriginal\trabalho\bin\Debug\MaterialDesignColors.pdb
+C:\Users\AnaBeatrizClaroShurm\Documents\GitHub\trabalhoOriginal\trabalho\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\AnaBeatrizClaroShurm\Documents\GitHub\trabalhoOriginal\trabalho\bin\Debug\MaterialDesignThemes.Wpf.xml

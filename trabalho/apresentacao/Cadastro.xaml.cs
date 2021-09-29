@@ -25,62 +25,42 @@ namespace trabalho.apresentacao
             InitializeComponent();
         }
 
-        private void logo_click(object sender, MouseButtonEventArgs e)
+        private void logo_Click(object sender, MouseButtonEventArgs e)
         {
-
+            Inicio Inicio = new Inicio();
+            Inicio.Show();
+            Close();
         }
 
         private void Romance_Click(object sender, RoutedEventArgs e)
         {
-
+            Romance Romance = new Romance();
+            Romance.Show();
+            Close();
         }
 
         private void Mangas_Click(object sender, RoutedEventArgs e)
         {
-
+            Mangas Mangas = new Mangas();
+            Mangas.Show();
+            Close();
         }
 
         private void Misterio_Click(object sender, RoutedEventArgs e)
         {
-
+            Misterio Misterio = new Misterio();
+            Misterio.Show();
+            Close();
         }
 
         private void Terror_Click(object sender, RoutedEventArgs e)
         {
-
+            Terror Terror = new Terror();
+            Terror.Show();
+            Close();
         }
 
-        private void btn_perfil_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void hortolandia_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void americana_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void sumare_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void campinas_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void logo_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            Inicio inicio = new Inicio();
-            inicio.Show();
-            this.Close();
-        }
+     
 
         private void btn_Cadastrar_Cad_Click(object sender, RoutedEventArgs e)
         {
@@ -138,14 +118,5 @@ namespace trabalho.apresentacao
             Close();
         }
 
-        private void cb_Estado_Cad_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            txt_UF.Visibility = Visibility.Hidden;
-        }
-
-        private void cb_Gender_Cad_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            txt_gen.Visibility = Visibility.Hidden;
-        }
     }
 }
