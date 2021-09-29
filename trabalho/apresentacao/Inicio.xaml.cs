@@ -21,6 +21,9 @@ namespace trabalho.apresentacao
     public partial class Inicio : Window
     {
         int i = 1;
+        int j = 7;
+        int k = 13;
+
         int idRecebido = 0;
         Controle controle = new Controle();
         public Inicio(int idEnviado)
@@ -86,7 +89,7 @@ namespace trabalho.apresentacao
             {
                 i = 6;
             }
-            populares.Source = new BitmapImage(new Uri(@"../imagens/" + i + ".jpg", UriKind.Relative));
+            classicos.Source = new BitmapImage(new Uri(@"../imagens/" + i + ".jpg", UriKind.Relative));
 
 
 
@@ -99,52 +102,10 @@ namespace trabalho.apresentacao
             {
                 i = 1;
             }
-            populares.Source = new BitmapImage(new Uri(@"../imagens/" + i + ".jpg", UriKind.Relative));
+            classicos.Source = new BitmapImage(new Uri(@"../imagens/" + i + ".jpg", UriKind.Relative));
 
         }
-
-        private void btn_Biografia_Click(object sender, RoutedEventArgs e)
-        {
-            Biografia Biografia = new Biografia(idRecebido);
-            Biografia.Show();
-            Close();
-        }
-
-        private void btn_Misterio_Click(object sender, RoutedEventArgs e)
-        {
-            Misterio Misterio = new Misterio(idRecebido);
-            Misterio.Show();
-            Close();
-        }
-
-        private void btn_Mangas_Click(object sender, RoutedEventArgs e)
-        {
-            Mangas Mangas = new Mangas(idRecebido);
-            Mangas.Show();
-            Close();
-        }
-
-        private void btn_Terror_Click(object sender, RoutedEventArgs e)
-        {
-            Terror Terror = new Terror(idRecebido);
-            Terror.Show();
-            Close();
-        }
-
-        private void btn_Romance_Click(object sender, RoutedEventArgs e)
-        {
-            Romance Romance = new Romance(idRecebido);
-            Romance.Show();
-            Close();
-        }
-
-        private void btn_perfil_Click(object sender, RoutedEventArgs e)
-        {
-            Perfil perfil = new Perfil(idRecebido);
-            perfil.Show();
-            Close();
-        }
-
+      
         private void btn_login_ini_Click(object sender, RoutedEventArgs e)
         {
             Login login = new Login();
@@ -153,19 +114,67 @@ namespace trabalho.apresentacao
 
         }
 
-        private void btn_cad_ini_Click_1(object sender, RoutedEventArgs e)
+        private void btn_cad_ini_Click(object sender, RoutedEventArgs e)
         {
             Cadastro cadastro = new Cadastro();
             cadastro.Show();
             Close();
         }
 
-        private void add_Click(object sender, RoutedEventArgs e)
+        private void btn_back_Click2(object sender, RoutedEventArgs e)
         {
-            Adicionar_livros add = new Adicionar_livros(idRecebido);
-            add.Show();
+            j--;
+            if (j < 7)
+            {
+                j = 12;
+            }
+            juvenis.Source = new BitmapImage(new Uri(@"../imagens/" + j + ".jpg", UriKind.Relative));
+
+        }
+
+        private void btn_next_Click2(object sender, RoutedEventArgs e)
+        {
+            j++;
+            if (j > 12)
+            {
+                j = 7;
+            }
+            juvenis.Source = new BitmapImage(new Uri(@"../imagens/" + j + ".jpg", UriKind.Relative));
+        }
+
+        private void btn_back_Click3(object sender, RoutedEventArgs e)
+        {
+            k--;
+            if (k < 13)
+            {
+                k = 18;
+            }
+            mangas.Source = new BitmapImage(new Uri(@"../imagens/" + k + ".jpg", UriKind.Relative));
+
+        }
+
+        private void btn_next_Click3(object sender, RoutedEventArgs e)
+        {
+            k++;
+            if (k > 18)
+            {
+                k = 13;
+            }
+            mangas.Source = new BitmapImage(new Uri(@"../imagens/" + k + ".jpg", UriKind.Relative));
+        }
+
+        private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Perfil perfil = new Perfil();
+            perfil.Show();
             Close();
         }
 
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Perfil perfill = new Perfil();
+            perfill.Show();
+            Close();
+        }
     }
 }
