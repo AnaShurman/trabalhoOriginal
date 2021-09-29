@@ -90,7 +90,7 @@ namespace trabalho.apresentacao
                 }
                 else
                 {
-                    String mensagem = controle.cadastrar(txt_User_Cad.Text, txt_Pass_Cad.Text, txt_Nome_Cad.Text, cb_Gender_Cad.Text, txt_Cidade_Cad.Text, cb_Estado_Cad.Text, txt_DDD_Cad.Text, txt_Cel_Cad.Text, txt_Email_Cad.Text, txt_Pass_Cad_Confirm.Text);
+                    String mensagem = controle.cadastrar(txt_User_Cad.Text, txt_Pass_Cad.Password, txt_Nome_Cad.Text, cb_Gender_Cad.Text, txt_Cidade_Cad.Text, cb_Estado_Cad.Text, txt_DDD_Cad.Text, txt_Cel_Cad.Text, txt_Email_Cad.Text, txt_Pass_Cad_Confirm.Password);
                     if (controle.tem)
                     {
                         MessageBox.Show(mensagem, "Cadastro", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -130,27 +130,6 @@ namespace trabalho.apresentacao
             Inicio inicio = new Inicio();
             inicio.Show();
             Close();
-        }
-
-        private void cb_Estado_Cad_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            txt_UF.Visibility = Visibility.Hidden;
-        }
-
-        private void cb_Gender_Cad_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            txt_gen.Visibility = Visibility.Hidden;
-        }
-
-        private void check_pass_Checked(object sender, RoutedEventArgs e)
-        {
-            if ((bool)!check_pass.IsChecked)
-            {
-                txt_Pass_Cad.Text = "*****";
-            }
-            
-
-           
         }
 
     }

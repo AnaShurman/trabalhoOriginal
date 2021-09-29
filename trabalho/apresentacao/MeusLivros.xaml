@@ -5,56 +5,57 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:trabalho.apresentacao"
         mc:Ignorable="d"
-        Title="Meus livros" Height="681" Width="1372" WindowState="Maximized" OpacityMask="Black">
+         Title="Inicio" Height="680" Width="1370" WindowState="Maximized" OpacityMask="Black">
     <Window.Background>
-        <ImageBrush ImageSource="https://cdn.discordapp.com/attachments/771526886505185300/892587169384898570/background1.jpg"/>
+        <ImageBrush ImageSource="../imagens/stars.jpg"/>
     </Window.Background>
     <Grid Margin="10,6,0,5">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="211*"></ColumnDefinition>
-            <ColumnDefinition Width="1058"></ColumnDefinition>
-            <ColumnDefinition Width="93*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-
         <Grid.RowDefinitions>
-            <RowDefinition Height="102"></RowDefinition>
-            <RowDefinition/>
-            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="77*"/>
+            <RowDefinition Height="243*"/>
         </Grid.RowDefinitions>
-
-        <Rectangle Grid.Column="1" HorizontalAlignment="Center" Height="487" Stroke="Black" VerticalAlignment="Top" Width="1044" Fill="#FF1B1B1B" RadiusX="8" RadiusY="8" Grid.Row="1" Opacity="0.37" Margin="7,0"/>
-
-        <Image x:Name="logo" Grid.Row="0" Source="../imagens/logo.png"  Stretch="UniformToFill"    Height="104"  HorizontalAlignment="Left" Width="225"   VerticalAlignment="Top" Margin="-18,-22,0,0" RenderTransformOrigin="0.5,0.5" MouseLeftButtonDown="logo_MouseLeftButtonDown">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="96*"/>
+            <ColumnDefinition Width="Auto" MinWidth="967.2"/>
+            <ColumnDefinition Width="97*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="logo" HorizontalAlignment="Center" VerticalAlignment="Center" MaxHeight="120" Source="../imagens/logogrande1.png" Grid.Row="0"  Grid.Column="0" Height="97" Width="144" MouseLeftButtonDown="logo_Click" >
+            <Image.Effect>
+                <DropShadowEffect/>
+            </Image.Effect>
+            <Image.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF180808" Offset="1"/>
+                </LinearGradientBrush>
+            </Image.OpacityMask>
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
-                    <SkewTransform AngleY="-0.547"/>
+                    <SkewTransform AngleY="0.449"/>
                     <RotateTransform/>
-                    <TranslateTransform Y="-1.006"/>
+                    <TranslateTransform Y="0.437"/>
                 </TransformGroup>
             </Image.RenderTransform>
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="../imagens/logo.png" TileMode="None" Stretch="None"/>
-            </Image.OpacityMask>
         </Image>
 
+        <Rectangle Grid.Column="1" Grid.Row="1" Fill="#FF1B1B1B" HorizontalAlignment="Center" Height="444"  RadiusY="8" RadiusX="8" Stroke="Black" VerticalAlignment="Top" Width="854" Opacity="0.37" Margin="66,0,47,0" />
 
-        <Menu x:Name="menu" HorizontalAlignment="Left" Grid.Row="1" Width="218" Opacity="0.85">
-            <MenuItem Header="Categorias"  Background="#FF323232"   Width="220" Margin="0,87,0,0" FontFamily="Haettenschweiler" FontSize="22" >
-                <MenuItem x:Name="Romance" Header="Romance" Click="Romance_Click"  Foreground="#FFFFF6F6" Background="#FF171819"/>
-                <MenuItem x:Name="Manga" Header="Mangás" Background="#FF323232" Click="Mangas_Click"  Foreground="White"/>
-                <MenuItem x:Name="Misterio" Header="Misterio" Background="#FF323232" Click="Misterio_Click"  Foreground="White"/>
-                <MenuItem x:Name="Terror" Header="Terror" Background="#FF323232"  Click="Terror_Click" Foreground="White"/>
+        <Image Source="../imagens/perfil.png" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Height="75" Width="72" Margin="0,18.4,0,0"/>
+        <Image HorizontalAlignment="Left" Height="55" Margin="0,104.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="79" Source="/trabalho;component/imagens/categoria.png" RenderTransformOrigin="-0.532,0.52"/>
+        <Menu x:Name="menu" HorizontalAlignment="Left" Background="{x:Null}" Width="132" Opacity="0.85" Margin="64,40.4,0,212.2" Grid.Row="1" Padding="0" Grid.ColumnSpan="2" >
+            <MenuItem Background="{x:Null}" Foreground="White" FontWeight="Bold" FontSize="20" FontFamily="Simplicity" Header="Meu Perfil" Width="147" Height="37" Padding="16,0,-80,0"/>
+            <MenuItem Header="Categorias"  Background="{x:Null}" Foreground="White"  Width="153" FontFamily="Simplicity" FontSize="20" FontWeight="Bold" Height="31" Padding="16,0,-86,0" Margin="0,32,0,0" BorderThickness="0" >
+                <MenuItem x:Name="Romance" Header="Romance" Background="#FF323232" Foreground="#FFFFF6F6" Click="Romance_Click"/>
+                <MenuItem x:Name="Mangas" Header="Mangás" Background="#FF323232" Foreground="White" Click="Mangas_Click"/>
+                <MenuItem x:Name="Misterio" Header="Misterio" Background="#FF323232" Foreground="White" Click="Misterio_Click"/>
+                <MenuItem x:Name="Terror" Header="Terror" Background="#FF323232" Foreground="White" Click="Terror_Click"/>
             </MenuItem>
         </Menu>
 
-        <Button x:Name="btn_perfil" Grid.Row="1" Content="" HorizontalAlignment="Left" Margin="168,51,0,0" VerticalAlignment="Top" Width="29" Height="31" Click="btn_perfil_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="../imagens/perfil_icon.png"/>
-            </Button.Background>
-        </Button>
+
         <ListBox Loaded="Window_Loaded" x:Name="lbMeusLivros" Grid.Column="1" HorizontalAlignment="Left" Height="378" Margin="133,66,0,0" Grid.Row="1" VerticalAlignment="Top" Width="172" SelectionChanged="lbMeusLivros_SelectionChanged" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
-        <Label Content="Meus livros para troca:" Grid.Column="1" HorizontalAlignment="Left" Margin="133,35,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="White" Height="31" Width="172" FontWeight="Bold"/>
+        <Label Content="Meus livros para troca:" Grid.Column="1" HorizontalAlignment="Left" Margin="133,35,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="White" Height="31" Width="226" FontWeight="Bold" FontSize="20"/>
 
         <Button Grid.Column="1" HorizontalAlignment="Left" Margin="340,66,0,0" Grid.Row="1" VerticalAlignment="Top" Width="419" Background="{x:Null}" BorderBrush="Black" Height="378">
             <Image x:Name="imagebox" Grid.Column="1" HorizontalAlignment="Left" Height="378" Grid.Row="1" VerticalAlignment="Top" Width="409"/>

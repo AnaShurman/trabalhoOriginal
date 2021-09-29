@@ -221,42 +221,42 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="imagens\1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
+    <Resource Include="imagens\10.jpg" />
+    <Resource Include="imagens\11.jpg" />
+    <Resource Include="imagens\12.jpg" />
+    <Resource Include="imagens\13.jpg" />
+    <Resource Include="imagens\14.jpg" />
+    <Resource Include="imagens\15.jpg" />
+    <Resource Include="imagens\16.jpg" />
+    <Resource Include="imagens\17.jpg" />
+    <Resource Include="imagens\18.jpg" />
     <Resource Include="imagens\2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="imagens\3.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="imagens\4.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="imagens\5.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="imagens\6.jpg" />
-  </ItemGroup>
-  <ItemGroup>
+    <Resource Include="imagens\7.jpg" />
+    <Resource Include="imagens\8.jpg" />
+    <Resource Include="imagens\9.jpg" />
+    <Resource Include="imagens\background1.jpg" />
+    <Resource Include="imagens\cadastro.png" />
+    <Resource Include="imagens\categoria.png" />
     <Resource Include="imagens\ComoEuEra.jpg" />
-  </ItemGroup>
-  <ItemGroup>
+    <Resource Include="imagens\Image1.png" />
     <Resource Include="imagens\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="imagens\perfil_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="imagens\stars.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="imagens\logogrande1.png" />
     <Resource Include="imagens\logogrande2.png" />
     <Resource Include="imagens\logopequena1.png" />
     <Resource Include="imagens\logopequena2.png" />
+    <Resource Include="imagens\margem.png" />
+    <Resource Include="imagens\perfil.png" />
+    <Resource Include="imagens\perfil_icon.png" />
+    <Resource Include="imagens\Sem título %283%29.png" />
+    <Resource Include="imagens\stars.jpg" />
+    <Resource Include="imagens\TITULO.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image1.png" />
+    <Resource Include="imagens\destaques.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets')" />

@@ -140,5 +140,12 @@ namespace trabalho.apresentacao
 
             imagebox.Source = bi;
         }
+
+        private void logo_Click(object sender, MouseButtonEventArgs e)
+        {
+            Inicio inicio = new Inicio();
+            inicio.Show();
+            Close();
+        }
     }
 }
