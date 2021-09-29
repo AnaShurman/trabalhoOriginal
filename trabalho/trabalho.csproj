@@ -258,6 +258,21 @@
   <ItemGroup>
     <Resource Include="imagens\destaques.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="apresentacao\design2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="apresentacao\Sem título %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="apresentacao\Sem título %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="apresentacao\design1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="apresentacao\Sem título %287%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

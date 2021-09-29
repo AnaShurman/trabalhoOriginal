@@ -43,8 +43,18 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
+        <Image Grid.Column="2" HorizontalAlignment="Left" Height="247" Margin="65.8,-94,-64.4,0" VerticalAlignment="Top" Width="285" Source="Sem título (6).png" RenderTransformOrigin="0.5,0.5" Stretch="UniformToFill" Grid.RowSpan="2">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.769"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
 
-        <Rectangle Grid.Column="1" Grid.Row="1" Fill="#FF1B1B1B" HorizontalAlignment="Center" Height="487"  RadiusY="8" RadiusX="8" Stroke="Black" VerticalAlignment="Top" Width="758" Opacity="0.37" Margin="94,0,38,0" />
+        <Rectangle Grid.Column="1" Grid.Row="1" Fill="#FF0D023A" HorizontalAlignment="Center" Height="487"  RadiusY="8" RadiusX="8" VerticalAlignment="Top" Width="758" Margin="94,0,38,0" />
 
 
         <Label x:Name="lblNome_Cad" Content="Nome completo:" Grid.Column="1" HorizontalAlignment="Left" Margin="307.2,17.2,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" FontWeight="Bold"/>
@@ -136,16 +146,6 @@
                 <ComboBoxItem Content="TO"/>
             </ComboBox>
         </Border>
-
-
-        <Image Grid.Column="2" HorizontalAlignment="Left" Height="152" Margin="160.6,-43,-53.4,0" VerticalAlignment="Top" Width="180" Source="/trabalho;component/imagens/Sem título (3).png" Stretch="UniformToFill" Grid.RowSpan="2">
-            <Image.Effect>
-                <DropShadowEffect/>
-            </Image.Effect>
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/trabalho;component/imagens/Sem título (3).png" Stretch="UniformToFill"/>
-            </Image.OpacityMask>
-        </Image>
         <Image Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Height="141"  VerticalAlignment="Top" Width="286" Source="/trabalho;component/imagens/cadastro.png" Stretch="UniformToFill" Margin="332.2,-32,271.4,0" Grid.RowSpan="2" >
             <Image.Effect>
                 <DropShadowEffect/>
@@ -173,6 +173,7 @@
             </MenuItem>
         </Menu>
         <Image HorizontalAlignment="Left" Height="55" Margin="0,104.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="79" Source="/trabalho;component/imagens/categoria.png" RenderTransformOrigin="-0.532,0.52"/>
+        <Image Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="25.2,285.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Source="Sem título (7).png" Stretch="UniformToFill"/>
 
     </Grid>
 </Window>

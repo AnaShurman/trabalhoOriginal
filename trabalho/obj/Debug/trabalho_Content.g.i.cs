@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("10.jfif")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("apresentacao/sem%20t%c3%adtulo%20(7).png")]
 
 
