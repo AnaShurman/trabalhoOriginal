@@ -39,7 +39,7 @@
             </Image.RenderTransform>
         </Image>
 
-        <Rectangle Grid.Column="1" HorizontalAlignment="Left" Height="485" Stroke="Black" VerticalAlignment="Top" Width="990" Fill="#FF1B1B1B" RadiusX="8" RadiusY="8" Grid.Row="1" Opacity="0.68" Margin="3.2,0.4,0,0"/>
+        <Rectangle Grid.Column="1" HorizontalAlignment="Left" Height="443" Stroke="Black" VerticalAlignment="Top" Width="1003" Fill="#FF1B1B1B" RadiusX="8" RadiusY="8" Grid.Row="1" Opacity="0.68" Margin="3,0,0,0"/>
 
         <Menu x:Name="menu" HorizontalAlignment="Left" Background="{x:Null}" Width="132" Opacity="0.85" Margin="64,40.4,0,212.2" Grid.Row="1" Padding="0" Grid.ColumnSpan="2" >
             <MenuItem Background="{x:Null}" Foreground="White" FontWeight="Bold" FontSize="20" FontFamily="Simplicity" Header="Meu Perfil" Width="147" Height="37" Padding="16,0,-80,0"/>
@@ -59,11 +59,11 @@
         <Label x:Name="lblPass_Log" Content="Senha:" Grid.Column="1" HorizontalAlignment="Left" Margin="388.2,148.4,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="120" Foreground="White" FontWeight="Bold"/>
 
         <Border BorderThickness="1"  CornerRadius="20" Padding="2"  MinHeight="8"  HorizontalAlignment="Left" Margin="388.2,120.4,0,0" Grid.Row="1"  Grid.Column="1" VerticalAlignment="Top" Height="30" Width="265"  Background="#FFF9F9F9">
-            <TextBox x:Name="txt_User_Log" Tag="Digite email ou username..." RenderTransformOrigin="0.5,0.5" TextWrapping="Wrap" CaretBrush="#FF673AB7" Margin="3,3,-3,-3"/>
+            <TextBox x:Name="txt_User_Log" Tag="Digite email ou username..." RenderTransformOrigin="0.5,0.5" TextWrapping="Wrap" CaretBrush="#FF673AB7" Margin="7,-3"/>
         </Border>
 
         <Border BorderThickness="1"  CornerRadius="20" Padding="2" MinHeight="8" Grid.Column="1" HorizontalAlignment="Left" Margin="388.2,178.4,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="265"  Background="#FFF9F9F9">
-            <PasswordBox x:Name="txt_Pass_Log"  Tag="Digite uma senha..." Margin="-3,3,3,-3"/>
+            <PasswordBox x:Name="txt_Pass_Log"  Tag="Digite uma senha..." Margin="7,-3"/>
         </Border>
 
         <Button x:Name="btn_Cadastrar_Log" Content="Cadastrar" Grid.Column="1" HorizontalAlignment="Left" Margin="455.2,294.4,0,0" Grid.Row="1" VerticalAlignment="Top" Width="104" Click="btn_Cadastrar_Log_Click"/>
