@@ -8,6 +8,8 @@ using trabalho.apresentacao;
 using System.IO;
 using Microsoft.Win32;
 using System.Data;
+using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace trabalho.dal
 {
@@ -18,6 +20,7 @@ namespace trabalho.dal
         MySqlCommand cmd = new MySqlCommand();
         Conexao con = new Conexao();
         MySqlDataReader dr;
+
         public bool verificarLogin(String mail, String login, String senha)
         {
             //Buscar no db esse usuario
@@ -135,6 +138,31 @@ namespace trabalho.dal
 
         }
 
+        public int idLivro(String id_livro_lido)
+        {
+            int idLivroLido = 0;
+            cmd.CommandText = "SELECT nome_livro_lido FROM livros_lidos WHERE ID_usuario = @id";
+            cmd.Parameters.AddWithValue("@id", id_livro_lido);
+            try
+            {
+                cmd.Connection = con.conectar();
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    idLivroLido = Convert.ToInt32(dr["ID_usuario"]);
+                }
+                con.desconectar();
+                dr.Close();
+            }
+            catch (MySqlException)
+            {
+                this.mensagem = "Erro com o Database!";
+            }
+
+            return idLivroLido;
+        }
+
         public int verificaPage(String num_pages, int num_tots, String id_usuar)
         {
             int page_total = 0;
@@ -189,8 +217,7 @@ namespace trabalho.dal
 
             return idRetorno;
         }
-
-
+     
 
     }
 }

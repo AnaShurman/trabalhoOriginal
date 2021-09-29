@@ -44,43 +44,55 @@ namespace trabalho.apresentacao
 
         private void insertData()
         {
-            FileStream fs = new FileStream(@imageName, FileMode.Open, FileAccess.Read);
-
-            byte[] data = new byte[fs.Length];
-            fs.Read(data, 0, System.Convert.ToInt32(fs.Length));
-
-            fs.Close();
-
-            //Comandos para inserir livros
-            cmd.CommandText = "INSERT INTO livros (nome_livro, cat_livro, edicao_livro, foto, id_user) VALUES(@nome_livro, @cat_livro, @ano_livro, @foto, @id_user)";
-            cmd.Parameters.AddWithValue("@nome_livro", txt_nome_livro.Text);
-            cmd.Parameters.AddWithValue("@cat_livro", txt_cat_livro.Text);
-            cmd.Parameters.AddWithValue("@ano_livro", txt_data_livro.Text);
-            cmd.Parameters.AddWithValue("@foto", data);
-            cmd.Parameters.AddWithValue("@id_user", idRecebido);
-
-
+            if (imageName == "")
+            {
+                return;
+            }
             try
             {
-                cmd.Connection = con.conectar();
-                cmd.ExecuteNonQuery();
-                con.desconectar();
-                this.mensagem = "Livro cadastrado com sucesso!";
-                tem = true;
+                FileStream fs = new FileStream(@imageName, FileMode.Open, FileAccess.Read);
+
+                byte[] data = new byte[fs.Length];
+                fs.Read(data, 0, Convert.ToInt32(fs.Length));
+                fs.Close();
+
+                //Comandos para inserir livros
+                cmd.CommandText = "INSERT INTO livros (nome_livro, cat_livro, edicao_livro, foto, id_user) VALUES(@nome_livro, @cat_livro, @ano_livro, @foto, @id_user)";
+                cmd.Parameters.AddWithValue("@nome_livro", txt_nome_livro.Text);
+                cmd.Parameters.AddWithValue("@cat_livro", txt_cat_livro.Text);
+                cmd.Parameters.AddWithValue("@ano_livro", txt_data_livro.Text);
+                cmd.Parameters.AddWithValue("@foto", data);
+                cmd.Parameters.AddWithValue("@id_user", idRecebido);
+
+                try
+                {
+                    cmd.Connection = con.conectar();
+                    cmd.ExecuteNonQuery();
+                    con.desconectar();
+                    this.mensagem = "Livro cadastrado com sucesso!";
+                    tem = true;
+                }
+                catch (MySqlException)
+                {
+                    this.mensagem = "Erro com o Database!";
+                }
+
+                if (tem)
+                {
+                    MessageBox.Show(mensagem, "Cadastro de livros", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    MessageBox.Show(mensagem);
+                }
             }
-            catch (MySqlException)
+            catch (Exception ex)
             {
-                this.mensagem = "Erro com o Database!";
+                MessageBox.Show(ex.Message);
             }
 
-            if (tem)
-            {
-                MessageBox.Show(mensagem, "Cadastro de livros", MessageBoxButton.OK, MessageBoxImage.Information);
-            }
-            else
-            {
-                MessageBox.Show(mensagem);
-            }
+
+
         }
 
         public void btn_add_img_Click(object sender, RoutedEventArgs e)
@@ -91,7 +103,7 @@ namespace trabalho.apresentacao
                 FileDialog capa = new OpenFileDialog();
                 capa.Title = "Selecionar foto";
                 capa.InitialDirectory = "Images";
-                capa.Filter = "Image File (*.BMP;*.JPG;*.GIF,*.PNG,*.TIFF)|*.BMP;*.JPG;*.GIF;*.PNG;*.TIFF|" + "All files (*.*)|*.*";
+                capa.Filter = "Image File (*.BMP;*.JPG;*.GIF,*.PNG,*.TIFF)|*.bmp;*.jpg;*.gif;*.png;*.tiff |" + "All files (*.*)|*.*";
                 capa.ShowDialog();
                 {
 
@@ -153,9 +165,9 @@ namespace trabalho.apresentacao
 
         private void btn_perfil_Click(object sender, RoutedEventArgs e)
         {
-            /*Perfil perfil = new Perfil();
+            Perfil perfil = new Perfil();
             perfil.Show();
-            Close();*/
+            Close();
         }
 
 

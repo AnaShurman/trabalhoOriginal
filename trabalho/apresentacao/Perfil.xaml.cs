@@ -1,6 +1,8 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,11 +23,10 @@ namespace trabalho.apresentacao
     /// </summary>
     public partial class Perfil : Window
     {
-        public bool tem = false;
         public String mensagem = "";//Se estiver vazio esta certo
         MySqlCommand cmd = new MySqlCommand();
+        MySqlDataAdapter sqa = new MySqlDataAdapter();
         Conexao con = new Conexao();
-        MySqlDataReader dr;
         int idRecebido = 0;
         public Perfil(int idEnviado)
         {
@@ -37,36 +38,6 @@ namespace trabalho.apresentacao
             InitializeComponent();
         }
 
-        private void selectLivros()
-        {
-            //Comandos para inserir livros
-            cmd.CommandText = "";
-            cmd.Parameters.AddWithValue("@city", MySqlDbType.Int32).Value = lblNumLivros.Text;
-            try
-            {
-                cmd.Connection = con.conectar();
-                dr = cmd.ExecuteReader();
-                dr.Read();
-                
-                lblNumLivros.Text = dr.GetString(2);
-                con.desconectar();
-                mensagem = "Chegou aqui!";
-                tem = true;
-            }
-            catch (MySqlException)
-            {
-                this.mensagem = "Erro com o Database!";
-            }
-
-            if (tem)
-            {
-                MessageBox.Show(mensagem, "Chegou aqui 2", MessageBoxButton.OK, MessageBoxImage.Information);
-            }
-            else
-            {
-                MessageBox.Show(mensagem);
-            }
-        }
 
         private void logo_click(object sender, MouseButtonEventArgs e)
         {
@@ -120,7 +91,58 @@ namespace trabalho.apresentacao
 
         private void btn_Meus_Livros_Click(object sender, RoutedEventArgs e)
         {
-            
+            MeusLivros meusLivros = new MeusLivros(idRecebido);
+            meusLivros.Show();
+            Close();
+        }
+
+        private void lbLivros_Loaded(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                cmd.Connection = con.conectar();
+                DataSet ds = new DataSet();
+                sqa = new MySqlDataAdapter("SELECT nome_livro_lido FROM livros_lidos WHERE ID_usuario = "+ idRecebido, con.conectar());
+                sqa.Fill(ds);
+                con.desconectar();
+
+
+                foreach (DataRow dataRow in ds.Tables[0].Rows)
+                {
+                    ListBoxItem lbItem = new ListBoxItem();
+                    lbItem.Content = dataRow[0].ToString();
+                    lbLivros.Items.Add(lbItem);
+                }
+            }
+            catch (MySqlException)
+            {
+                this.mensagem = "Erro com o Database!";
+            }
+
+        }
+
+        private void txtPageTotal_Loaded(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                cmd.Connection = con.conectar();
+                DataSet ds = new DataSet();
+                sqa = new MySqlDataAdapter("SELECT num_total FROM livros_lidos WHERE ID_usuario = " + idRecebido, con.conectar());
+                sqa.Fill(ds);
+                con.desconectar();
+
+
+                foreach (DataRow dataRow in ds.Tables[0].Rows)
+                {
+                    TextBox textBox = new TextBox();
+                    textBox.Text = dataRow[0].ToString();
+                    txtPageTotal = textBox;
+                }
+            }
+            catch (MySqlException)
+            {
+                this.mensagem = "Erro com o Database!";
+            }
         }
     }
 }

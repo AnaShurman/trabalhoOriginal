@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using trabalho.modelo;
 
 namespace trabalho.apresentacao
 {
@@ -21,15 +22,27 @@ namespace trabalho.apresentacao
     {
         int i = 1;
         int idRecebido = 0;
+        Controle controle = new Controle();
         public Inicio(int idEnviado)
         {
             idRecebido = idEnviado;
-            //MessageBox.Show(idRecebido.ToString());
             InitializeComponent();
         }
         public Inicio()
-        {   
+        {
             InitializeComponent();
+        }
+
+        public void enviaID()
+        {
+            Adicionar_livros a = new Adicionar_livros(idRecebido);
+            Biografia b = new Biografia(idRecebido);
+            Mangas f = new Mangas(idRecebido);
+            MeusLivros g = new MeusLivros(idRecebido);
+            Misterio h = new Misterio(idRecebido);
+            Perfil i = new Perfil(controle.procuraIDLivro(Convert.ToString(idRecebido)));
+            Romance j = new Romance(idRecebido);
+            Terror k = new Terror(idRecebido);
         }
         private void logo_Click(object sender, MouseButtonEventArgs e)
         {
@@ -74,7 +87,7 @@ namespace trabalho.apresentacao
                 i = 6;
             }
             populares.Source = new BitmapImage(new Uri(@"../imagens/" + i + ".jpg", UriKind.Relative));
-           
+
 
 
         }
@@ -153,6 +166,6 @@ namespace trabalho.apresentacao
             add.Show();
             Close();
         }
-  
+
     }
 }

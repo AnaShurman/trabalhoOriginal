@@ -13,6 +13,7 @@ namespace trabalho.modelo
     {
         public bool tem;
         public int idRetorno;
+        public int idLivroLidoV;
         public int page_total;
         public String mensagem = "";
         public bool acessar(String mail, String login, String senha)
@@ -47,6 +48,18 @@ namespace trabalho.modelo
             return idRetorno;
         }
 
+        public int procuraIDLivro(String id_livro_lido)
+        {
+            LoginDalComandos loginDal = new LoginDalComandos();
+            idLivroLidoV = loginDal.idLivro(id_livro_lido);
+            if (loginDal.tem)
+            {
+                this.tem = true;
+            }
+            return idLivroLidoV;
+
+        }
+
         public int acessarPageTot(String num_pages, int num_tots, String id_usuar)
         {
             LoginDalComandos loginDal = new LoginDalComandos();
@@ -57,7 +70,6 @@ namespace trabalho.modelo
             }
             return page_total;
         }
-
 
         public String cadastrar(String email, String nome, String username, String genero, String cidade, String estado, String ddd, String celular, String senha, String confSenha)
         {
