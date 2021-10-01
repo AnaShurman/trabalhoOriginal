@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Inicio" Height="1080" Width="2560" WindowState="Maximized" OpacityMask="Black">
+        Title="Inicio" Height="680" Width="1370" WindowState="Maximized" Icon="../imagens/logogrande1.png" WindowStartupLocation='CenterScreen' OpacityMask="Black">
     <Window.Background>
         <ImageBrush ImageSource="../imagens/stars.jpg"/>
     </Window.Background>
@@ -18,7 +18,7 @@
             <ColumnDefinition Width="Auto" MinWidth="967.2"/>
             <ColumnDefinition Width="97*"/>
         </Grid.ColumnDefinitions>
-        <Image x:Name="logo" HorizontalAlignment="Center" VerticalAlignment="Center" MaxHeight="120" Source="../imagens/logogrande1.png" Grid.Row="0"  Grid.Column="0" Height="97" Width="144" MouseLeftButtonDown="logo_Click" >
+        <Image x:Name="logo" HorizontalAlignment="Center" VerticalAlignment="Center" MaxHeight="150" Source="../imagens/logogrande1.png" Grid.Row="0"  Grid.Column="0" Height="177" Width="276" MouseLeftButtonDown="logo_Click">
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>
@@ -42,19 +42,19 @@
         <Image HorizontalAlignment="Left" Height="55" Margin="0,104.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="79" Source="../imagens/categoria.png" RenderTransformOrigin="-0.532,0.52"/>
 
         <Menu x:Name="menu" HorizontalAlignment="Left" Background="{x:Null}" Width="132" Opacity="0.85" Margin="64,40.4,0,212.2" Grid.Row="1" Padding="0" Grid.ColumnSpan="2" >
-            <MenuItem Background="{x:Null}" Foreground="White" FontWeight="Bold" FontSize="20" FontFamily="Simplicity" Header="Meu Perfil" Width="147" Height="37" Padding="16,0,-80,0" Click="MenuItem_Click"/>
+            <MenuItem Background="{x:Null}" Foreground="White" FontWeight="Bold" FontSize="20" FontFamily="Simplicity" Header="Meu Perfil" Width="147" Height="37" Padding="16,0,-80,0" Click="Perfil_Click"/>
             <MenuItem Header="Categorias"  Background="{x:Null}" Foreground="White"  Width="153" FontFamily="Simplicity" FontSize="20" FontWeight="Bold" Height="31" Padding="16,0,-86,0" Margin="0,32,0,0" BorderThickness="0" >
-                <MenuItem x:Name="Romance" Header="Romance" Background="#FF323232" Foreground="#FFFFF6F6" Click="Romance_Click"/>
-                <MenuItem x:Name="Mangas" Header="Mangás" Background="#FF323232" Foreground="White" Click="Mangas_Click"/>
-                <MenuItem x:Name="Misterio" Header="Misterio" Background="#FF323232" Foreground="White" Click="Misterio_Click"/>
-                <MenuItem x:Name="Terror" Header="Terror" Background="#FF323232" Foreground="White" Click="Terror_Click"/>
+                <MenuItem x:Name="Romance" Header="Romance" Background="{x:Null}" Foreground="White" Click="Romance_Click"/>
+                <MenuItem x:Name="Mangas" Header="Mangás" Background="{x:Null}" Foreground="White" Click="Mangas_Click"/>
+                <MenuItem x:Name="Misterio" Header="Misterio" Background="{x:Null}" Foreground="White" Click="Misterio_Click"/>
+                <MenuItem x:Name="Terror" Header="Terror" Background="{x:Null}" Foreground="White" Click="Terror_Click"/>
             </MenuItem>
         </Menu>
 
-        <Image Grid.Column="1" HorizontalAlignment="Center" Height="127" VerticalAlignment="Center" Width="487" Source="../imagens/TITULO.png" Margin="261,13,219.2,13.6"/>
+        <Image Grid.Column="1" HorizontalAlignment="Center" Height="125" VerticalAlignment="Center" Width="487" Source="../imagens/TITULO.png" Margin="261,13,219.2,13.6"/>
 
         <Button x:Name="btn_cad_ini" Content="Cadastro" Click="btn_cad_ini_Click" VerticalAlignment="Center"  Grid.Column="1" FontFamily="Book Antiqua" FontSize="18" Background="White" Foreground="Black" Margin="860,119,0,3" FontWeight="Bold"  />
-        <Button x:Name="btn_login_ini" Content="Login" HorizontalAlignment="Center" VerticalAlignment="Center" Width="79" Click="btn_login_ini_Click"  Grid.Column="1" FontFamily="Book Antiqua" FontSize="16" Foreground="Black" Background="White" Margin="781,119,107,3" FontWeight="Bold"/>
+        <Button x:Name="btn_login_ini" Content="Login" HorizontalAlignment="Center" VerticalAlignment="Center" Width="79" Click="btn_login_ini_Click"  Grid.Column="1" FontFamily="Book Antiqua" FontSize="18" Foreground="Black" Background="White" Margin="781,119,107,3" FontWeight="Bold"/>
 
         <Image HorizontalAlignment="Left" Height="417" Margin="28,144,0,77" VerticalAlignment="Center" Width="939" Source="../imagens/destaques.png" Grid.RowSpan="2" Stretch="Fill" Grid.Column="1"/>
 
@@ -76,9 +76,9 @@
         <Button x:Name="btn_back3" Grid.Column="1" Width="20" HorizontalAlignment="Left" Grid.Row="1" Height="20" Content="&lt;" Background="#FFF6F6F6" FontSize="16" Click="btn_back_Click3" Padding="0,-3,0,0" Margin="670,165,0,297" BorderBrush="{x:Null}" Foreground="#DD000000"/>
         <Button x:Name="btn_next3" Grid.Column="1" Width="20" HorizontalAlignment="Right" Grid.Row="1" Height="20" FontSize="16" Content="&gt;" Background="#FFF6F6F6" Click="btn_next_Click3" Padding="0,-3,0,0" Margin="0,166,91,298" BorderBrush="{x:Null}" Foreground="#DD000000"/>
 
-        <Label Content="Clássicos" Grid.Column="1" HorizontalAlignment="Left" Margin="125,265,0,194" Grid.Row="1" VerticalAlignment="Stretch" Height="25" Width="85" FontFamily="Segoe Script" FontWeight="Bold" FontSize="14"/>
-        <Label Content="Infantojuvenil" Grid.Column="1" HorizontalAlignment="Left" Margin="422,265,0,194" Grid.Row="1" VerticalAlignment="Stretch" Height="25" Width="118" FontFamily="Segoe Script" FontWeight="Bold" FontSize="14"/>
-        <Label Content="Mangás" Grid.Column="1" HorizontalAlignment="Left" Margin="742,271,0,188" Grid.Row="1" VerticalAlignment="Stretch" Height="25" Width="118" FontFamily="Segoe Script" FontWeight="Bold" FontSize="14"/>
+        <Label Content="Clássicos" Grid.Column="1" HorizontalAlignment="Left" Margin="135,269,0,190" Grid.Row="1" VerticalAlignment="Stretch" Height="25" Width="86" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="14"/>
+        <Label Content="Infantojuvenil" Grid.Column="1" HorizontalAlignment="Left" Margin="430,269,0,190" Grid.Row="1" VerticalAlignment="Stretch" Height="25" Width="105" Padding="0" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="14"/>
+        <Label Content="Mangás" Grid.Column="1" HorizontalAlignment="Left" Margin="745,272,0,187" Grid.Row="1" VerticalAlignment="Stretch" Height="25" Width="50" Padding="0" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="14"/>
 
 
 

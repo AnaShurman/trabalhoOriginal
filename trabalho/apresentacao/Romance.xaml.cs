@@ -28,6 +28,7 @@ namespace trabalho.apresentacao
         Conexao con = new Conexao();
         MySqlDataReader dr;
         int idRecebido = 0;
+        Controle controle = new Controle();
 
         public Romance(int idEnviado)
         {
@@ -38,6 +39,7 @@ namespace trabalho.apresentacao
         {
             InitializeComponent();
         }
+
 
         private void selectFiltro()
         {
@@ -72,14 +74,14 @@ namespace trabalho.apresentacao
 
         private void btn_perfil_Click(object sender, RoutedEventArgs e)
         {
-            Perfil perfil = new Perfil();
+            Perfil perfil = new Perfil(idRecebido);
             perfil.Show();
             Close(); 
         }
 
         private void Romance_Click(object sender, RoutedEventArgs e)
         {
-            Romance romance = new Romance();
+            Romance romance = new Romance(idRecebido);
             romance.Show();
             this.Close();
         }
@@ -87,33 +89,28 @@ namespace trabalho.apresentacao
         private void Mangas_Click(object sender, RoutedEventArgs e)
         {
 
-            Mangas mangas = new Mangas();
+            Mangas mangas = new Mangas(idRecebido);
             mangas.Show();
             this.Close();
         }
 
         private void Misterio_Click(object sender, RoutedEventArgs e)
         {
-            Misterio misterio = new Misterio();
+            Misterio misterio = new Misterio(idRecebido);
             misterio.Show();
             this.Close();
         }
 
         private void Terror_Click(object sender, RoutedEventArgs e)
         {
-            Terror terror = new Terror();
+            Terror terror = new Terror(idRecebido);
             terror.Show();
             this.Close();
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
         private void logo_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Inicio inicio = new Inicio();
+            Inicio inicio = new Inicio(idRecebido);
             inicio.Show();
             this.Close();
         }
@@ -127,6 +124,13 @@ namespace trabalho.apresentacao
         private void btn_pesquisa_Click(object sender, RoutedEventArgs e)
         {
             selectFiltro();
+        }
+
+        private void logo_Click(object sender, MouseButtonEventArgs e)
+        {
+            Inicio Inicio = new Inicio(idRecebido);
+            Inicio.Show();
+            Close();
         }
     }
 }

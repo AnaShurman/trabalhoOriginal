@@ -15,7 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using trabalho.dal;
-
+using trabalho.modelo;
 
 namespace trabalho.apresentacao
 {
@@ -28,6 +28,8 @@ namespace trabalho.apresentacao
         MySqlCommand cmd = new MySqlCommand();
         MySqlDataAdapter sqa = new MySqlDataAdapter();
         Conexao con = new Conexao();
+        Controle controle = new Controle();
+        int v = 0;
 
         int idRecebido = 0;
         public MeusLivros(int idEnviado)
@@ -39,14 +41,13 @@ namespace trabalho.apresentacao
         {
             InitializeComponent();
         }
-
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             try
             {
                 cmd.Connection = con.conectar();
                 DataSet ds = new DataSet();
-                sqa = new MySqlDataAdapter("SELECT nome_livro FROM livros WHERE id_user = "+ idRecebido, con.conectar());
+                sqa = new MySqlDataAdapter("SELECT nome_livro FROM livros WHERE id_user = " + idRecebido, con.conectar());
                 sqa.Fill(ds);
                 con.desconectar();
                 foreach (DataRow dataRow in ds.Tables[0].Rows)
@@ -58,49 +59,49 @@ namespace trabalho.apresentacao
             }
             catch (MySqlException)
             {
-                this.mensagem = "Erro com o Database!";
+                mensagem = "Erro com o Database!";
             }
 
         }
 
         private void btn_perfil_Click(object sender, RoutedEventArgs e)
         {
-            Perfil perfil = new Perfil();
+            Perfil perfil = new Perfil(idRecebido);
             perfil.Show();
             Close();
         }
 
         private void logo_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Inicio inicio = new Inicio();
+            Inicio inicio = new Inicio(idRecebido);
             inicio.Show();
             Close();
         }
 
         private void Romance_Click(object sender, RoutedEventArgs e)
         {
-            Romance romance = new Romance();
+            Romance romance = new Romance(idRecebido);
             romance.Show();
             Close();
         }
 
         private void Mangas_Click(object sender, RoutedEventArgs e)
         {
-            Mangas mangas = new Mangas();
+            Mangas mangas = new Mangas(idRecebido);
             mangas.Show();
             Close();
         }
 
         private void Misterio_Click(object sender, RoutedEventArgs e)
         {
-            Misterio menuItem = new Misterio();
+            Misterio menuItem = new Misterio(idRecebido);
             menuItem.Show();
             Close();
         }
 
         private void Terror_Click(object sender, RoutedEventArgs e)
         {
-            Terror menuIte = new Terror();
+            Terror menuIte = new Terror(idRecebido);
             menuIte.Show();
             Close();
         }
@@ -143,9 +144,14 @@ namespace trabalho.apresentacao
 
         private void logo_Click(object sender, MouseButtonEventArgs e)
         {
-            Inicio inicio = new Inicio();
+            Inicio inicio = new Inicio(idRecebido);
             inicio.Show();
             Close();
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            Adicionar_livros add = new Adicionar_livros(idRecebido);
         }
     }
 }

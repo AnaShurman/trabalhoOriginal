@@ -138,38 +138,11 @@ namespace trabalho.dal
 
         }
 
-        public int idLivro(String id_livro_lido)
-        {
-            int idLivroLido = 0;
-            cmd.CommandText = "SELECT nome_livro_lido FROM livros_lidos WHERE ID_usuario = @id";
-            cmd.Parameters.AddWithValue("@id", id_livro_lido);
-            try
-            {
-                cmd.Connection = con.conectar();
-                dr = cmd.ExecuteReader();
-
-                while (dr.Read())
-                {
-                    idLivroLido = Convert.ToInt32(dr["ID_usuario"]);
-                }
-                con.desconectar();
-                dr.Close();
-            }
-            catch (MySqlException)
-            {
-                this.mensagem = "Erro com o Database!";
-            }
-
-            return idLivroLido;
-        }
-
-        public int verificaPage(String num_pages, int num_tots, String id_usuar)
+        public int verificaPage(String id_usuar)
         {
             int page_total = 0;
             //Buscar no db esse usuario
             cmd.CommandText = "SELECT num_total FROM livros_lidos WHERE ID_usuario = @id_usu;";
-            cmd.Parameters.AddWithValue("@num_page", num_pages);
-            cmd.Parameters.AddWithValue("@num_tota", num_tots);
             cmd.Parameters.AddWithValue("@id_usu", id_usuar);
             try
             {

@@ -5,21 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:trabalho.apresentacao"
         mc:Ignorable="d"
-       Title="Login" Height="680" Width="1370" WindowState="Maximized" OpacityMask="Black">
+       Title="Login" Height="680" Width="1370" WindowState="Maximized" Icon="../imagens/logogrande1.png" WindowStartupLocation='CenterScreen'  OpacityMask="Black">
     <Window.Background>
-        <ImageBrush ImageSource="../imagens/stars.jpg"/>
+        <ImageBrush ImageSource="../imagens/background1.jpg"/>
     </Window.Background>
+
     <Grid Margin="10,6,0,5">
+
         <Grid.RowDefinitions>
-            <RowDefinition Height="77*"/>
-            <RowDefinition Height="243*"/>
+            <RowDefinition Height="94*"/>
+            <RowDefinition Height="545*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="193*"/>
             <ColumnDefinition Width="Auto" MinWidth="1016"/>
             <ColumnDefinition Width="145*"/>
         </Grid.ColumnDefinitions>
-        <Image x:Name="logo" HorizontalAlignment="Center" VerticalAlignment="Center" MaxHeight="120" Source="../imagens/logogrande1.png" Grid.Row="0"  Grid.Column="0" Height="97" Width="126" MouseLeftButtonDown="logo_click" Margin="35,28,31.8,28.6">
+
+        <Image x:Name="logo" HorizontalAlignment="Center" VerticalAlignment="Center" MaxHeight="120" Source="../imagens/logogrande1.png" Grid.Row="0"  Grid.Column="0" Height="97" Width="126" MouseLeftButtonDown="logo_click" Margin="35,-4,31.8,1.4">
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>
@@ -39,12 +42,11 @@
             </Image.RenderTransform>
         </Image>
 
-        <Rectangle Grid.Column="1" HorizontalAlignment="Left" Height="443" Stroke="Black" VerticalAlignment="Top" Width="1003" Fill="#FF1B1B1B" RadiusX="8" RadiusY="8" Grid.Row="1" Opacity="0.68" Margin="3,0,0,0"/>
+        <Rectangle Grid.Column="1" HorizontalAlignment="Center" Height="453" Stroke="Black" VerticalAlignment="Top" Width="990" Fill="#FF0E0434" RadiusX="8" RadiusY="8" Margin="16.2,3.6,9.8,0" Grid.Row="1" />
 
-        <Menu x:Name="menu" HorizontalAlignment="Left" Background="{x:Null}" Width="132" Opacity="0.85" Margin="64,40.4,0,212.2" Grid.Row="1" Padding="0" Grid.ColumnSpan="2" >
-            <MenuItem Background="{x:Null}" Foreground="White" FontWeight="Bold" FontSize="20" FontFamily="Simplicity" Header="Meu Perfil" Width="147" Height="37" Padding="16,0,-80,0"/>
+        <Menu x:Name="menu" HorizontalAlignment="Left" Background="{x:Null}" Width="132" Opacity="0.85" Margin="64,44.6,0,212.2" Grid.Row="1" Padding="0" Grid.ColumnSpan="2" >
+            <MenuItem Background="{x:Null}" Foreground="White" FontWeight="Bold" FontSize="20" FontFamily="Simplicity" Header="Meu Perfil" Width="147" Height="37" Padding="16,0,-80,0" Click="perfil_Click"/>
             <MenuItem Header="Categorias"  Background="{x:Null}" Foreground="White"  Width="153" FontFamily="Simplicity" FontSize="20" FontWeight="Bold" Height="31" Padding="16,0,-86,0" BorderThickness="0"  Margin="0,31,0,0" >
-
                 <MenuItem x:Name="Romance" Header="Romance" Foreground="#FFFFF6F6" Click="Romance_Click"/>
                 <MenuItem x:Name="Mangas" Header="Mangás" Foreground="White" Click="Mangas_Click"/>
                 <MenuItem x:Name="Misterio" Header="Misterio" Foreground="White" Click="Misterio_Click"/>
@@ -52,25 +54,27 @@
             </MenuItem>
         </Menu>
 
-        <Image Source="../imagens/perfil.png" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Height="75" Width="72" Margin="0,18.4,0,0"  />
-        <Image HorizontalAlignment="Left" Height="55" Margin="8,98.4,0,0" Grid.Row="1" VerticalAlignment="Top" Width="79" Source="../imagens/categoria.png" RenderTransformOrigin="-0.532,0.52"/>
+        <Image Source="../imagens/perfil.png" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Height="75" Width="72" Margin="0,22.6,0,0"  />
+        <Image HorizontalAlignment="Left" Height="55" Margin="8,102.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="79" Source="../imagens/categoria.png" RenderTransformOrigin="-0.532,0.52"/>
 
-        <Label x:Name="lblUser_Log" Content="Nome de usuário ou email:" Grid.Column="1" HorizontalAlignment="Left" Margin="388.2,90.4,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="265" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="lblPass_Log" Content="Senha:" Grid.Column="1" HorizontalAlignment="Left" Margin="388.2,148.4,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="120" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="lblUser_Log" Content="Nome de usuário ou email:" Grid.Column="1" HorizontalAlignment="Left" Margin="388.2,94.6,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="265" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="lblPass_Log" Content="Senha:" Grid.Column="1" HorizontalAlignment="Left" Margin="388.2,152.6,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="120" Foreground="White" FontWeight="Bold"/>
 
-        <Border BorderThickness="1"  CornerRadius="20" Padding="2"  MinHeight="8"  HorizontalAlignment="Left" Margin="388.2,120.4,0,0" Grid.Row="1"  Grid.Column="1" VerticalAlignment="Top" Height="30" Width="265"  Background="#FFF9F9F9">
-            <TextBox x:Name="txt_User_Log" Tag="Digite email ou username..." RenderTransformOrigin="0.5,0.5" TextWrapping="Wrap" CaretBrush="#FF673AB7" Margin="7,-3"/>
+        <Border BorderThickness="1"  CornerRadius="10" Padding="2"  MinHeight="8"  HorizontalAlignment="Left" Margin="388.2,124.6,0,0" Grid.Row="1"  Grid.Column="1" VerticalAlignment="Top" Height="30" Width="265"  Background="#FFF9F9F9">
+            <TextBox x:Name="txt_User_Log" RenderTransformOrigin="0.5,0.5" TextWrapping="Wrap" CaretBrush="#FF673AB7" Margin="7,-3"/>
         </Border>
 
-        <Border BorderThickness="1"  CornerRadius="20" Padding="2" MinHeight="8" Grid.Column="1" HorizontalAlignment="Left" Margin="388.2,178.4,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="265"  Background="#FFF9F9F9">
-            <PasswordBox x:Name="txt_Pass_Log"  Tag="Digite uma senha..." Margin="7,-3"/>
+        <Border BorderThickness="1"  CornerRadius="10" Padding="2" MinHeight="8" Grid.Column="1" HorizontalAlignment="Left" Margin="388.2,182.6,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="265"  Background="#FFF9F9F9">
+            <PasswordBox x:Name="txt_Pass_Log" Margin="7,-3"/>
         </Border>
 
-        <Button x:Name="btn_Cadastrar_Log" Content="Cadastrar" Grid.Column="1" HorizontalAlignment="Left" Margin="455.2,294.4,0,0" Grid.Row="1" VerticalAlignment="Top" Width="104" Click="btn_Cadastrar_Log_Click"/>
+        <Button x:Name="btn_Cadastrar_Log" Content="Cadastrar" Grid.Column="1" HorizontalAlignment="Left" Margin="463,298,0,0" Grid.Row="1" VerticalAlignment="Top" Width="95" Height="30" Click="btn_Cadastrar_Log_Click"/>
 
-        <Button x:Name="btn_Voltar_Log" Content="Voltar" Grid.Column="1" HorizontalAlignment="Left" Margin="513.2,251.4,0,0" Grid.Row="1" VerticalAlignment="Top" Width="80" Click="btn_Voltar_Log_Click"/>
+        <Button x:Name="btn_Voltar_Log" Content="Voltar" Grid.Column="1" HorizontalAlignment="Left" Margin="513.2,255.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="80" Height="30" Click="btn_Voltar_Log_Click"/>
 
-        <Button x:Name="btn_Login_Log" Content="Login" Grid.Column="1" HorizontalAlignment="Left" Margin="428.2,251.4,0,0" Grid.Row="1" VerticalAlignment="Top" Width="80" Click="btn_Login_Log_Click"/>
+        <Button x:Name="btn_Login_Log" Content="Login" Grid.Column="1" HorizontalAlignment="Left" Margin="428.2,255.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="80" Height="30" Click="btn_Login_Log_Click"/>
+
+        <Label Content="Login" Grid.Column="1" HorizontalAlignment="Center" Margin="434,19,423,0" VerticalAlignment="Top" Foreground="White" Height="74" Width="159" FontWeight="Bold" FontSize="50" FontFamily="Ink Free"/>
 
 
     </Grid>

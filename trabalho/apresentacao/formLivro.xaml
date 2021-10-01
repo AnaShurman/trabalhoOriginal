@@ -5,47 +5,103 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:trabalho.apresentacao"
         mc:Ignorable="d"
-        Title="formLivro" 
- Height="400" Width="700" WindowStartupLocation='CenterScreen'>
-    <Grid Margin="10,6,0,5">
+        Title="Ponto de encontro" Height="400" Width="700" WindowStartupLocation='CenterScreen' Icon="../imagens/logogrande1.png">
+    <Grid Margin="-6,6,16,5">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition/>
             <ColumnDefinition Width="500"></ColumnDefinition>
-            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Image x:Name="logo" VerticalAlignment="Top" Height="81" Source="../imagens/logo.png" MouseLeftButtonDown="logo_MouseLeftButtonDown" Margin="-29,-11,480,0" Grid.RowSpan="2" Grid.ColumnSpan="2" >
+        <Image x:Name="logo" VerticalAlignment="Top" Height="82" Source="../imagens/logopequena1.png" MouseLeftButtonDown="logo_MouseLeftButtonDown" Margin="10,-12,490,0" Grid.ColumnSpan="2" >
             <Image.OpacityMask>
-                <ImageBrush ImageSource="../imagens/logo.png"/>
+                <ImageBrush ImageSource="../imagens/logopequena1.png"/>
             </Image.OpacityMask>
         </Image>
-        <RadioButton Content="16/07/2021,Terça, 14:50" Grid.Column="1" HorizontalAlignment="Left" Margin="110,74.6,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
-        <RadioButton Content="20/08/2021-10:00" Grid.Column="1" HorizontalAlignment="Left" Margin="110,94.6,0,0" Grid.Row="1" VerticalAlignment="Top" IsThreeState="True"/>
-        <RadioButton Content="01/09/2021- 18:00" Grid.Column="1" HorizontalAlignment="Left" Margin="110,114.6,0,0" Grid.Row="1" VerticalAlignment="Top"/>
 
-        <RadioButton Content="Shopping Dom Pedro" Grid.Column="1" HorizontalAlignment="Left" Margin="268,116.6,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <RadioButton Content="Biblioteca Municipal" Grid.Column="1" HorizontalAlignment="Left" Margin="268,96.6,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <RadioButton Content="Shopping de Hortolândia" Grid.Column="1" HorizontalAlignment="Left" Margin="268,73.6,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        
-        <Button x:Name="btn_enviar" Content="Enviar solicitação" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="303,212.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="97" Click="btn_enviar_Click"/>
-        <Button x:Name="btn_cancelar" Content="Cancelar" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="411,212.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="79" Click="btn_cancelar_Click"/>
-        <Label Content="Datas disponiveis" Grid.Column="1" HorizontalAlignment="Left" Margin="99,40.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="146" FontWeight="Bold" FontSize="16"/>
-        <Label Content="Lugares disponiveis" Grid.Column="1" HorizontalAlignment="Left" Margin="268,39.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="162" FontWeight="Bold" FontSize="16" RenderTransformOrigin="0.5,0.5">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.657"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
+        <RadioButton x:Name="radioShopping" Content="Shopping" Grid.Column="1" HorizontalAlignment="Left" Margin="265,102,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="radioShopping_Checked" Height="18" Width="73"/>
+        <RadioButton x:Name="radioBiblioteca" Content="Biblioteca Municipal" Grid.Column="1" HorizontalAlignment="Left" Margin="265,79,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="radioBiblioteca_Checked" Height="18" Width="129"/>
+        <RadioButton x:Name="radioOpen" Content="Open Shopping" Grid.Column="1" HorizontalAlignment="Left" Margin="265,56,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="radioOpen_Checked" Height="18" Width="106"/>
+        <RadioButton x:Name="radioOutro" Content="Outro. Qual?" Grid.Column="1" HorizontalAlignment="Left" Margin="265,125,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="radioOutro_Checked" Height="18" Width="89"/>
+
+        <Button x:Name="btn_enviar" Content="Enviar solicitação" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="239,198,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150" Click="btn_enviar_Click"/>
+        <Button x:Name="btn_cancelar" Content="Cancelar" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="400,198,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" Click="btn_cancelar_Click"/>
+
+        <Label Content="Datas possíveis" Grid.Column="1" HorizontalAlignment="Left" Margin="40,16,0,0" Grid.Row="1" VerticalAlignment="Top" Width="126" FontWeight="Bold" FontSize="16" Height="29"/>
+        <Label Content="Sugestão de lugares" Grid.Column="1" HorizontalAlignment="Left" Margin="259,21,0,0" Grid.Row="1" VerticalAlignment="Top" Width="162" FontWeight="Bold" FontSize="16" Height="29"/>
+        <Label Content="Mensagem: " Grid.Column="1" HorizontalAlignment="Left" Margin="40,96,0,0" Grid.Row="1" VerticalAlignment="Top" Width="126" FontWeight="Bold" FontSize="16" Height="29"/>
+
+        <Border BorderThickness="1"  CornerRadius="10" Padding="2" Grid.Column="1" HorizontalAlignment="Left" Margin="40,50,0,0" Grid.Row="1" Background="#FFE8E1E1" VerticalAlignment="Top" Height="25" Width="50" >
+            <ComboBox x:Name="cbDia" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="30" Height="25" Margin="7,-3,0,-3">
+                <ComboBoxItem>1</ComboBoxItem>
+                <ComboBoxItem>2</ComboBoxItem>
+                <ComboBoxItem>3</ComboBoxItem>
+                <ComboBoxItem>4</ComboBoxItem>
+                <ComboBoxItem>5</ComboBoxItem>
+                <ComboBoxItem>6</ComboBoxItem>
+                <ComboBoxItem>7</ComboBoxItem>
+                <ComboBoxItem>8</ComboBoxItem>
+                <ComboBoxItem>9</ComboBoxItem>
+                <ComboBoxItem>10</ComboBoxItem>
+                <ComboBoxItem>11</ComboBoxItem>
+                <ComboBoxItem>12</ComboBoxItem>
+                <ComboBoxItem>13</ComboBoxItem>
+                <ComboBoxItem>14</ComboBoxItem>
+                <ComboBoxItem>15</ComboBoxItem>
+                <ComboBoxItem>16</ComboBoxItem>
+                <ComboBoxItem>17</ComboBoxItem>
+                <ComboBoxItem>18</ComboBoxItem>
+                <ComboBoxItem>19</ComboBoxItem>
+                <ComboBoxItem>20</ComboBoxItem>
+                <ComboBoxItem>21</ComboBoxItem>
+                <ComboBoxItem>22</ComboBoxItem>
+                <ComboBoxItem>23</ComboBoxItem>
+                <ComboBoxItem>24</ComboBoxItem>
+                <ComboBoxItem>25</ComboBoxItem>
+                <ComboBoxItem>26</ComboBoxItem>
+                <ComboBoxItem>27</ComboBoxItem>
+                <ComboBoxItem>28</ComboBoxItem>
+                <ComboBoxItem>29</ComboBoxItem>
+                <ComboBoxItem>30</ComboBoxItem>
+            </ComboBox>
+        </Border>
+
+        <Border BorderThickness="1"  CornerRadius="10" Padding="2" Grid.Column="1" HorizontalAlignment="Left" Margin="95,50,0,0" Grid.Row="1" Background="#FFE8E1E1" VerticalAlignment="Top" Height="25" Width="50" >
+            <ComboBox Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="30" Height="25" Margin="7,-3,0,-3">
+                <ComboBoxItem>1</ComboBoxItem>
+                <ComboBoxItem>2</ComboBoxItem>
+                <ComboBoxItem>3</ComboBoxItem>
+                <ComboBoxItem>4</ComboBoxItem>
+                <ComboBoxItem>5</ComboBoxItem>
+                <ComboBoxItem>6</ComboBoxItem>
+                <ComboBoxItem>7</ComboBoxItem>
+                <ComboBoxItem>8</ComboBoxItem>
+                <ComboBoxItem>9</ComboBoxItem>
+                <ComboBoxItem>10</ComboBoxItem>
+                <ComboBoxItem>11</ComboBoxItem>
+                <ComboBoxItem>12</ComboBoxItem>
+            </ComboBox>
+        </Border>
+
+        <Border BorderThickness="1"  CornerRadius="10" Padding="2" Grid.Column="1" HorizontalAlignment="Left" Margin="150,49,0,0" Grid.Row="1" Background="#FFE8E1E1" VerticalAlignment="Top" Height="25" Width="69" >
+            <ComboBox Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="49" Height="25" Margin="7,-3,0,-3">
+                <ComboBoxItem>2021</ComboBoxItem>
+            </ComboBox>
+        </Border>
+
+        <Border x:Name="txtOutro" BorderThickness="1"  CornerRadius="10" Padding="2" Visibility="Hidden"  MinHeight="8"  HorizontalAlignment="Left" Margin="268,154,0,0" Grid.Row="1" Grid.Column="1" Background="#FFE8E1E1" VerticalAlignment="Top" Height="25" Width="150">
+            <TextBox x:Name="txtOutroo" Grid.Column="1" HorizontalAlignment="Left" Height="25" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Grid.ColumnSpan="2" Margin="7,-3,0,-3"/>
+        </Border>
+
+        <Border BorderThickness="1"  CornerRadius="10" Padding="2"  MinHeight="8"  HorizontalAlignment="Left" Margin="46,130,0,0" Grid.Row="1" Grid.Column="1" Background="#FFE8E1E1" VerticalAlignment="Top" Height="70" Width="170">
+            <TextBox x:Name="txtMsg" Grid.Column="1" HorizontalAlignment="Left" Height="67" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Background="#FFE8E1E1" Margin="7,0,0,-3"/>
+        </Border>
 
     </Grid>
 </Window>

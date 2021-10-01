@@ -46,8 +46,6 @@ namespace trabalho.apresentacao
                     Inicio inicio = new Inicio(controle.acessarID(txt_User_Log.Text, txt_User_Log.Text));
                     inicio.Show();
                     Close();
-
-
                 }
                 else
                 {
@@ -74,24 +72,39 @@ namespace trabalho.apresentacao
             Close();
         }
 
+        private void logo_Click(object sender, MouseButtonEventArgs e)
+        {
+            Inicio Inicio = new Inicio();
+            Inicio.Show();
+            Close();
+        }
+
         private void Romance_Click(object sender, RoutedEventArgs e)
         {
-
+            Romance Romance = new Romance();
+            Romance.Show();
+            Close();
         }
 
         private void Mangas_Click(object sender, RoutedEventArgs e)
         {
-
+            Mangas Mangas = new Mangas();
+            Mangas.Show();
+            Close();
         }
 
         private void Misterio_Click(object sender, RoutedEventArgs e)
         {
-
+            Misterio Misterio = new Misterio();
+            Misterio.Show();
+            Close();
         }
 
         private void Terror_Click(object sender, RoutedEventArgs e)
         {
-
+            Terror Terror = new Terror();
+            Terror.Show();
+            Close();
         }
 
         private void logo_click(object sender, MouseButtonEventArgs e)
@@ -102,11 +115,9 @@ namespace trabalho.apresentacao
 
         }
 
-        private void btn_perfil_Click(object sender, RoutedEventArgs e)
+        private void perfil_Click(object sender, RoutedEventArgs e)
         {
-            Perfil perfil = new Perfil();
-            perfil.Show();
-            Close();
+            MessageBox.Show("Faça o login ou cadastro", "Error!", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
 }

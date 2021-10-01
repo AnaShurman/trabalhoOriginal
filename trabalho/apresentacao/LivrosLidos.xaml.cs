@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using trabalho.dal;
 using trabalho.modelo;
 
 namespace trabalho.apresentacao
@@ -20,12 +22,18 @@ namespace trabalho.apresentacao
     /// </summary>
     public partial class LivrosLidos : Window
     {
+        public String mensagem = "";
         int pages_tot = 0;
         int idRecebido = 0;
+        MySqlCommand cmd = new MySqlCommand();
+        MySqlDataReader dr;
+        Conexao con = new Conexao();
 
-        public LivrosLidos(int page, int idEnviado)
+
+
+
+        public LivrosLidos(int idEnviado)
         {
-            pages_tot = page;
             idRecebido = idEnviado;
             InitializeComponent();
         }
@@ -35,12 +43,30 @@ namespace trabalho.apresentacao
             InitializeComponent();
         }
 
-
+        private void verificaPage()
+        {
+            cmd.CommandText = "SELECT num_total FROM livros_lidos WHERE ID_usuario = @id_usu;";
+            cmd.Parameters.AddWithValue("@id_usu", idRecebido);
+            try
+            {
+                cmd.Connection = con.conectar();
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)//Se existir no db
+                {
+                    pages_tot = Convert.ToInt32(dr);
+                }
+                con.desconectar();
+                dr.Close();
+            }
+            catch (MySqlException)
+            {
+                this.mensagem = "Erro com o Database!";
+            }
+        }
 
         private void btn_add_livro_lido_Click(object sender, RoutedEventArgs e)
         {
-            Controle controle = new Controle();
-
+            Controle controle = new Controle();     
             if (controle.mensagem.Equals(""))
             {
                 pages_tot += Convert.ToInt32(txt_numero_paginas.Text);
@@ -64,34 +90,42 @@ namespace trabalho.apresentacao
 
         private void logo_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Inicio inicio = new Inicio();
+            Inicio inicio = new Inicio(idRecebido);
             inicio.Show();
             Close();
         }
 
         private void Romance_Click(object sender, RoutedEventArgs e)
         {
-
+            Romance menu = new Romance(idRecebido);
+            menu.Show();
+            Close();
         }
 
         private void Mangas_Click(object sender, RoutedEventArgs e)
         {
-
+            Mangas menu = new Mangas(idRecebido);
+            menu.Show();
+            Close();
         }
 
         private void Misterio_Click(object sender, RoutedEventArgs e)
         {
-
+            Misterio menu = new Misterio(idRecebido);
+            menu.Show();
+            Close();
         }
 
         private void Terror_Click(object sender, RoutedEventArgs e)
         {
-
+            Terror menu = new Terror(idRecebido);
+            menu.Show();
+            Close();
         }
 
-        private void btn_perfil_Click(object sender, RoutedEventArgs e)
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            Perfil perfil = new Perfil();
+            Perfil perfil = new Perfil(idRecebido);
             perfil.Show();
             Close();
         }

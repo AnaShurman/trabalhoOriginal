@@ -48,22 +48,10 @@ namespace trabalho.modelo
             return idRetorno;
         }
 
-        public int procuraIDLivro(String id_livro_lido)
+        public int acessarPageTot(String id_usuar)
         {
             LoginDalComandos loginDal = new LoginDalComandos();
-            idLivroLidoV = loginDal.idLivro(id_livro_lido);
-            if (loginDal.tem)
-            {
-                this.tem = true;
-            }
-            return idLivroLidoV;
-
-        }
-
-        public int acessarPageTot(String num_pages, int num_tots, String id_usuar)
-        {
-            LoginDalComandos loginDal = new LoginDalComandos();
-            page_total = loginDal.verificaPage(num_pages, num_tots, id_usuar);
+            page_total = loginDal.verificaPage(id_usuar);
             if (!loginDal.mensagem.Equals(""))
             {
                 this.mensagem = loginDal.mensagem;

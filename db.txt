@@ -6,8 +6,18 @@ CREATE TABLE `livros` (
   `cat_livro` varchar(45) NOT NULL,
   `edicao_livro` varchar(30) NOT NULL,
   `foto` longblob NOT NULL,
+  `id_user` int unsigned NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB;
+
+CREATE TABLE `livros_lidos` (
+  `ID_livro_lido` int unsigned NOT NULL AUTO_INCREMENT,
+  `nome_livro_lido` varchar(100) NOT NULL,
+  `num_page` bigint unsigned NOT NULL,
+  `num_total` int unsigned NOT NULL,
+  `ID_usuario` int unsigned NOT NULL,
+  PRIMARY KEY (`ID_livro_lido`)
+) ENGINE=InnoDB;
 
 CREATE TABLE `users` (
   `id_u` int unsigned NOT NULL AUTO_INCREMENT,
@@ -21,4 +31,4 @@ CREATE TABLE `users` (
   `celular` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `email` varchar(100) NOT NULL,
   PRIMARY KEY (`id_u`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB;
