@@ -5,75 +5,153 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:trabalho.apresentacao"
         mc:Ignorable="d"
-       Title="romance" Height="681" Width="1372"  WindowState="Maximized" OpacityMask="Black">
+       Title="romance" Height="681" Width="1372"  WindowState="Maximized" OpacityMask="Black" Icon="../imagens/logogrande1.png">
     <Window.Background>
-        <ImageBrush ImageSource="../imagens/stars.jpg"/>
+        <ImageBrush ImageSource="/trabalho;component/imagens/background1.jpg"/>
     </Window.Background>
+
     <Grid Margin="10,6,0,5">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="211*"></ColumnDefinition>
-            <ColumnDefinition Width="1058"></ColumnDefinition>
-            <ColumnDefinition Width="93*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-
         <Grid.RowDefinitions>
-            <RowDefinition Height="102"></RowDefinition>
-            <RowDefinition/>
-            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="123*"/>
+            <RowDefinition Height="517*"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="207*"/>
+            <ColumnDefinition Width="Auto" MinWidth="1028"/>
+            <ColumnDefinition Width="121*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Height="469" Stroke="Black" VerticalAlignment="Top" Width="1044" Fill="#FF0E0434" RadiusX="8" RadiusY="8" Margin="2,4,3,0" />
 
-        <Rectangle Grid.Column="1" HorizontalAlignment="Center" Height="574" Stroke="Black" VerticalAlignment="Top" Width="1044" Fill="#FF1B1B1B" RadiusX="8" RadiusY="8" Grid.Row="1" Opacity="0.68" Grid.RowSpan="2"/>
-
-        <Image x:Name="logo" Grid.Row="0" Source="../imagens/logo.png"  Stretch="UniformToFill"   HorizontalAlignment="Left" Width="225" Margin="-18,-22,0,0" RenderTransformOrigin="0.5,0.5" Height="104" VerticalAlignment="Top" MouseLeftButtonDown="logo_MouseLeftButtonDown">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleY="-0.547"/>
-                    <RotateTransform/>
-                    <TranslateTransform Y="-1.006"/>
-                </TransformGroup>
-            </Image.RenderTransform>
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="../imagens/logo.png" TileMode="None" Stretch="None"/>
-            </Image.OpacityMask>
-        </Image>
-
-
-        <Menu x:Name="menu" HorizontalAlignment="Left" Grid.Row="1" Background="#FF1B1B1B" Width="218" Opacity="0.85">
-            <MenuItem Header="Categorias"  Background="#FF323232" Foreground="White"  Width="220" Margin="0,87,0,0" FontFamily="Haettenschweiler" FontSize="22" >
-                <MenuItem x:Name="romance" Header="Romance" Click="Romance_Click"  Foreground="#FFFFF6F6" Background="#FF171819"/>
-                <MenuItem x:Name="Mangas" Header="Mangás" Background="#FF323232" Click="Mangas_Click"  Foreground="White"/>
-                <MenuItem x:Name="Misterio" Header="Misterio" Background="#FF323232" Click="Misterio_Click"  Foreground="White"/>
-                <MenuItem x:Name="Terror" Header="Terror" Background="#FF323232"  Click="Terror_Click" Foreground="White"/>
-            </MenuItem>
-        </Menu>
-
-        <Button x:Name="btn_perfil" Grid.Row="1" Content="" HorizontalAlignment="Left" Margin="168,51,0,0" VerticalAlignment="Top" Width="29" Height="31" Click="btn_perfil_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="../imagens/perfil_icon.png"/>
-            </Button.Background>
-        </Button>
-
-        <Image x:Name="img_ComoEuEra" Grid.Column="1" HorizontalAlignment="Left" Height="146" Margin="67,92,0,0" Grid.Row="1" VerticalAlignment="Top" Width="108" Source="../imagens/ComoEuEra.jpg">
+        <Image x:Name="img_ComoEuEra" Grid.Column="1" HorizontalAlignment="Left" Height="146" Margin="86,54,0,0" Grid.Row="1" VerticalAlignment="Top" Width="108" Source="../imagens/ComoEuEra.jpg">
             <Image.OpacityMask>
                 <ImageBrush ImageSource="../imagens/ComoEuEra.jpg"/>
             </Image.OpacityMask>
         </Image>
 
+        <Label Content="Romance" Grid.Column="1" HorizontalAlignment="Center" Margin="450,19,399,0" VerticalAlignment="Top" Foreground="White" Height="74" Width="200" FontWeight="Bold" FontSize="50" FontFamily="Ink Free"/>
 
 
-        <Button x:Name="btn_antesDeVc" Content="Adquirir" Grid.Column="1"  HorizontalAlignment="Left" Margin="80.8,242.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" IsCancel="True" Click="btn_antesDeVc_Click"/>
-        <TextBox x:Name="teste"  Grid.Column="1" HorizontalAlignment="Left" Height="82" Margin="283,156,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="206"/>
-        <Label x:Name="teste1" Grid.Column="1" HorizontalAlignment="Left" Margin="613,136,0,0" Grid.Row="1" VerticalAlignment="Top" Height="70" Width="88" Background="#FFEA1212"/>
-        <Rectangle Grid.Column="1" Fill="Gray" HorizontalAlignment="Left" Height="41" RadiusY="8" Grid.Row="1" RadiusX="8" Stroke="Black" VerticalAlignment="Top" Width="1048"/>
-        <Label Content="Localização" Grid.Column="1" HorizontalAlignment="Left" Margin="176,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="82"/>
-        <TextBox x:Name="txtPesquisa" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="258,14,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"/>
+        <Button x:Name="btn_antesDeVc" Content="Adquirir" Grid.Column="1"  HorizontalAlignment="Left" Margin="89,205,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" IsCancel="True" Click="btn_antesDeVc_Click"/>
+        <TextBox x:Name="teste"  Grid.Column="1" HorizontalAlignment="Left" Height="82" Margin="282.4,154.8,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="206"/>
+        <Label x:Name="teste1" Grid.Column="1" HorizontalAlignment="Left" Margin="612.4,134.8,0,0" Grid.Row="1" VerticalAlignment="Top" Height="70" Width="88" Background="{x:Null}"/>
+        <Rectangle Fill="White" HorizontalAlignment="Center" Height="41" RadiusY="8" RadiusX="8" Stroke="Black" VerticalAlignment="Top" Width="1048" Grid.Row="1" Grid.Column="1" Margin="0.4,0.8,0.4,0"/>
+        <Label Content="Localização" Grid.Column="1" HorizontalAlignment="Left" Margin="754,11,0,0" Grid.Row="1" VerticalAlignment="Top" Width="82" Foreground="#DD000000" FontWeight="Bold" Height="24"/>
+        <TextBox x:Name="txtPesquisa" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="836,15,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"/>
 
-        <Button x:Name="btn_pesquisa" Grid.Row="1" Content="" HorizontalAlignment="Left" Margin="396,10,0,0" VerticalAlignment="Top" Width="55" Height="31" Grid.Column="1" BorderBrush="{x:Null}" Click="btn_pesquisa_Click">
+        <Button x:Name="btn_pesquisa" Grid.Row="1" Content="" HorizontalAlignment="Left" Margin="974,11,0,0" VerticalAlignment="Top" Width="55" Height="31" Grid.Column="1" BorderBrush="{x:Null}" Click="btn_pesquisa_Click">
             <Button.Background>
                 <ImageBrush ImageSource="https://lattinegroup.com/wp-content/uploads/2018/08/lupinha.png"/>
             </Button.Background>
         </Button>
+        <Menu x:Name="menu" HorizontalAlignment="Left" Background="{x:Null}" Width="132" Opacity="0.85" Margin="55,83.8,0,117" Grid.Row="1" Padding="0" >
+            <MenuItem Background="{x:Null}" Foreground="White" FontWeight="Bold" FontSize="20" FontFamily="Simplicity" Header="Meu Perfil" Width="147" Height="37" Padding="16,0,-80,0"/>
+            <MenuItem Header="Categorias"  Background="{x:Null}" Foreground="White"  Width="153" FontFamily="Simplicity" FontSize="20" FontWeight="Bold" Height="31" Padding="16,0,-86,0" Margin="0,32,0,0" BorderThickness="0" >
+
+                <MenuItem x:Name="Romance1" Header="Romance" Background="#FF323232" Foreground="#FFFFF6F6" Click="Romance_Click"/>
+                <MenuItem x:Name="Mangas" Header="Mangás" Background="#FF323232" Foreground="White" Click="Mangas_Click"/>
+                <MenuItem x:Name="Misterio" Header="Misterio" Background="#FF323232" Foreground="White" Click="Misterio_Click"/>
+                <MenuItem x:Name="Terror" Header="Terror" Background="#FF323232" Foreground="White" Click="Terror_Click"/>
+            </MenuItem>
+        </Menu>
+        <Image Source="/trabalho;component/imagens/perfil.png" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Height="75" Width="72" Margin="0,65.8,0,0"  />
+        <Image HorizontalAlignment="Left" Height="55" Margin="8,145.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="79" Source="/trabalho;component/imagens/categoria.png" RenderTransformOrigin="-0.532,0.52"/>
+        <Image x:Name="logo" HorizontalAlignment="Center" VerticalAlignment="Center" MaxHeight="120" Source="/trabalho;component/imagens/logogrande1.png" Grid.Row="0"  Grid.Column="0" Height="97" Width="144" MouseLeftButtonDown="logo_Click" Margin="27,14,22.6,12.2" >
+            <Image.Effect>
+                <DropShadowEffect/>
+            </Image.Effect>
+            <Image.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF180808" Offset="1"/>
+                </LinearGradientBrush>
+            </Image.OpacityMask>
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.449"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0.437"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="img_ComoEuEra_Copy" Grid.Column="1" HorizontalAlignment="Left" Height="146" Margin="218,54,0,0" Grid.Row="1" VerticalAlignment="Top" Width="108" Source="../imagens/como.jpeg">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="../imagens/1.jpg"/>
+            </Image.OpacityMask>
+        </Image>
+        <Button x:Name="btn_antesDeVc_Copy" Content="Adquirir" Grid.Column="1"  HorizontalAlignment="Left" Margin="224,205,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" IsCancel="True" Click="btn_antesDeVc_Click"/>
+        <Image x:Name="img_ComoEuEra_Copy1" Grid.Column="1" HorizontalAlignment="Left" Height="146" Margin="350,54,0,0" Grid.Row="1" VerticalAlignment="Top" Width="108" Source="../imagens/conectadas.jpeg">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="../imagens/3.jpg"/>
+            </Image.OpacityMask>
+        </Image>
+        <Button x:Name="btn_antesDeVc_Copy1" Content="Adquirir" Grid.Column="1"  HorizontalAlignment="Left" Margin="356,205,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" IsCancel="True" Click="btn_antesDeVc_Click"/>
+        <Image x:Name="img_ComoEuEra_Copy2" Grid.Column="1" HorizontalAlignment="Left" Height="146" Margin="482,54,0,0" Grid.Row="1" VerticalAlignment="Top" Width="108" Source="../imagens/quinze.jpeg">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="../imagens/3.jpg"/>
+            </Image.OpacityMask>
+        </Image>
+        <Button x:Name="btn_antesDeVc_Copy2" Content="Adquirir" Grid.Column="1"  HorizontalAlignment="Left" Margin="488,205,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" IsCancel="True" Click="btn_antesDeVc_Click"/>
+        <Image x:Name="img_ComoEuEra_Copy3" Grid.Column="1" HorizontalAlignment="Left" Height="146" Margin="607,54,0,0" Grid.Row="1" VerticalAlignment="Top" Width="108" Source="../imagens/sua.jpeg">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="../imagens/4.jpg"/>
+            </Image.OpacityMask>
+        </Image>
+        <Button x:Name="btn_antesDeVc_Copy3" Content="Adquirir" Grid.Column="1"  HorizontalAlignment="Left" Margin="612,205,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" IsCancel="True" Click="btn_antesDeVc_Click"/>
+        <Image x:Name="img_ComoEuEra_Copy4" Grid.Column="1" HorizontalAlignment="Left" Height="146" Margin="739,54,0,0" Grid.Row="1" VerticalAlignment="Top" Width="108" Source="../imagens/ummilhao.jpeg">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/trabalho;component/imagens/ComoEuEra.jpg"/>
+            </Image.OpacityMask>
+        </Image>
+        <Button x:Name="btn_antesDeVc_Copy4" Content="Adquirir" Grid.Column="1"  HorizontalAlignment="Left" Margin="744,205,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" IsCancel="True" Click="btn_antesDeVc_Click"/>
+        <Image x:Name="img_ComoEuEra_Copy5" Grid.Column="1" HorizontalAlignment="Left" Height="146" Margin="863,54,0,0" Grid.Row="1" VerticalAlignment="Top" Width="108" Source="../imagens/amor.jpeg">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/trabalho;component/imagens/ComoEuEra.jpg"/>
+            </Image.OpacityMask>
+        </Image>
+        <Button x:Name="btn_antesDeVc_Copy5" Content="Adquirir" Grid.Column="1"  HorizontalAlignment="Left" Margin="869,205,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" IsCancel="True" Click="btn_antesDeVc_Click"/>
+        <Image x:Name="img_ComoEuEra_Copy6" Grid.Column="1" HorizontalAlignment="Left" Height="146" Margin="89,265,0,0" Grid.Row="1" VerticalAlignment="Top" Width="108" Source="../imagens/red.jpeg">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/trabalho;component/imagens/ComoEuEra.jpg"/>
+            </Image.OpacityMask>
+        </Image>
+        <Button x:Name="btn_antesDeVc_Copy6" Content="Adquirir" Grid.Column="1"  HorizontalAlignment="Left" Margin="86,416,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" IsCancel="True" Click="btn_antesDeVc_Click"/>
+        <Image x:Name="img_ComoEuEra_Copy7" Grid.Column="1" HorizontalAlignment="Left" Height="146" Margin="212,265,0,0" Grid.Row="1" VerticalAlignment="Top" Width="108" Source="../imagens/todo.jpeg">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/trabalho;component/imagens/ComoEuEra.jpg"/>
+            </Image.OpacityMask>
+        </Image>
+        <Button x:Name="btn_antesDeVc_Copy7" Content="Adquirir" Grid.Column="1"  HorizontalAlignment="Left" Margin="218,416,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" IsCancel="True" Click="btn_antesDeVc_Click"/>
+        <Image x:Name="img_ComoEuEra_Copy8" Grid.Column="1" HorizontalAlignment="Left" Height="146" Margin="350,265,0,0" Grid.Row="1" VerticalAlignment="Top" Width="108" Source="../imagens/cinco.jpeg">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/trabalho;component/imagens/ComoEuEra.jpg"/>
+            </Image.OpacityMask>
+        </Image>
+        <Button x:Name="btn_antesDeVc_Copy8" Content="Adquirir" Grid.Column="1"  HorizontalAlignment="Left" Margin="356,416,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" IsCancel="True" Click="btn_antesDeVc_Click"/>
+        <Image x:Name="img_ComoEuEra_Copy9" Grid.Column="1" HorizontalAlignment="Left" Height="146" Margin="482,265,0,0" Grid.Row="1" VerticalAlignment="Top" Width="108" Source="../imagens/todolo.jpeg">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="../imagens/10.jpg"/>
+            </Image.OpacityMask>
+        </Image>
+        <Button x:Name="btn_antesDeVc_Copy9" Content="Adquirir" Grid.Column="1"  HorizontalAlignment="Left" Margin="488,416,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" IsCancel="True" Click="btn_antesDeVc_Click"/>
+        <Image x:Name="img_ComoEuEra_Copy10" Grid.Column="1" HorizontalAlignment="Left" Height="146" Margin="601,265,0,0" Grid.Row="1" VerticalAlignment="Top" Width="108" Source="../imagens/saga.jpg">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/trabalho;component/imagens/ComoEuEra.jpg"/>
+            </Image.OpacityMask>
+        </Image>
+        <Button x:Name="btn_antesDeVc_Copy10" Content="Adquirir" Grid.Column="1"  HorizontalAlignment="Left" Margin="607,416,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" IsCancel="True" Click="btn_antesDeVc_Click"/>
+        <Image x:Name="img_ComoEuEra_Copy11" Grid.Column="1" HorizontalAlignment="Left" Height="146" Margin="738,265,0,0" Grid.Row="1" VerticalAlignment="Top" Width="108" Source="../imagens/apenas.jpg">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/trabalho;component/imagens/ComoEuEra.jpg"/>
+            </Image.OpacityMask>
+        </Image>
+        <Button x:Name="btn_antesDeVc_Copy11" Content="Adquirir" Grid.Column="1"  HorizontalAlignment="Left" Margin="744,416,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" IsCancel="True" Click="btn_antesDeVc_Click"/>
+        <Image x:Name="img_ComoEuEra_Copy12" Grid.Column="1" HorizontalAlignment="Left" Height="146" Margin="863,265,0,0" Grid.Row="1" VerticalAlignment="Top" Width="108" Source="../imagens/selecao.jpg">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/trabalho;component/imagens/ComoEuEra.jpg"/>
+            </Image.OpacityMask>
+        </Image>
+        <Button x:Name="btn_antesDeVc_Copy12" Content="Adquirir" Grid.Column="1"  HorizontalAlignment="Left" Margin="869,416,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" IsCancel="True" Click="btn_antesDeVc_Click"/>
 
     </Grid>
 </Window>

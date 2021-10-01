@@ -20,6 +20,14 @@ namespace trabalho.apresentacao
     /// </summary>
     public partial class Cadastro : Window
     {
+        int idRecebido = 0;
+        Controle controle = new Controle();
+        int v = 0;
+        public Cadastro(int idEnviado)
+        {
+            idRecebido = idEnviado;
+            InitializeComponent();
+        }
         public Cadastro()
         {
             InitializeComponent();
@@ -27,21 +35,21 @@ namespace trabalho.apresentacao
 
         private void logo_click(object sender, MouseButtonEventArgs e)
         {
-            Inicio inicio = new Inicio();
+            Inicio inicio = new Inicio(idRecebido);
             inicio.Show();
             Close();
         }
 
         private void Romance_Click(object sender, RoutedEventArgs e)
         {
-            Romance romance = new Romance();
+            Romance romance = new Romance(idRecebido);
             romance.Show();
             Close();
         }
 
         private void Mangas_Click(object sender, RoutedEventArgs e)
         {
-            Mangas mangas = new Mangas();
+            Mangas mangas = new Mangas(idRecebido);
             mangas.Show();
             Close();
 
@@ -49,21 +57,21 @@ namespace trabalho.apresentacao
 
         private void Misterio_Click(object sender, RoutedEventArgs e)
         {
-            Misterio misterio = new Misterio();
+            Misterio misterio = new Misterio(idRecebido);
             misterio.Show();
             Close();
         }
 
         private void Terror_Click(object sender, RoutedEventArgs e)
         {
-            Terror terror = new Terror();
+            Terror terror = new Terror(idRecebido);
             terror.Show();
             Close();
         }
 
         private void btn_perfil_Click(object sender, RoutedEventArgs e)
         {
-             Perfil perfil = new Perfil();
+             Perfil perfil = new Perfil(idRecebido);
              perfil.Show();
              Close();
         }
@@ -71,14 +79,13 @@ namespace trabalho.apresentacao
 
         private void logo_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Inicio inicio = new Inicio();
+            Inicio inicio = new Inicio(idRecebido);
             inicio.Show();
             this.Close();
         }
 
         private void btn_Cadastrar_Cad_Click(object sender, RoutedEventArgs e)
         {
-            Controle controle = new Controle();
             controle.acessarC(txt_Email_Cad.Text);
 
             if (controle.mensagem.Equals(""))
@@ -94,6 +101,9 @@ namespace trabalho.apresentacao
                     if (controle.tem)
                     {
                         MessageBox.Show(mensagem, "Cadastro", MessageBoxButton.OK, MessageBoxImage.Information);
+                        Login login = new Login();
+                        login.Show();
+                        Close();
                     }
                     else
                     {
@@ -118,6 +128,8 @@ namespace trabalho.apresentacao
             txt_Cel_Cad.Clear();
             txt_Nome_Cad.Focus();
             txt_Pass_Cad_Confirm.Clear();
+            cb_Estado_Cad.SelectedItem = "";
+            cb_Gender_Cad.SelectedItem = "";
         }
 
         private void btn_Limpar_Cad_Click(object sender, RoutedEventArgs e)
@@ -127,7 +139,7 @@ namespace trabalho.apresentacao
 
         private void btn_Voltar_Cad_Click(object sender, RoutedEventArgs e)
         {
-            Inicio inicio = new Inicio();
+            Inicio inicio = new Inicio(idRecebido);
             inicio.Show();
             Close();
         }

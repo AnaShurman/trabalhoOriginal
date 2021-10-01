@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Microsoft.Win32;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -15,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using trabalho.dal;
+using trabalho.modelo;
 
 namespace trabalho.apresentacao
 {
@@ -26,11 +28,16 @@ namespace trabalho.apresentacao
         public String mensagem = "";//Se estiver vazio esta certo
         MySqlCommand cmd = new MySqlCommand();
         MySqlDataAdapter sqa = new MySqlDataAdapter();
+        MySqlDataReader dr;
         Conexao con = new Conexao();
         int idRecebido = 0;
+        Controle controle = new Controle();
+        string imageName;
+        public bool tem = false;
+
         public Perfil(int idEnviado)
         {
-            idRecebido = idEnviado;     
+            idRecebido = idEnviado;
             InitializeComponent();
         }
         public Perfil()
@@ -39,52 +46,97 @@ namespace trabalho.apresentacao
         }
 
 
-        private void logo_click(object sender, MouseButtonEventArgs e)
+        private void insertData()
         {
-            Inicio ini = new Inicio();
-            ini.Show();
+            if (imageName == "")
+            {
+                return;
+            }
+            try
+            {
+                FileStream fs = new FileStream(@imageName, FileMode.Open, FileAccess.Read);
+                byte[] data = new byte[fs.Length];
+                fs.Read(data, 0, Convert.ToInt32(fs.Length));
+                fs.Close();
+
+                //Insert books in database
+                cmd.CommandText = "UPDATE users SET foto = @foto WHERE id_u = " + idRecebido;
+                cmd.Parameters.AddWithValue("@foto", data);
+
+                try
+                {
+                    cmd.Connection = con.conectar();
+                    cmd.ExecuteNonQuery();
+                    con.desconectar();
+                    mensagem = "Foto alterada com sucesso!";
+                    tem = true;
+                }
+                catch (MySqlException)
+                {
+                    mensagem = "Erro com o Database!";
+                }
+
+                if (tem)
+                {
+                    MessageBox.Show(mensagem, "Mudança de foto", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    MessageBox.Show(mensagem);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void logo_Click(object sender, MouseButtonEventArgs e)
+        {
+            Inicio Inicio = new Inicio(idRecebido);
+            Inicio.Show();
             Close();
         }
 
         private void Romance_Click(object sender, RoutedEventArgs e)
         {
-            Romance romance = new Romance();
-            romance.Show();
+            Romance Romance = new Romance(idRecebido);
+            Romance.Show();
             Close();
         }
 
         private void Mangas_Click(object sender, RoutedEventArgs e)
         {
-            Mangas mangas = new Mangas();
-            mangas.Show();
+            Mangas Mangas = new Mangas(idRecebido);
+            Mangas.Show();
             Close();
         }
 
         private void Misterio_Click(object sender, RoutedEventArgs e)
         {
-            Misterio misterio = new Misterio();
-            misterio.Show();
+            Misterio Misterio = new Misterio(idRecebido);
+            Misterio.Show();
             Close();
-
         }
 
         private void Terror_Click(object sender, RoutedEventArgs e)
         {
-            Terror terror = new Terror();
-            terror.Show();
+            Terror Terror = new Terror(idRecebido);
+            Terror.Show();
             Close();
         }
 
         private void btn_Cadastrar_Livro_Click(object sender, RoutedEventArgs e)
         {
-            Adicionar_livros add = new Adicionar_livros();
+            Adicionar_livros add = new Adicionar_livros(idRecebido);
             add.Show();
             Close();
         }
 
         private void btn_add_livro_lido_Click(object sender, RoutedEventArgs e)
         {
-            LivrosLidos livro = new LivrosLidos(idRecebido, idRecebido);
+            LivrosLidos livro = new LivrosLidos(idRecebido);
             livro.Show();
             Close();
         }
@@ -102,7 +154,7 @@ namespace trabalho.apresentacao
             {
                 cmd.Connection = con.conectar();
                 DataSet ds = new DataSet();
-                sqa = new MySqlDataAdapter("SELECT nome_livro_lido FROM livros_lidos WHERE ID_usuario = "+ idRecebido, con.conectar());
+                sqa = new MySqlDataAdapter("SELECT nome_livro_lido FROM livros_lidos WHERE ID_usuario = " + idRecebido, con.conectar());
                 sqa.Fill(ds);
                 con.desconectar();
 
@@ -125,26 +177,39 @@ namespace trabalho.apresentacao
         {
             try
             {
-                cmd.Connection = con.conectar();
-                DataSet ds = new DataSet();
-                sqa = new MySqlDataAdapter("SELECT num_total FROM livros_lidos WHERE ID_usuario = " + idRecebido, con.conectar());
-                sqa.Fill(ds);
-                con.desconectar();
-
-
-                foreach (DataRow dataRow in ds.Tables[0].Rows)
+                //Search pages in database
+                cmd.CommandText = "SELECT num_total FROM livros_lidos WHERE ID_usuario = " + idRecebido;
+                try
                 {
-                    TextBox textBox = new TextBox();
-                    textBox.Text = dataRow[0].ToString();
-                    txtPageTotal = textBox;
+                    cmd.Connection = con.conectar();
+
+                    dr = cmd.ExecuteReader();
+                    dr.Read();
+
+                    txtPageTotal.Text = dr.GetString(0);
+
+                    con.desconectar();
+                    tem = true;
                 }
+                catch (MySqlException)
+                {
+                    mensagem = "Erro com o Database!";
+                }
+
             }
-            catch (MySqlException)
+            catch (Exception ex)
             {
-                this.mensagem = "Erro com o Database!";
+                MessageBox.Show(ex.Message);
             }
+
         }
 
+    
+
+        private void Salvar_Click(object sender, RoutedEventArgs e)
+        {
+            insertData();
+        }
 
     }
 }

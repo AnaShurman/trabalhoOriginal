@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:trabalho.apresentacao"
         mc:Ignorable="d"
-        Title="Aviso"  WindowStartupLocation='CenterScreen' Height="400" Width="700" Background="White">
+        Title="Aviso"  WindowStartupLocation='CenterScreen' Height="400" Width="700" Background="White" Icon="../imagens/logogrande1.png">
     <Grid Margin="10,6,0,5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="92*"></ColumnDefinition>
@@ -15,19 +15,22 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Image x:Name="logo" VerticalAlignment="Top" Height="81" Source="../imagens/logo.png" MouseLeftButtonDown="logo_MouseLeftButtonDown" Margin="-29,-11,480,0" Grid.RowSpan="2" Grid.ColumnSpan="2" >
+        <Image x:Name="logo" VerticalAlignment="Top" Height="81" Source="../imagens/logopequena2.png" MouseLeftButtonDown="logo_MouseLeftButtonDown" Margin="-29,-11,480,0" Grid.RowSpan="2" Grid.ColumnSpan="2" >
             <Image.OpacityMask>
-                <ImageBrush ImageSource="../imagens/logo.png"/>
+                <ImageBrush ImageSource="../imagens/logopequena2.png"/>
             </Image.OpacityMask>
         </Image>
-        <CheckBox Content="Eu estou ciente sobre todas as instruções de segurança e tomo total responsabilidade &#xD;&#xA;por possiveis acidentes e imprevistos relacionados a entrega do livro." HorizontalAlignment="Left" Margin="4,191.6,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="490" Grid.Column="1"/>
-        <Button x:Name="btn_finalizar" Content="Finalizar" Grid.Column="1" HorizontalAlignment="Left" Margin="395,229.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <Image Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="374,62.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="130" Source="../imagens/logogrande2.png" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" StretchDirection="DownOnly">
+
+        <CheckBox x:Name="checkSeguranca" Content="Eu estou ciente sobre todas as instruções de segurança e tomo total responsabilidade &#xD;&#xA;por possiveis acidentes e imprevistos relacionados a entrega do livro." HorizontalAlignment="Left" Margin="10,136,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="490" Grid.Column="1" Checked="checkSeguranca_Checked"/>
+        
+        <Button x:Name="btn_finalizar" Content="Finalizar" Grid.Column="1" HorizontalAlignment="Left" Margin="397,187,0,0" Grid.Row="1" VerticalAlignment="Top" Width="95" Click="btn_finalizar_Click"/>
+        
+        <Image Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="374,22,0,0" Grid.Row="1" VerticalAlignment="Top" Width="130" Source="../imagens/logogrande2.png" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" StretchDirection="DownOnly">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="-1"/>
@@ -38,6 +41,6 @@
             </Image.RenderTransform>
         </Image>
         <Label Content="Dicas de segurança:" Grid.Column="1" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="248" FontWeight="Bold" FontSize="16" FontFamily="Sitka Heading"/>
-        <Label Content="-Compartilhe sua localização com algum conhecido;&#xD;&#xA;-Sempre diga para alguém de sua confiança onde você esta indo;&#xD;&#xA;- Marque sempre em lugares seguros e com uma boa&#xD;&#xA; circulação de pessoas;" Grid.Column="1" HorizontalAlignment="Left" Margin="10,24.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="368" Height="97"/>
+        <Label Content="- Compartilhe sua localização com algum conhecido;&#xA;- Sempre diga para alguém de sua confiança onde você esta indo;&#xA;- Marque sempre em lugares seguros e com uma boa&#xA; circulação de pessoas;" Grid.Column="1" HorizontalAlignment="Left" Margin="10,24.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="368" Height="97"/>
     </Grid>
 </Window>

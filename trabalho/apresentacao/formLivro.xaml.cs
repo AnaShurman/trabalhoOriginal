@@ -24,11 +24,6 @@ namespace trabalho.apresentacao
             InitializeComponent();
         }
 
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void btn_enviar_Click(object sender, RoutedEventArgs e)
         {
             AvisoSeguranca seguranca = new AvisoSeguranca();
@@ -48,6 +43,26 @@ namespace trabalho.apresentacao
             Inicio inicio = new Inicio();
             inicio.Show();
             this.Close();
+        }
+
+        private void radioOutro_Checked(object sender, RoutedEventArgs e)
+        {
+            txtOutro.Visibility = Visibility.Visible;
+        }
+
+        private void radioShopping_Checked(object sender, RoutedEventArgs e)
+        {
+            txtOutro.Visibility = Visibility.Hidden;
+        }
+
+        private void radioBiblioteca_Checked(object sender, RoutedEventArgs e)
+        {
+            txtOutro.Visibility = Visibility.Hidden;
+        }
+
+        private void radioOpen_Checked(object sender, RoutedEventArgs e)
+        {
+            txtOutro.Visibility = Visibility.Hidden;
         }
     }
 }

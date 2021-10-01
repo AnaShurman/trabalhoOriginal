@@ -24,7 +24,7 @@ namespace trabalho.apresentacao
         int j = 7;
         int k = 13;
 
-        int idRecebido = 0;
+        int idRecebido = 0;    
         Controle controle = new Controle();
         public Inicio(int idEnviado)
         {
@@ -36,48 +36,37 @@ namespace trabalho.apresentacao
             InitializeComponent();
         }
 
-        public void enviaID()
-        {
-            Adicionar_livros a = new Adicionar_livros(idRecebido);
-            Biografia b = new Biografia(idRecebido);
-            Mangas f = new Mangas(idRecebido);
-            MeusLivros g = new MeusLivros(idRecebido);
-            Misterio h = new Misterio(idRecebido);
-            Perfil i = new Perfil(controle.procuraIDLivro(Convert.ToString(idRecebido)));
-            Romance j = new Romance(idRecebido);
-            Terror k = new Terror(idRecebido);
-        }
         private void logo_Click(object sender, MouseButtonEventArgs e)
         {
-            Inicio Inicio = new Inicio();
+            Inicio Inicio = new Inicio(idRecebido);
             Inicio.Show();
             Close();
         }
 
         private void Romance_Click(object sender, RoutedEventArgs e)
         {
-            Romance Romance = new Romance();
+            Romance Romance = new Romance(idRecebido);
             Romance.Show();
             Close();
         }
 
         private void Mangas_Click(object sender, RoutedEventArgs e)
         {
-            Mangas Mangas = new Mangas();
+            Mangas Mangas = new Mangas(idRecebido);
             Mangas.Show();
             Close();
         }
 
         private void Misterio_Click(object sender, RoutedEventArgs e)
         {
-            Misterio Misterio = new Misterio();
+            Misterio Misterio = new Misterio(idRecebido);
             Misterio.Show();
             Close();
         }
 
         private void Terror_Click(object sender, RoutedEventArgs e)
         {
-            Terror Terror = new Terror();
+            Terror Terror = new Terror(idRecebido);
             Terror.Show();
             Close();
         }
@@ -90,9 +79,6 @@ namespace trabalho.apresentacao
                 i = 6;
             }
             classicos.Source = new BitmapImage(new Uri(@"../imagens/" + i + ".jpg", UriKind.Relative));
-
-
-
         }
 
         private void btn_next_Click(object sender, RoutedEventArgs e)
@@ -103,7 +89,6 @@ namespace trabalho.apresentacao
                 i = 1;
             }
             classicos.Source = new BitmapImage(new Uri(@"../imagens/" + i + ".jpg", UriKind.Relative));
-
         }
       
         private void btn_login_ini_Click(object sender, RoutedEventArgs e)
@@ -111,7 +96,6 @@ namespace trabalho.apresentacao
             Login login = new Login();
             login.Show();
             Close();
-
         }
 
         private void btn_cad_ini_Click(object sender, RoutedEventArgs e)
@@ -129,7 +113,6 @@ namespace trabalho.apresentacao
                 j = 12;
             }
             juvenis.Source = new BitmapImage(new Uri(@"../imagens/" + j + ".jpg", UriKind.Relative));
-
         }
 
         private void btn_next_Click2(object sender, RoutedEventArgs e)
@@ -150,7 +133,6 @@ namespace trabalho.apresentacao
                 k = 18;
             }
             mangas.Source = new BitmapImage(new Uri(@"../imagens/" + k + ".jpg", UriKind.Relative));
-
         }
 
         private void btn_next_Click3(object sender, RoutedEventArgs e)
@@ -165,14 +147,14 @@ namespace trabalho.apresentacao
 
         private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Perfil perfil = new Perfil();
+            Perfil perfil = new Perfil(idRecebido);
             perfil.Show();
             Close();
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void Perfil_Click(object sender, RoutedEventArgs e)
         {
-            Perfil perfill = new Perfil();
+            Perfil perfill = new Perfil(idRecebido);
             perfill.Show();
             Close();
         }

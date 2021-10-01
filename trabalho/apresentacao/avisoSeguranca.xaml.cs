@@ -17,6 +17,7 @@ namespace trabalho.apresentacao
     /// <summary>
     /// Lógica interna para AvisoSeguranca.xaml
     /// </summary>
+    /// 
     public partial class AvisoSeguranca : Window
     {
         public AvisoSeguranca()
@@ -24,16 +25,28 @@ namespace trabalho.apresentacao
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
         private void logo_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             Inicio inicio = new Inicio();
             inicio.Show();
-            this.Close();
+            Close();
+        }
+
+        private void checkSeguranca_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkSeguranca.IsChecked == false)
+            {
+                btn_finalizar.IsEnabled = false;
+            }
+            else
+            {
+                btn_finalizar.IsEnabled = true;
+            }
+        } 
+
+        private void btn_finalizar_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

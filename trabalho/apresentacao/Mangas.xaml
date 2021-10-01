@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:trabalho.apresentacao"
         mc:Ignorable="d"
-          Title="mangas" Height="681" Width="1372" WindowState="Maximized" OpacityMask="Black">
+     
+          Title="Mangas" Height="680" Width="1370" WindowState="Maximized" Icon="../imagens/logogrande1.png" WindowStartupLocation='CenterScreen' OpacityMask="Black">
+    
     <Window.Background>
         <ImageBrush ImageSource="../imagens/stars.jpg"/>
     </Window.Background>

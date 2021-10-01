@@ -5,61 +5,73 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:trabalho.apresentacao"
         mc:Ignorable="d"
-         Title="Livros lidos" Height="681" Width="1372" WindowState="Maximized" OpacityMask="Black">
-    <Window.Background>
-        <ImageBrush ImageSource="../imagens/stars.jpg"/>
-    </Window.Background>
+         Title="Livros lidos" Height="680" Width="1370" WindowState="Maximized" OpacityMask="Black" Icon="../imagens/logogrande1.png" Background="#FF1D0E4D">
+
     <Grid Margin="10,6,0,5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="97*"/>
+            <RowDefinition Height="489*"/>
+            <RowDefinition Height="54*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="211*"></ColumnDefinition>
-            <ColumnDefinition Width="1058"></ColumnDefinition>
-            <ColumnDefinition Width="93*"></ColumnDefinition>
+            <ColumnDefinition Width="177*"/>
+            <ColumnDefinition Width="Auto" MinWidth="889.6"/>
+            <ColumnDefinition Width="287*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="102"></RowDefinition>
-            <RowDefinition/>
-            <RowDefinition Height="50"></RowDefinition>
-        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="../imagens/background1.jpg"/>
+        </Grid.Background>
 
-        <Rectangle Grid.Column="1" HorizontalAlignment="Center" Height="574" Stroke="Black" VerticalAlignment="Top" Width="1044" Fill="#FF1B1B1B" RadiusX="8" RadiusY="8" Grid.Row="1" Opacity="0.68" Grid.RowSpan="2"/>
+        <Label Content="Adicionar livro lido" Grid.Column="1" HorizontalAlignment="Center" Margin="399,18,163,0" VerticalAlignment="Top" Foreground="White" Height="74" Width="454" FontWeight="Bold" FontSize="50" FontFamily="Ink Free"/>
 
-        <Image x:Name="logo" Grid.Row="0" Source="../imagens/logo.png"  IsEnabled="False"  Height="104"  HorizontalAlignment="Left" Width="225"   VerticalAlignment="Top" Margin="-18,-22,0,0" RenderTransformOrigin="0.5,0.5" MouseLeftButtonDown="logo_MouseLeftButtonDown">
+        <Image x:Name="logo" HorizontalAlignment="Center" MouseLeftButtonDown="logo_MouseLeftButtonDown"  VerticalAlignment="Center" MaxHeight="120" Source="../imagens/logogrande1.png" Grid.Row="0"  Grid.Column="0" Height="97" Width="126">
+            <Image.Effect>
+                <DropShadowEffect/>
+            </Image.Effect>
+            <Image.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF180808" Offset="1"/>
+                </LinearGradientBrush>
+            </Image.OpacityMask>
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
-                    <SkewTransform AngleY="-0.547"/>
+                    <SkewTransform AngleY="0.449"/>
                     <RotateTransform/>
-                    <TranslateTransform Y="-1.006"/>
+                    <TranslateTransform Y="0.437"/>
                 </TransformGroup>
             </Image.RenderTransform>
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="../imagens/logo.png" TileMode="None" Stretch="None"/>
-            </Image.OpacityMask>
         </Image>
 
+        <Rectangle Grid.Column="1" Grid.Row="1" Fill="#FF0D023A" HorizontalAlignment="Center" Height="463"  RadiusY="8" RadiusX="8" VerticalAlignment="Top" Width="855" Margin="151,0,10,0" />
 
-        <Menu x:Name="menu" HorizontalAlignment="Left" Grid.Row="1" Background="#FF1B1B1B" Width="218" Opacity="0.85">
-            <MenuItem Header="Categorias"  Background="#FF323232" Foreground="White"  Width="220" Margin="0,87,0,0" FontFamily="Haettenschweiler" FontSize="22" >
-                <MenuItem x:Name="Romance" Header="Romance" Click="Romance_Click"  Foreground="#FFFFF6F6" Background="#FF171819"/>
-                <MenuItem x:Name="Mangas" Header="Mangás" Background="#FF323232" Click="Mangas_Click"  Foreground="White"/>
-                <MenuItem x:Name="Misterio" Header="Misterio" Background="#FF323232" Click="Misterio_Click"  Foreground="White"/>
-                <MenuItem x:Name="Terror" Header="Terror" Background="#FF323232"  Click="Terror_Click" Foreground="White"/>
+        <Menu x:Name="menu" HorizontalAlignment="Left" Background="{x:Null}" Width="132" Opacity="0.85" Margin="64,44.6,0,212.2" Grid.Row="1" Padding="0" Grid.ColumnSpan="2" >
+            <MenuItem Background="{x:Null}" Foreground="White" FontWeight="Bold" FontSize="20" FontFamily="Simplicity" Header="Meu Perfil" Width="147" Height="37" Padding="16,0,-80,0" Click="MenuItem_Click"/>
+            <MenuItem Header="Categorias"  Background="{x:Null}" Foreground="White"  Width="153" FontFamily="Simplicity" FontSize="20" FontWeight="Bold" Height="31" Padding="16,0,-86,0" BorderThickness="0"  Margin="0,31,0,0" >
+                <MenuItem x:Name="Romance" Header="Romance" Foreground="#FFFFF6F6" Click="Romance_Click"/>
+                <MenuItem x:Name="Mangas" Header="Mangás" Foreground="White" Click="Mangas_Click"/>
+                <MenuItem x:Name="Misterio" Header="Misterio" Foreground="White" Click="Misterio_Click"/>
+                <MenuItem x:Name="Terror" Header="Terror" Foreground="White" Click="Terror_Click"/>
             </MenuItem>
         </Menu>
 
-        <Button x:Name="btn_perfil" Grid.Row="1" Content="" HorizontalAlignment="Left" Margin="168,51,0,0" VerticalAlignment="Top" Width="29" Height="31" Click="btn_perfil_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="../imagens/perfil_icon.png"/>
-            </Button.Background>
-        </Button>
+        <Image Source="../imagens/perfil.png" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Height="75" Width="72" Margin="0,22.6,0,0"  />
+        <Image HorizontalAlignment="Left" Height="55" Margin="8,102.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="79" Source="../imagens/categoria.png" RenderTransformOrigin="-0.532,0.52"/>
 
-        <Menu Grid.Column="1" Margin="21,22,20,0" Grid.Row="1" Height="35" VerticalAlignment="Top" Opacity="0.355"/>
-        <Label Content="Nome do livro:" Grid.Column="1" HorizontalAlignment="Left" Margin="224.8,89.6,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="110" Foreground="White"/>
-        <Label Content="Número de páginas:" Grid.Column="1" HorizontalAlignment="Left" Margin="224.8,121.6,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="123" Foreground="White"/>
-        <TextBox x:Name="txt_nome_livro_lido" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="375.8,93.6,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txt_numero_paginas" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="375.8,121.6,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btn_add_livro_lido" Content="Adicionar livro" Grid.Column="1" HorizontalAlignment="Left" Margin="388.8,293.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="107" Click="btn_add_livro_lido_Click"/>
+        <Label Content="Nome do livro:" Grid.Column="1" HorizontalAlignment="Left" Margin="384,73,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="110" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Número de páginas:" Grid.Column="1" HorizontalAlignment="Left" Margin="384,107,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="123" Foreground="White" FontWeight="Bold"/>
+
+        <Border BorderThickness="1"  CornerRadius="10" Padding="2"  MinHeight="8"  HorizontalAlignment="Left" Margin="544,73,0,0" Grid.Row="1" Grid.Column="1" Background="#FFF9F9F9" VerticalAlignment="Top" Height="25" Width="200">
+            <TextBox x:Name="txt_nome_livro_lido" Grid.Column="1" HorizontalAlignment="Right" Height="26" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Margin="0,-3,7,-4"/>
+        </Border>
+
+        <Border BorderThickness="1"  CornerRadius="10" Padding="2"  MinHeight="8"  HorizontalAlignment="Left" Margin="544,111,0,0" Grid.Row="1" Grid.Column="1" Background="#FFF9F9F9" VerticalAlignment="Top" Height="25" Width="200">
+            <TextBox x:Name="txt_numero_paginas" Grid.Column="1" HorizontalAlignment="Left" Height="26" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Margin="7,-3,0,-4"/>
+        </Border>
+
+        <Button x:Name="btn_add_livro_lido" Content="Adicionar livro" Grid.Column="1" HorizontalAlignment="Left" Margin="566,220,0,0" Grid.Row="1" VerticalAlignment="Top" Width="149" Click="btn_add_livro_lido_Click"/>
 
 
     </Grid>

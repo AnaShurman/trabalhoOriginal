@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:trabalho.apresentacao"
         mc:Ignorable="d"
-        Title="Misterio" Height="681" Width="1372" WindowState="Maximized" OpacityMask="Black">
+        Title="Misterio" Height="681" Width="1372" WindowState="Normal"  WindowStartupLocation='CenterScreen' OpacityMask="Black">
     <Window.Background>
         <ImageBrush ImageSource="../imagens/stars.jpg"/>
     </Window.Background>

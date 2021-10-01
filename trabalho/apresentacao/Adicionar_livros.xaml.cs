@@ -30,6 +30,7 @@ namespace trabalho.apresentacao
         Conexao con = new Conexao();
         string imageName;
         int idRecebido = 0;
+        Controle controle = new Controle();
 
         public Adicionar_livros(int idEnviado)
         {
@@ -51,12 +52,11 @@ namespace trabalho.apresentacao
             try
             {
                 FileStream fs = new FileStream(@imageName, FileMode.Open, FileAccess.Read);
-
                 byte[] data = new byte[fs.Length];
                 fs.Read(data, 0, Convert.ToInt32(fs.Length));
                 fs.Close();
 
-                //Comandos para inserir livros
+                //Insert books in database
                 cmd.CommandText = "INSERT INTO livros (nome_livro, cat_livro, edicao_livro, foto, id_user) VALUES(@nome_livro, @cat_livro, @ano_livro, @foto, @id_user)";
                 cmd.Parameters.AddWithValue("@nome_livro", txt_nome_livro.Text);
                 cmd.Parameters.AddWithValue("@cat_livro", txt_cat_livro.Text);
@@ -91,15 +91,12 @@ namespace trabalho.apresentacao
                 MessageBox.Show(ex.Message);
             }
 
-
-
         }
 
         public void btn_add_img_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-
                 FileDialog capa = new OpenFileDialog();
                 capa.Title = "Selecionar foto";
                 capa.InitialDirectory = "Images";
@@ -110,14 +107,12 @@ namespace trabalho.apresentacao
                     imageName = capa.FileName;
                     ImageSourceConverter isc = new ImageSourceConverter();
                     imagebox.SetValue(Image.SourceProperty, isc.ConvertFromString(imageName));
-
                 }
-
                 capa = null;
             }
             catch (Exception)
             {
-                this.mensagem = "Erro com o gerenciador de imagens, acione o administrador!";
+                mensagem = "Erro com o gerenciador de imagens, acione o administrador!";
             }
 
         }
@@ -130,46 +125,44 @@ namespace trabalho.apresentacao
 
         private void logo_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Inicio inicio = new Inicio();
+            Inicio inicio = new Inicio(idRecebido);
             inicio.Show();
             Close();
         }
 
         private void Romance_Click(object sender, RoutedEventArgs e)
         {
-            Romance romance = new Romance();
+            Romance romance = new Romance(idRecebido);
             romance.Show();
             Close();
         }
 
         private void Mangas_Click(object sender, RoutedEventArgs e)
         {
-            Mangas mg = new Mangas();
+            Mangas mg = new Mangas(idRecebido);
             mg.Show();
             Close();
         }
 
         private void Misterio_Click(object sender, RoutedEventArgs e)
         {
-            Misterio ms = new Misterio();
+            Misterio ms = new Misterio(idRecebido);
             ms.Show();
             Close();
         }
 
         private void Terror_Click(object sender, RoutedEventArgs e)
         {
-            Terror terror = new Terror();
+            Terror terror = new Terror(idRecebido);
             terror.Show();
             Close();
         }
 
-        private void btn_perfil_Click(object sender, RoutedEventArgs e)
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            Perfil perfil = new Perfil();
+            Perfil perfil = new Perfil(idRecebido);
             perfil.Show();
             Close();
         }
-
-
     }
 }
